@@ -1,0 +1,17 @@
+// LINKS
+a {
+  color: color(gray);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+a:hover {
+  color: color(pink);
+  text-shadow: none;
+  border: none;
+}
+
+.roll span:after {
+  color: gray(0);
+  background: color(gray);
+}

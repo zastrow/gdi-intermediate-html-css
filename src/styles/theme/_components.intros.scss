@@ -1,0 +1,22 @@
+// Introductions Slides
+.intros .name {
+  font-size: 2.25em;
+  color: color-code(warning);
+  @include font(body, lighter);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.intros .job-title {
+  color: color(gray);
+  @include font(heading, bolder);
+  font-size: 1.125em;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+}
+
+.intros .twitter {
+  font-size: 1em;
+  color: color(pink);
+  @include font(body, lighter);
+}

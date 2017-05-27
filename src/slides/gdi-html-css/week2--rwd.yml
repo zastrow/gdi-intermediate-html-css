@@ -1,0 +1,202 @@
+slides:
+  -
+    content: |
+      ##Responsive Web Design (RWD)
+
+  -
+    content: |
+      ## What is it!?
+
+      RWD is a design approach that suggests that the design &amp; development of a site shoud respond to the user's behavior and environment.
+
+      ![images/responsive-design.png](responsive design)
+
+  -
+    content: |
+      ## Wait, people really care?
+
+      - 91% of U.S. Citizens have their smart phone within reach 24/7
+      - Smartphone users check their phones 150x every day
+      - 25% of mobile users in the U.S. don't even own a laptop or desktop
+
+
+  -
+    content: |
+      ## Why it's awesome
+
+      RWD modifies the presentation of a site, without modifying the content of the page. So no matter what, every user has access to the same information.
+
+      ![images/responsive-example.png](responsive example)
+
+
+  -
+    content: |
+      ## How did we get here?
+
+      - In 2010, Ethan Marcotte coined the tearm in an article on [A List Apart](http://alistapart.com/article/responsive-web-design)
+      - In 2011, he wrote the book on it (literally), called: "Responsive Web Design"
+      - In 2012, RWD was the #2 trend in web design
+      - 2013 was called "The Year of Responsive Web Design" because it was and still is a cost effective alternative to mobile apps
+
+
+  -
+    content: |
+      ## The Ingredients of RWD
+
+      - A Flexible foundation
+      - Fluid grids
+      - Flexible images
+      - CSS Media Queries to make the magic happen
+
+  -
+    content: |
+      ## Fluid Grids
+
+      With fixed-width sites, we have to adjust the height and width of elements manually.
+
+      With fluid grids, the height and width of elements is dependent upon the device resolution.
+
+  -
+    content: |
+      ## How they work
+
+      - First, we define a maximum width for the container
+      - Then, we divide the content up into a set of columns, usually 12
+      - Then, we design elements with proportional widths and heights instead of being stuck with specific pixel dimensions
+      - Whenever the device width changes, the grids change in width to scale with the device
+
+  -
+    content: |
+      ## Flexible images
+
+      Text scales easily on smaller devices, but images are a bit tricky.
+
+      Images will overflow their container elements if they're too big for them.
+
+      That's annoying.
+
+  -
+    content: |
+      ## Enter max-width
+
+      By using max-width on images, they will only expand to the size of their parent.
+
+      If their parent has no width, it will just expand to the width of the viewport.
+
+      ```css
+      img {
+        max-width: 100%;
+      }
+      ```
+
+  -
+    content: |
+      ## Media Queries
+
+      Media queries apply certain CSS in certain situations.
+
+      - Print Media
+      - iPhone
+      - iPad
+      - Even larger screens
+
+
+  -
+    content: |
+      ## Include Media Queries Last
+
+      They will overwrite previous styles because they are last in the cascade.
+
+      Here's the CSS for #header-image
+
+      ![images/mq-normal-style.png]() <!-- .element: width="380px" -->>
+
+      And here are the media queries that call for the larger image to be used for screens over 1200px wide, and to turn off the header image if the site is printed.
+
+      ![images/mq-larger-img.png]() <!-- .element: height="120px" -->
+      ![images/mq-print.png]() <!-- .element: height="120px" -->
+
+  -
+    content: |
+      ## Standard MQs
+
+      For devices that have dimensions no smaller than 320px and are not larger than 480px
+      ```css
+      /* Smartphones (portrait and landscape) */
+      @media only screen and (min-device-width : 320px)
+      and (max-device-width : 480px) {
+        /* Styles */
+      }
+      ```
+
+      iPad dimensions with the orientation in landscape.
+
+      ```css
+      /* iPads (landscape) ----------- */
+      @media only screen and (min-device-width : 768px)
+      and (max-device-width : 1024px)
+      and (orientation : landscape) {
+        /* Styles */
+      }
+      ```
+
+  -
+    content: |
+      ## How they work
+
+      Rather than looking for a type of device, they look at the capability of the device. You can use them to check for all sorts of things.
+
+      - Width &amp; height of the viewport
+      - Width &amp; height of the device
+      - Orientation - landscape or portrait
+      - Resolution - retina or normal
+
+  -
+    content: |
+      ## Mobile First
+
+      By designing sites with mobile first in mind, it makes scaling them down a lot easier.
+
+      Mobile first allows us to simplify the user flow to its basic elements and then enhance it as the screen size increases.
+
+  -
+    content: |
+      ## iPhone:
+
+      ![images/media-queries-phone.png]()
+
+  -
+    content: |
+      ## Tablet
+
+      ![images/media-queries-tablet.png]()
+
+  -
+    content: |
+      ## Desktop
+
+      ![images/media-queries-desktop.png]()
+
+  -
+    content: |
+      ## Viewport Meta
+
+      Use this to control the size of the viewport.
+
+      ```html
+      <meta name="viewport" content="width=device-width,user-scalable=true;">
+      ```
+
+      Width=device-width makes the viewport the size of the device.
+
+      User-scalable=true allows the user to pinch and zoom on your site.
+
+  -
+    content: |
+      ## Let's develop it!
+
+      Let's take a look at our site now on a phone (or you can resize your browser), and find ways to improve it.
+
+      Add the viewport meta tag to the html.
+
+      Use media queries to shift elements around on the page and to increase legibilty.

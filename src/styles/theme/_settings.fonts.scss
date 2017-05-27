@@ -1,0 +1,48 @@
+// Font Stacks
+$avenir: "Avenir Next", "Hevetica Neue", Helvetica, Arial, sans-serif;
+$operator: Monaco, monospace;
+
+// Font Maps
+$fonts: (
+  heading: $avenir,
+  body: $avenir,
+  code: $operator
+);
+
+$heading-weight: (
+  lighter: 300,
+  bolder: 500
+);
+
+$body-weight: (
+  lighter: 500,
+  bolder: 700
+);
+
+$code-weight: (
+  lighter: 400,
+  bolder: 400
+);
+
+// Font Functions
+@function font-family($family:body) {
+  @return map-get($fonts, $family);
+}
+
+@function font-weight($family:body, $weight:lighter) {
+  @if $family == heading {
+    @return map-get($heading-weight, $weight);
+  }
+  @if $family == body {
+    @return map-get($body-weight, $weight);
+  }
+  @if $family == code {
+    @return map-get($code-weight, $weight);
+  }
+}
+
+// Font Mixin
+@mixin font($family:body, $weight:lighter) {
+  font-family: font-family($family);
+  font-weight: font-weight($family, $weight);
+}

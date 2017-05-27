@@ -1,0 +1,66 @@
+// COLORS
+// Girl Develop It!
+$primary: #f05b62;
+$secondary: #53555C;
+$green: #92BB44;
+$blue: #00A9B4;
+
+$colors: (
+  pink: $primary,
+  gray: $secondary,
+  green: $green,
+  blue: $blue
+);
+
+// Syntax Highlighting for Foundry Code Blocks
+$code-green: $green;
+$code-pink: $primary;
+$code-blue: $blue;
+
+//// Code
+$code-colors: (
+  success: $code-green,
+  warning: $code-pink,
+  standard: $code-blue
+);
+
+// Code
+@function color-code($color) {
+  // Give this function a color,
+  // and it'll spit out its value
+  $r: map-get($code-colors, $color);
+
+  @if ($r) {
+    @return $r;
+  } @else {
+    // allow arbitrary colors to be passed to this function
+    @return $color;
+  }
+}
+
+// Color
+@function color($color) {
+  // Give this function a color,
+  // and it'll spit out its value
+  $r: map-get($colors, $color);
+
+  @if ($r) {
+    @return $r;
+  } @else {
+    // allow arbitrary colors to be passed to this function
+    @return $color;
+  }
+}
+
+// Grayscale
+@function gray($level:0) {
+  @if $level == 0 {
+    @return white;
+  }
+  @else if $level == 100 {
+    @return black;
+  }
+  @else {
+    @return darken(white, $level * 1%);;
+  }
+}

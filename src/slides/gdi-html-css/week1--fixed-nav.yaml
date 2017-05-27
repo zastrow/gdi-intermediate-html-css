@@ -1,0 +1,193 @@
+slides:
+  -
+    content: |
+      # Horizontal Fixed Nav
+
+  -
+    content: |
+      ### All the cool kids are doing it
+      - Horizontal fixed-to-top nav allows users to have access to navigational elements at all times
+      - All the rage these days
+      - Be careful - screen heights vary, and it reduces the amount of content visible on smaller screens
+
+  -
+    content: |
+      ### Fixed Nav: HTML
+      Let's include it in a header, since we know we'll be grouping related content here.
+
+      ```html
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#home">My Home</a></li>
+            <li><a href="#diet">My Diet</a></li>
+            <li><a href="#pattern">Stripes</a></li>
+          </ul>
+        </nav>
+      </header>
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: CSS
+
+      Remember, using fixed position is like using absolute position, except that it's fixed to the viewport, not the containing element.
+
+      We also have to define a width for it, and its location.
+
+      ```css
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fafafa;
+        border-bottom: 2px solid #ccc;
+        height: 70px;
+        width: 100%;
+      }
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: CSS
+
+      Because we've fixed the nav to the top of the viewport, we need to bump the content of the `body` down to be visible to the user.
+      This should be the same, or more than, the height of the navigation bar.
+
+      ```css
+      body {
+        padding-top: 70px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fafafa;
+        border-bottom: 2px solid #ccc;
+        height: 70px;
+        width: 100%;
+      }
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: CSS
+
+      Now we need to get those list items next to each other instead of stacked.
+
+      Let's float them to the left and add some padding to the links so they have a large clickable area.
+
+      ```css
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fafafa;
+        border-bottom: 2px solid #ccc;
+        height: 70px;
+        width: 100%;
+      }
+      nav li {
+        float: left;
+        width: auto;
+      }
+      nav li a {
+        padding: 25px 10px;
+        display: block;
+      }
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: Adding a brand
+
+      We can use an `h1` with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.
+
+      ```html
+      <header>
+        <nav>
+          <h1 id="brand">IMA Zebra</h1>
+          <ul>
+            <li><a href="#home">My Home</a></li>
+            <li><a href="#diet">My Diet</a></li>
+            <li><a href="#pattern">Stripes</a></li>
+          </ul>
+        </nav>
+      </header>
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: Text replacement & `h1`s
+
+      ```css
+      #brand {
+        color: transparent;
+        background: url(../images/z.png) no-repeat top left;
+        height: 60px;
+        width: 60px;
+        float: left;
+        margin: 5px;
+      }
+      nav ul {
+        float: right;
+        width: auto;
+      }
+      ```
+
+  -
+    content: |
+      ### Why Text Replacement?
+
+      - If we turn the CSS off for this page - the title will still be visible to the browser.
+      - If a user is coming to our site with a screen reader, the title of the site will be readable to them
+      - Search engines &hearts; it!
+
+  -
+    content: |
+      ### Fixed Nav: Container
+
+      Notice how the edge of the nav bumps up against the edge of the browser? Let's fix that by adding a container around it.
+
+      ```html
+      <header>
+        <nav>
+        <div class="container">
+          <h1 id="brand">IMA Zebra</h1>
+            <ul>
+              <li><a href="#home">My Home</a></li>
+              <li><a href="#diet">My Diet</a></li>
+              <li><a href="#pattern">Stripes</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      ```
+
+  -
+    content: |
+      ### Fixed Nav: Container
+
+      Let's give the container a fixed width and see what happens.
+
+      ```css
+      .container {
+        width: 1024px;
+        margin: 0 auto;
+      }
+      ```
+
+      Now wherever we use `.container` it will be 1024px wide and centered.
+
+  -
+    content: |
+      ### Develop It!
+
+      Let's make some small tweaks to the navigation
+
+      - Remove the underlines on the links with `text-decoration`
+      - Change the color of the links
+      - Try adding a background color on hover
+
+    notes: |
+      End of Class 1 in 4 week sequence

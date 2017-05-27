@@ -1,0 +1,283 @@
+slides:
+  -
+    content: |
+      # Hero Section
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### What is a Hero?
+
+      - Large banner image, prominently placed on a web page, generally in the front and center
+      - First visual a visitor encounters on the site and its purpose is to present an overview of the site's most important content
+      - Often consists of image and text, can be static or dynamic
+
+  -
+    content: |
+      ## Hero Examples
+
+  -
+    content: |
+      ![](images/apple.png)
+
+  -
+    content: |
+      ![](images/uber.png)
+
+  -
+    content: |
+      ![](images/fostr.png)
+
+  -
+    content: |
+      ![](images/ndesign.png)
+
+  -
+    content: |
+      ![](images/karma.png)
+
+  -
+    content: |
+      ### Hero: HTML
+
+      Our Hero `section` should look a little something like this:
+
+      ```html
+      <section id="hero">
+        <img src="images/zebra.jpg" alt="IMA Zebra" />
+        <h2>IMA Zebra</h2>
+        <span class="city">Africa</span>
+      </section>
+      ```
+
+  -
+    content: |
+      ### Hero: CSS
+
+      Now is where the fun really happens!
+
+      ```css
+      #hero {
+        background: url(../images/zebra-hero.jpg) no-repeat top left;
+        color: #fafafa;
+        text-align: center;
+      }
+      ```
+
+  -
+    content: |
+      ### Hero: CSS
+
+      Let's give it a height and some padding too.
+
+      ```css
+      #hero {
+        background: url(../images/zebra.jpg) no-repeat top left;
+        color: #fafafa;
+        text-align: center;
+        height: 350px;
+        padding: 25px 0;
+      }
+      ```
+
+      Remember our Box Model. Padding adds to the height & width of elements.
+
+      So the height of our hero will be `400px`
+
+  -
+    content: |
+      ### Well, that was unexpected…
+
+      Things that are wrong with this hero right now:
+
+      1. That image of your face is way to big! And it's not even a circle!
+      2. The background image is way too large
+      3. The headline is really tiny
+
+  -
+    content: |
+      ## Hero: Profile Image
+
+      Let's make the profile image a little smaller.
+
+      We'll use CSS Targeting with the descendant selector to style the image.
+
+      ```css
+      #hero img {
+        width: 150px;
+      }
+      ```
+
+      That should do it
+
+  -
+    content: |
+        # Border Magic
+    options:
+        class: section-card
+
+  -
+    content: |
+      ### Turning squares into circles with magic!
+
+      Okay, it's not really magic, it's just a bit of CSS3.
+
+  -
+    content: |
+      ### Border-Radius
+
+      Simply put, allows you to create rounded corners on boxes.
+
+      Designers rejoice!
+
+  -
+    content: |
+      ### Border-radius
+
+      20px radius on all corners
+
+      ```css
+      #hero img {
+        border-radius: 20px;
+      }
+      ```
+
+      ![](images/radius-20.png)
+
+  -
+    content: |
+      ### Border-radius
+
+      10px radius on top left & bottom right
+
+      40px on top right & bottom left
+
+      ```css
+      #hero img {
+        border-radius: 10px 40px;
+      }
+      ```
+
+      ![](images/radius-10-40.png)
+
+  -
+    content: |
+      ### Border-radius
+
+      10px radius on top left
+
+      20px radius top right
+
+      40px radius bottom right
+
+      80px radius bottom left
+
+      ```css
+      #hero img {
+        border-radius: 10px 20px 40px 80px;
+      }
+      ```
+
+      ![](images/radius-10-20-40-80.png)
+
+  -
+    content: |
+      ### Border-radius
+
+      50% radius on all corners
+
+      ```css
+      #hero img {
+        border-radius: 50%;
+      }
+      ```
+
+      ![](images/radius-50.png)
+
+  -
+    content: |
+      # Vendor Prefixes
+
+    options:
+        class: section-card
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      HTML5 and CSS3 are still new!
+
+      This is great, but it means that not all browsers treat new CSS3 properties the same
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      Flags it as a work-in-progress
+
+      When finished, the browser should support the non-prefixed name
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      Each browser has their own:
+
+      - **Chrome:** `-webkit-`
+      - **Firefox:** `-moz-`
+      - **Safari:** `-webkit-`
+      - **Opera:** `-o-`
+      - **Internet Explorer:** `-ms-`
+
+  -
+    content: |
+      <h3>Using Prefixes</h3>
+      ```css
+      #hero img {
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      }```
+      <p>Order matters! The non-prefixed version should always go last.</p>
+
+  -
+    content: |
+      ### NOTE:
+      While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.
+
+      This is to save time during the code exercises
+
+  -
+    content: |
+      # Back to our Hero!
+
+  -
+    content: |
+      ### Background-size
+      Notice how the image is too large for the section? Let's fix that with a new property called `background-size`
+
+      ```css
+      #hero {
+        background: url(../images/zebra.jpg) no-repeat top left;
+        color: #fafafa;
+        text-align: center;
+        height: 350px;
+        padding: 25px 0;
+        background-size: cover;
+      }
+      ```
+      `cover` scales the image to the largest size such that both its width and its height can fit inside the content area.
+
+
+  -
+    content: |
+      ### Develop It!
+
+      Let's make some small tweaks to the Hero
+
+      - Move the image down from the top
+      - Adjust the font size of the header
+      - Add a border to the span

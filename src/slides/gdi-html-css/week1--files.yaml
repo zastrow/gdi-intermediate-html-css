@@ -1,0 +1,32 @@
+slides:
+  -
+    content: |
+      # Workshop files
+
+    options:
+      class: section-card
+  -
+    content: |
+      ### Workshop files
+
+      Last reminder to download the files for today's class! </p>
+
+      - We have provided a folder that contains sample images for you to use today. We encourage you to be creative so don't feel like you're restricted to these images
+
+      - We've also included a blank index.html file for you to work from, as well as the final site for you to use as a reference if you get stuck.
+  -
+    content: |
+
+      <div>
+        <h3>Folder Structure</h3>
+        <p>We've set up the folder structure for the site today to reflect common practices used.</p>
+      </div>
+
+      <img src="images/folder-structure.png" alt="folder structure" style="width:500px;"/>
+    options:
+      class: grid grid-1-2
+  -
+    content: |
+      ### Cheat sheets
+
+      We've provided a copy of the site you'll be building today with notes on how to break down the layout of the page.

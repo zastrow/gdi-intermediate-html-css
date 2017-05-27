@@ -1,0 +1,196 @@
+slides:
+  -
+    content: |
+      # @font-face
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### @font-face</h3>
+
+      The world of HTML has progressed beyond Times New Roman and Arial
+
+      Yay!
+
+      How do we use new and cool fonts?
+
+  -
+    content: |
+      ### Class, meet Google Web Fonts
+
+      Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!
+
+      The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.
+
+  -
+    content: |
+      # [Google Fonts](http://fonts.google.com)
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### @font-face
+
+      In our example, we've used Lato for the body and Bree Serif for the headlines
+
+      You can use any font you'd like!
+
+      ![lato](images/lato.png) <!-- .element: style="width: 40%; float: left;" -->
+      ![bree](images/bree.png) !-- .element: style="width: 40%; float: right;" -->
+
+  -
+    content: |
+      ### Using Google Fonts in 3 steps!
+      1. Search the hundreds of font families, then add them to your collection.
+      2. Compare and refine the collection - think about what styles you NEED.
+      3. Grab the code that Google prepares for you and add it to your site!
+
+      ```html
+      @import url(http://fonts.googleapis.com/
+      css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);
+      ```
+      [What does that do?](http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif)
+
+
+  -
+    content: |
+      ### Integrating into the CSS
+      ```css
+      body{
+        font-family: 'Lato', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Bree Serif', serif;
+      }
+      ```
+
+  -
+    content: |
+      ### Develop It!
+
+      Pick some fonts for your site using Google Fonts.
+
+      Adjust the `font-size` and `line-height` to refine your fonts.
+
+  -
+    content: |
+      # `rgba()` Colors & `opacity`
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## `rgba()` Colors & `opacity`
+
+      In CSS, we can choose colors with hexadecimal `#0000FF` or `rgb(0, 0, 255)`
+
+      In CSS3, there are ways to control opacity of a color too!
+
+      - **`rgba()`** - controls the opacity of a color
+      - **`opacity`** - controls the opacity of an element
+
+  -
+    markdown: false
+    content: |
+      <h2><code>rgba()</code> Colors & <code>opacity</code></h2>
+
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: 1; height: 50px; width: 40%; float: right; margin-bottom: 20px; border: 3px solid black;">
+          opacity: 1;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, 1); height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, 1);
+        </div>
+      </article>
+
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: .8; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+          opacity: .8;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, .8);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, .8);
+        </div>
+      </article>
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: .6; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+          opacity: .6;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, .6);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, .6);
+        </div>
+      </article>
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: .4; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+          opacity: .4;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, .4);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, .4);
+        </div>
+      </article>
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: .2; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+          opacity: .2;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, .2);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, .2);
+        </div>
+      </article>
+      <article class="fragment">
+        <div style="background-color: rgb(255, 0, 0); opacity: .1; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+          opacity: .1;
+        </div>
+        <div style="background-color: rgba(255, 0, 0, .1);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+          rgba(255, 0, 0, .1);
+        </div>
+      </article>
+
+
+  -
+    content: |
+      ### RGBA Colors</h3>
+
+      controls the opacity of a color
+
+      ```css
+      .example2 {
+        background-color: rgba(255, 0, 0, 0.8);
+      }
+      ```
+
+      color property using (red, green, blue, opacity)
+
+      opacity is a decimal value from 0 to 1
+
+      - 0 - not visible
+      - 1 - fully visible
+
+  -
+    content: |
+      ### Opacity
+
+      controls the opacity of an element
+
+      ```css
+      .example2 {
+        opacity: 0.8;
+      }
+      ```
+
+      decimal value from 0 to 1
+
+      - 0 - not visible
+      - 1 - fully visible
+
+  -
+    content: |
+      ### Develop It!
+
+      Change some colors to have alpha transparency or opacity.
+
+      Use [hex2rgba.devoth.com](http://hex2rgba.devoth.com) to convert HEX to RGBA.
+
+      Hint: Try making the navbar 80% opaque.

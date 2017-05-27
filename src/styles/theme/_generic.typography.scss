@@ -1,0 +1,178 @@
+// HEADERS
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1.125rem;
+  color: color(pink);
+  line-height: 1.2;
+  text-shadow: none;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 3em;
+  @include font(heading, bolder);
+  text-shadow: none;
+}
+
+h2 {
+  font-size: 2.25em;
+  color: color(pink);
+  @include font(heading, bolder);
+}
+
+h3 {
+  font-size: 2em;
+  color: color(pink);
+  @include font(body, lighter);
+}
+
+h2, h3 {
+  line-height: 1.6;
+}
+
+h4 {
+  font-size: 1.75em;
+  @include font(body, lighter);
+}
+
+h5 {
+  font-size: 1.25em;
+  @include font(body, lighter);
+}
+
+h6 {
+  font-size: 1em;
+  @include font(heading, bolder);
+}
+
+.dark h1 {
+  color: color(pink);
+}
+
+.dark h2 {
+  color: color(pink);
+}
+
+.short-title {
+  font-size: 0.875em;
+  color: color(pink);
+  @include font(heading, bolder);
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+}
+
+// Other type
+p {
+  margin: 1em 0;
+  line-height: 1.3;
+}
+
+ol,
+ul {
+  line-height: 1.2em;
+  font-size: 1em;
+  color: color(gray);
+  margin-top: 1em;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+pre code {
+  @include font(code, lighter);
+  padding: 0.7em;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+ol,
+dl,
+ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul ul {
+  list-style-type: square;
+}
+
+ul ul ul {
+  list-style-type: circle;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 40px;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba( gray(0), 0.05);
+  box-shadow: 0px 0px 2px rgba(gray(100), 0.2);
+}
+
+blockquote p:first-child,
+blockquote p:last-child {
+  display: inline-block;
+}
+
+q {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+small * {
+  vertical-align: top;
+}

@@ -1,0 +1,298 @@
+slides:
+  -
+    content: |
+      # Common Applications
+    options:
+      class: section-card
+  -
+    content: |
+      ### Common Applications
+
+      HTML &amp; CSS are awesome, right?
+
+      But how do people use them *really?*
+
+      Here's a few things we'll be covering today:
+
+      - Horizontal & fixed navigation <!-- .element: class="fragment" -->
+      - Heros with full bleed background images <!-- .element: class="fragment" -->
+      - Border-radius on images & elements <!-- .element: class="fragment" -->
+      - Custom font-faces <!-- .element: class="fragment" -->
+      - Three column layouts <!-- .element: class="fragment" -->
+      - Fancy buttons <!-- .element: class="fragment" -->
+
+  -
+    content: |
+      # Standard Practices
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### Standard Practices
+
+          <li class="fragment">Reset CSS files
+          <li class="fragment">Standard widths and sizes
+          <li class="fragment">Containers for layout
+
+  -
+    content: |
+      ### Reset CSS
+
+      Even though HTML is the structure and CSS is the design, some HTML elements have default styles
+
+      Different browsers display these things differently. A reset gets rid of these inconsistencies.
+
+      **Examples include:**
+
+      - Bulleted lists like this one have standard bullets
+      - Paragraphs &amp; headings have default padding
+      - Links are blue and underlined
+
+  -
+    content: |
+      ### Reset CSS
+
+      Most elements:
+
+      ```css
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      ```
+
+      Lists:
+      ```css
+      list-style: none;
+      ```
+
+  -
+    content: |
+      ## Reset CSS
+
+      <!-- We've done all the hard work for you! Instead of typing this out - we've included this in our example files. -->
+
+  -
+    content: |
+      ## Normalize CSS
+
+      We've done all the hard work for you! Instead of typing this out - we've included this in our example files.
+
+  -
+    content: |
+      ### Standard widths and sizes
+
+      - Screen sizes vary from computer to computer. Standardize your site on different screen sizes by defining specific widths.
+      - Wrap your content in containers to control the max width it can span across a screen.
+      - Keep in mind screen sizes also mean different font size display.
+      - Retina screens have a higher pixel density and a larger resolution, so fonts appear smaller.
+
+  -
+    content: |
+      ### Fixed vs. Fluid Width pages
+
+      #### Fixed
+
+      - Fixed websites have a set width for the wrapper, usually a Desktop viewport of 960px to 1024px.
+      - The elements inside the wrapper have a set width, or percentage of the wrapper width.
+      - No matter the screensize, the user always sees the same size site.
+
+  -
+    content: |
+      ### Fixed vs. Fluid Width pages
+
+      #### Fluid
+
+      - Majority of the components, including the wrapper, have percentages for their widths.
+      - The layout adjusts for the width of the user's screen resolution.
+      - Sounds like a responsive site right!? More on that later.
+
+  -
+    content: |
+      ### Containers
+
+      Wrappers are a good way to center content if the screen width is wider than your content.
+
+      ```css
+      .container {
+        width: 100%; /* take up full viewport width */
+        max-width: 1400px; /* if viewport is larger than 1440px,
+                        don't let it take up 100% */
+        margin: 0 auto; /* center content in the viewport */
+      }
+      ```
+
+      1. The container will take up 100% of the screen if the width of the viewport is less than 1440px.
+      2. If the viewport is wider than 1440px, it will reach it's max width, and become centered in the viewport.
+
+  -
+    content: |
+      # HTML5
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### HTML 5: What is it?
+
+      Formally, HTML5 is the [W3C’s specification](http://www.w3.org/TR/html5/) for the next version of HTML.
+
+      Informally, people use "HTML5" to refer to a whole set of new web standards and abilities:
+
+      - HTML5
+      - CSS3
+      - JavaScript
+
+  -
+    content: |
+      ## Quick History of HTML5
+
+      - **2004:** "WHAT" Working group formed. (WHATWG)<br>
+        Members from Apple, Mozilla, &amp; Opera set out to develop HTML5.
+      - **2008:** First verson of HTML5 published<br>
+        First draft is written, but changes are still coming. HTML5 is continually evolving.
+      - **2008:** Firefox 3 becomes HTML5 compatable.
+      - **Jan. 2010:** YouTube now offers HTML5 video player.
+
+  -
+    content: |
+      ## Okay, not that quick history of HTML5
+
+      - **April 2010:** Steve Jobs puts a big nail in Flash’s coffin with is “[Thougts on Flash](https://www.apple.com/hotnews/thoughts-on-flash/)” letter
+      - **Dec. 2010:** Chrome opens HTML5 web store.
+      - **Sept. 2011:** 34% of top 100 sites use HTML5
+      - **Sept. 2012:** WC3 proposes stable release of HTML5 by end of 2014!
+      - **Oct. 2014:** Final and complete!
+
+  -
+    content: |
+      ## What about the browsers?
+
+      Percentage of HTML5 Elements supported (As of [May 2017](http://html5test.com/results/desktop.html)):
+
+      - **Chrome 58:** 94% supported
+      - **Opera 44:** 94% supported
+      - **Firefox 53:** 85% supported
+      - **Safari 10.1:** 74% supported
+      - **Edge 15:** 85% supported
+      - **Internet Explorer 11:** 56% supporte d
+
+    notes: |
+      As of May 2017
+      Source: html5test.com
+
+  -
+    content: |
+      ### So what's so cool about it?
+
+      ![](images/html5.svg) <!-- .element: style="width:50%" class="no-border" -->
+
+      Too much to cover in our time together
+
+      But here are some highlights
+
+  -
+    content: |
+      ## Marks some old things obsolete
+      **Examples**
+
+      - Deprecated items (e.g. `frame, frameset, noframes`)
+      - Presentational elements and attributes replaced by CSS (e.g. `font, big, center`)
+
+      [Reference](http://dev.w3.org/html5/spec/single-page.html#obsolete)
+
+  -
+    content: |
+      ## Redefines a few things
+
+      Gives some old elements semantic meaning and separates them from presentation (e.g. `b, i, strong, em`)
+
+  -
+    content: |
+      ## HTML5 Doctype
+
+      ```html
+      <!DOCTYPE html>
+      ```
+
+      Minimum information required to ensure that a browser renders using standards mode
+
+  -
+    content: |
+      ## Old Doctypes
+
+      ```html
+      <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+      ```
+
+  -
+    content: |
+      ## New Structural Elements
+
+  -
+    content: |
+      ## <section>
+
+      - Groups together thematically related content
+      - Similar to prior use of the div, but div has no semantic meaning
+
+
+  -
+    content: |
+      ## <header>
+
+      - Container for a group of introductory or navigational aids
+      - Document can have multiple header elements
+      - E.g. one for the page, one for each section
+
+
+  -
+    content: |
+      ## <nav>
+
+      - Contains major navigational information
+      - Usually a list of links
+      - Often lives in the header
+      - E.g. site navigation
+
+
+  -
+    content: |
+      ## <footer>
+
+      - Contains information about its containing element
+      - E.g. who wrote it, copyright, links to related content, etc.
+      - Document can have multiple footer elements
+      - E.g. one for the page, one for each section
+
+
+  -
+    content: |
+      ## <aside>
+
+      - Tangentially related content
+      - E.g. sidebar, pull quotes
+
+
+  -
+    content: |
+      ## <article>
+
+      - Self-contained related content
+      - E.g. blog posts, news stories, comments, reviews, forum posts
+
+
+  -
+    content: |
+      ### Let's Develop It
+
+      - Use new HTML elements to layout the site
+      - Refer to the example design for hints

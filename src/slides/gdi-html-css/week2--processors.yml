@@ -1,0 +1,103 @@
+<section>
+  <h2>LESS &amp; SASS?!</h2>
+  <p>These are two very popular CSS preprocessors</p>
+</section>
+<section>
+  <h2>What the what is a CSS Preprocessor?</h2>
+  <p>CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.</p>
+  <p>Since we're not writing straight CSS, we're not limited to the restrictions of the language.</p>
+</section>
+<section>
+  <h2>What they do</h2>
+  <ul>
+  <li><strong>Mixins – </strong>Classes for classes.</li>
+  <li><strong>Parametric mixins – </strong>Classes to which you can pass parameters, like functions.</li>
+  <li><strong>Nested Rules – </strong>Classes within classes, which cut down on repetitive code</li>
+  <li><strong>Operations – </strong>Math within CSS</li>
+  <li><strong>Color functions – </strong>Edit your colors</li>
+  <li><strong>Namespaces – </strong>Groups of styles that can be called by references</li>
+  <li><strong>Scope – </strong>Make local changes to styles</li>
+  <li><strong>JavaScript evaluation – </strong>JavaScript expressions evaluated in CSS</li>
+  </ul>
+</section>
+<section>
+  <h2>Some highlights</h2>
+  <p>Mixins!</p>
+<pre><code>/* LESS */ .rounded-corners (@radius: 5px) {
+-webkit-border-radius: @radius;
+-moz-border-radius: @radius;
+-ms-border-radius: @radius;
+-o-border-radius: @radius;
+border-radius: @radius;
+}
+
+#footer {
+.rounded-corners(10px);
+}</code></pre>
+<pre><code>
+/* Compiled CSS read by the browser */
+#footer {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+-ms-border-radius: 10px;
+-o-border-radius: 10px;
+border-radius: 10px;
+}</code></pre>
+</section>
+<section>
+<h2>Nested Rules</h2>
+<pre><code>// LESS
+
+#header {
+h1 {
+font-size: 26px;
+font-weight: bold;
+}
+p { font-size: 12px;
+a { text-decoration: none;
+&:hover { border-width: 1px }
+}
+}
+}</code></pre>
+<pre><code>/* Compiled CSS */
+
+#header h1 {font-size: 26px;font-weight: bold;}
+#header p {font-size: 12px;}
+#header p a {text-decoration: none;}
+#header p a:hover {border-width: 1px;}</code></pre>
+
+</section>
+<section>
+<h2>Functions</h2>
+<p>LESS</p>
+<pre><code>p {
+color: lighten(@base, 5%);
+}</code></pre>
+<p>SASS</p>
+<pre><code>p {
+color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
+}</code></pre>
+</section>
+<section>
+<h2>Variables</h2>
+<p>LESS</p>
+<pre><code>// LESS
+@blue: #199FD9;
+p {
+color: @blue;
+}
+// Compiled CSS
+p {
+color: #199FD9;
+}</code></pre>
+<p>SASS</p>
+<pre><code>// SASS
+$blue: #199FD9;
+p {
+color: $blue;
+}
+// Compiled CSS
+p {
+color: #199FD9;
+}</code></pre>
+</section>

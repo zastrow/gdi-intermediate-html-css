@@ -1,0 +1,12 @@
+.section-card {
+  background-color: color(pink);
+
+  h1 {
+    color: gray(0);
+    margin-bottom: 1em;
+  }
+
+  a[href] {
+    color: inherit;
+  }
+}

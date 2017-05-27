@@ -1,0 +1,72 @@
+slides:
+  -
+    content: |
+      ![Gir Develop It](images/gdi_logo_badge.png) <!-- .element: style="padding: 10px; width:400px;" -->
+      ## Intermediate HTML/CSS
+      #### &amp; Intro to Responsive Design
+
+    notes: |
+      Say hi
+    options:
+        id: start
+        class: title-card
+
+  -
+    content: |
+      ## Welcome!
+      #### Wifi Info <!-- .element: class="blue" -->
+
+      **Network:** Build Right<br>
+      **Password:**
+
+      ## Download workshop files
+      Please download workshop files at<br>
+      [paz.cc/gdi-html-css-files](http://girldevelopit.github.io/gdi-featured-intermediate-html-css/workshop-files.zip)
+  -
+    content: |
+      ## Thanks to our host:
+      ### Sparkbox
+  -
+    content: |
+      ### Class notes
+      All slides are available at:<br>
+      [paz.cc/gdi-html-css-slides](http://girldevelopit.github.io/gdi-featured-intermediate-html-css)
+  -
+    content: |
+      ### Welcome!
+
+      <div class="left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class="green">Some "rules"</p>
+          <ul>
+              <li>We are here for you!</li>
+              <li>Every question is important</li>
+              <li>Help each other</li>
+              <li>Have fun</li>
+          </ul>
+      </div>
+  -
+    content: |
+      ### Thank you to our Teaching Assistants today
+  -
+    content: |
+      ### About your instructor
+  -
+    content: |
+      ### Now it's all about you!
+
+      - Tell us who you are.
+      - What do you hope to get out of this class?
+      - Unlimited amount of money - where would you travel to?
+  -
+    content: |
+      ## What we'll be covering in this class
+
+      We'll be jumping into HTML/CSS right where the beginner class left off.
+
+      We will not be going over the previous class, we just don't have the time!
+  -
+    content: |
+      ### We will be building a profile site from scratch
+
+      ![today's project](images/gdi-profile-layout.png)

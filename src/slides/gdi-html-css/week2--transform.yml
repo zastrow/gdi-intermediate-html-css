@@ -1,0 +1,111 @@
+slides:
+  -
+    content: |
+      ## Transforms
+      #### Allow elements rendered by CSS to be transformed in space</h4>
+
+  -
+    content: |
+      ## Transform: Scale
+
+      scales the element
+
+      `transform:  scale(sx[, sy]);`
+
+      <article class="transform-scale">
+        <div class="example1">
+          scale(2);
+        </div>
+
+        <div class="example2">
+          scale(0.5);
+        </div>
+
+        <div class="example4">
+          scale(1, 0.5);
+        </div>
+
+        <div class="example3">
+          scale(0.5, 1);
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Transform: Rotate
+
+      rotates the element degrees around its origin
+
+      transform: rotate(angle);
+
+      <article class="transform-rotate">
+        <div class="example1">
+          rotate(45deg);
+        </div>
+
+        <div class="example2">
+          rotate(-45deg);
+        </div>
+
+        <div class="example3">
+          rotate(-90deg);
+        </div>
+
+        <div class="example4">
+          rotate(180deg);
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Transform: Translate
+
+      move element using x and y coordinates
+
+      transform: translate(ax[, ay]);
+
+      <article class="transform-translate">
+        <div class="example1">
+          translate(20px);
+        </div>
+
+        <div class="example2">
+          translate(0, 20px);
+        </div>
+
+        <div class="example3">
+          translate(-20px, 20px);
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Transform-origin
+
+      the x and y origin for transformation
+
+      transform-origin: x-offset y-offset;
+
+      <article class="transform-origin">
+        <div class="example1">
+          transform-origin(top, left)
+        </div>
+
+        <div class="example2">
+          transform-origin(50%, 50%)
+        </div>
+
+        <div class="example3">
+          transform-origin(0, 50px)
+        </div>
+      </article>
+
+  -
+    content: |
+      ### Develop It!
+
+      Pick a transform property and apply it to an element.
+
+      Hint: The transforms, like transitions, will only work if the element has a pseudo class, like :hover
+
+      Extra Credit: Use it with transition to make the transform smoother.
