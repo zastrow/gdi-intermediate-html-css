@@ -2,6 +2,7 @@ slides:
   -
     content: |
       # Hero Section
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
     options:
       class: section-card
 
@@ -21,26 +22,44 @@ slides:
     content: |
       ![](images/apple.png)
 
-  -
-    content: |
-      ![](images/uber.png)
+    options:
+      class: full-page-image
 
   -
     content: |
-      ![](images/fostr.png)
+      ![](images/slack.png)
+
+    options:
+      class: full-page-image
 
   -
     content: |
-      ![](images/ndesign.png)
+      ![](images/atom.png)
+
+    options:
+      class: full-page-image
 
   -
     content: |
-      ![](images/karma.png)
+      ![](images/electron.png)
+
+    options:
+      class: full-page-image
 
   -
     content: |
-      ### Hero: HTML
+      ![](images/wonderful-machine.png)
 
+    options:
+      class: full-page-image
+
+  -
+    content: |
+      # HTML
+      ###### Hero<!-- .element: class="short-title" -->
+
+  -
+    content: |
       Our Hero `section` should look a little something like this:
 
       ```html
@@ -53,8 +72,11 @@ slides:
 
   -
     content: |
-      ### Hero: CSS
+      # CSS
+      ###### Hero<!-- .element: class="short-title" -->
 
+  -
+    content: |
       Now is where the fun really happens!
 
       ```css
@@ -67,23 +89,21 @@ slides:
 
   -
     content: |
-      ### Hero: CSS
-
-      Let's give it a height and some padding too.
+      Let’s give it a height and some padding too.
 
       ```css
       #hero {
         background: url(../images/zebra.jpg) no-repeat top left;
         color: #fafafa;
         text-align: center;
-        height: 350px;
-        padding: 25px 0;
+        height: 21.875em;
+        padding: 1.5625em 0;
       }
       ```
 
       Remember our Box Model. Padding adds to the height & width of elements.
 
-      So the height of our hero will be `400px`
+      So the height of our hero will be `25em`
 
   -
     content: |
@@ -97,15 +117,18 @@ slides:
 
   -
     content: |
-      ## Hero: Profile Image
+      # Profile Image
+      ###### Hero<!-- .element: class="short-title" -->
 
-      Let's make the profile image a little smaller.
+  -
+    content: |
+      Let’s make the profile image a little smaller.
 
-      We'll use CSS Targeting with the descendant selector to style the image.
+      We’ll use CSS Targeting with the descendant selector to style the image.
 
       ```css
       #hero img {
-        width: 150px;
+        width: 9.375em;
       }
       ```
 
@@ -113,7 +136,8 @@ slides:
 
   -
     content: |
-        # Border Magic
+      # Border Magic
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
     options:
         class: section-card
 
@@ -121,11 +145,12 @@ slides:
     content: |
       ### Turning squares into circles with magic!
 
-      Okay, it's not really magic, it's just a bit of CSS3.
+      Okay, it’s not really magic, it’s just a bit of CSS3.
 
   -
     content: |
-      ### Border-Radius
+      ## Border-Radius
+      <hr>
 
       Simply put, allows you to create rounded corners on boxes.
 
@@ -133,60 +158,73 @@ slides:
 
   -
     content: |
-      ### Border-radius
+      <div>
 
-      20px radius on all corners
-
+      `1.25em` radius on all corners
+      </div>
+      <div class="util-center">
       ```css
       #hero img {
-        border-radius: 20px;
+        border-radius: 1.25em;
       }
       ```
 
       ![](images/radius-20.png)
+      </div>
+
+    options:
+      class: grid grid-1-2
 
   -
     content: |
-      ### Border-radius
+      <div>
 
-      10px radius on top left & bottom right
+      `0.625em` radius on top left and bottom&nbsp;right
 
-      40px on top right & bottom left
-
+      `2.5em` on top right and bottom left
+      </div>
+      <div class="util-center">
       ```css
       #hero img {
-        border-radius: 10px 40px;
+        border-radius: 0.625em 2.5em;
       }
       ```
 
       ![](images/radius-10-40.png)
+      </div>
 
+    options:
+      class: grid grid-1-2
   -
     content: |
-      ### Border-radius
+      <div>
 
-      10px radius on top left
+      `0.625em` radius on top left
 
-      20px radius top right
+      `1.25em` radius top right
 
-      40px radius bottom right
+      `2.5625em` radius bottom right
 
-      80px radius bottom left
-
+      `5em` radius bottom left
+      </div>
+      <div class="util-center">
       ```css
       #hero img {
-        border-radius: 10px 20px 40px 80px;
+        border-radius: 0.625em 1.25em 2.5em 5em;
       }
       ```
 
       ![](images/radius-10-20-40-80.png)
+      </div>
+
+    options:
+      class: grid grid-1-2
 
   -
     content: |
-      ### Border-radius
-
       50% radius on all corners
 
+      <div class="util-center">
       ```css
       #hero img {
         border-radius: 50%;
@@ -194,89 +232,39 @@ slides:
       ```
 
       ![](images/radius-50.png)
-
-  -
-    content: |
-      # Vendor Prefixes
+      </div>
 
     options:
-        class: section-card
+      class: grid grid-1-2
 
   -
     content: |
-      ### Vendor Prefixes
-
-      HTML5 and CSS3 are still new!
-
-      This is great, but it means that not all browsers treat new CSS3 properties the same
-
-  -
-    content: |
-      ### Vendor Prefixes
-
-      Flags it as a work-in-progress
-
-      When finished, the browser should support the non-prefixed name
-
-  -
-    content: |
-      ### Vendor Prefixes
-
-      Each browser has their own:
-
-      - **Chrome:** `-webkit-`
-      - **Firefox:** `-moz-`
-      - **Safari:** `-webkit-`
-      - **Opera:** `-o-`
-      - **Internet Explorer:** `-ms-`
-
-  -
-    content: |
-      <h3>Using Prefixes</h3>
-      ```css
-      #hero img {
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      }```
-      <p>Order matters! The non-prefixed version should always go last.</p>
-
-  -
-    content: |
-      ### NOTE:
-      While you should always use the vendor prefixes when writing code, today we're just going to use the non-prefixed property.
-
-      This is to save time during the code exercises
-
-  -
-    content: |
-      # Back to our Hero!
-
-  -
-    content: |
-      ### Background-size
-      Notice how the image is too large for the section? Let's fix that with a new property called `background-size`
+      <div class="grid grid-1-2 util-margin-b1">
+        <div>
+        <p>Notice how the image is too large for the section? Let’s fix that with a new property called `background-size`.</p>
+        </div>
+        <div>
+        <p>`cover` scales the image to the largest size such that both its width and its height can fit inside the content area.</p>
+        </div>
+      </div>
 
       ```css
       #hero {
         background: url(../images/zebra.jpg) no-repeat top left;
         color: #fafafa;
         text-align: center;
-        height: 350px;
-        padding: 25px 0;
+        height: 21.875em;
+        padding: 1.5625em 0;
         background-size: cover;
       }
       ```
-      `cover` scales the image to the largest size such that both its width and its height can fit inside the content area.
-
 
   -
     content: |
-      ### Develop It!
+      ### Let’s Develop It!
+      <hr>
 
-      Let's make some small tweaks to the Hero
+      Let’s make some small tweaks to the Hero
 
       - Move the image down from the top
       - Adjust the font size of the header

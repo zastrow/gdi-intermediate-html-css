@@ -2,4 +2,25 @@
   pre {
     width: 100%;
   }
+  pre, code {
+    height: 100%;
+    max-height: none;
+    box-sizing: border-box;
+  }
+}
+
+.slides > .code-full {
+  padding: 1em;
+}
+
+.code-full.slide-background {
+  background-color: gray(90) !important;
+  display: block !important;
+}
+
+.grid {
+  pre, code {
+    height: auto;
+    max-height: 37.5rem;
+  }
 }

@@ -1,10 +1,43 @@
 // Title Slides
-.title h1,
-.title h2,
-.title h3 {
-  color: color(pink);
+.title-card {
+
+  .gdi-logo {
+    height: 20%;
+    margin-bottom: 2em;
+  }
+
+  .title {
+    @include font(body, bolder);
+    font-size: 2.5em;
+    color: gray(0);
+  }
+
+  .subtitle {
+    @include font(heading, lighter);
+    font-size: 2em;
+    color: gray(0);
+  }
+
+  p {
+    @include font(body, lighter);
+    font-size: 1.5em;
+    color: mix(gray(0), color(pink), 80%);
+  }
+
+  a {
+    color: color(blue);
+  }
 }
 
-.title a {
-  color: color(blue);
+.title-card .gdi {
+  fill: mix(gray(0), color(pink), 80%);
+}
+
+.title-card .splash {
+  fill: mix(gray(0), color(pink), 80%);
+}
+
+.title-card.slide-background {
+  background-color: color(pink) !important;
+  display: block !important;
 }

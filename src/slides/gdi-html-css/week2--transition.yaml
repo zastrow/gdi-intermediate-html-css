@@ -1,0 +1,123 @@
+slides:
+  -
+    content: |
+      ## Transitions
+      #### Allow property changes in CSS values to occur smoothly over a specified duration
+      #### Create some awesome effects without any JavaScript
+
+  -
+    content: |
+      ## Transition Triggers
+
+      - Hover
+      - Mouse click
+      - Focus state
+      - Active state
+      - Changes to the element
+
+  -
+    content: |
+      ## Transition Properties
+
+      - transition-property
+      - transition-duration
+      - transition-delay
+      - transition-timing-function
+
+  -
+    content: |
+      ## transition-property
+
+      the names of CSS properties that should be transitioned
+
+      ```
+      .example1 { transition-property: background-color; }
+      ```
+
+      set to <strong>all</strong> to transition all CSS properties
+
+      ```
+      .example2 { transition-property: all; }
+      ```
+
+  -
+    content: |
+      ## transition-property
+
+      [animatable examples](http://leaverou.github.com/animatable)
+
+      [full list of supported properties](http://www.w3.org/TR/css3-transitions/#animatable-css)
+
+  -
+    content: |
+      ## transition-duration
+
+      the number of seconds or milliseconds a transition animation should take to complete
+
+      ```
+      .example1 { transition-duration: 2s; }
+      ```
+
+      <div class="sliders" style="width:40%;">
+        <span class="value">2</span>s duration
+        <input type="range" min="0" max="10" value="3">
+      </div>
+      <div class="example">
+      </div>
+
+  -
+    content: |
+      ## transition-delay
+
+      delay transitions from the moment a trigger happens
+
+      ```
+      .example1 { transition-delay: 0s; }
+      .example2 { transition-delay: 1s; }
+      .example3 { transition-delay: 2s; }
+      .example4 { transition-delay: 3s; }
+      ```
+
+      <article>
+        <div class="example4">3</div>
+        <div class="example3">2</div>
+        <div class="example2">1</div>
+        <div class="example1">0</div>
+      </article>
+
+
+  -
+    content: |
+      ## transition-timing-function
+
+      determines how intermediate values are calculated
+
+      ```
+      .example { transition-timing-function: ease; }
+      ```
+
+      <article>
+        <div class="ease">ease</div>
+        <div class="linear">linear</div>
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+        <div class="cubic-bezier">cubic-bezier</div>
+      </article>
+      [cubic-bezier](http://cubic-bezier.com)
+
+  -
+    content: |
+      ### That’s a lot to remember right?
+
+      Lucky for us, someone has created a tool that makes our lives easier.
+
+      [css3generator.com](http://css3generator.com/)
+
+  -
+    content: |
+      ### Develop It!
+
+      Pick a transition property and apply it to an element.
+
+      Hint: The transition will only work if it has a pseudo class, like `:hover`

@@ -1,0 +1,188 @@
+slides:
+  -
+    content: |
+      # HTML5
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### HTML 5: What is it?
+
+      Formally, HTML5 is the [W3C’s specification](http://www.w3.org/TR/html5/)<br>for the next version of HTML.
+
+      Informally, people use "HTML5" to refer to a whole<br>set of new web standards and abilities:
+
+      - HTML5
+      - CSS3
+      - ES6 (JavaScript)
+
+  -
+    content: |
+      ## Quick History of HTML5
+
+      - **2004:** "WHAT" Working group formed (WHATWG),<br>including members from Apple, Mozilla, &amp; Opera<br>set out to develop HTML5.
+      - **2008:** First draft of HTML5 published, but changes<br>are still coming. HTML5 is continually evolving.
+      - **2008:** Firefox 3 becomes HTML5 compatable.
+      - **Jan. 2010:** YouTube now offers an HTML5 video<br>player in addition to their popular Flash player.
+
+  -
+    content: |
+      ## Okay, not that quick history of HTML5
+
+      - **April 2010:** Steve Jobs puts a big nail in Flash’s<br>coffin with his “[Thougts on Flash](https://www.apple.com/hotnews/thoughts-on-flash/)” letter
+      - **Dec. 2010:** Chrome opens [HTML5 web store](https://chrome.google.com/webstore/category/apps).
+      - **Sept. 2011:** 34% of top 100 sites use HTML5
+      - **Sept. 2012:** W3C proposes stable release of<br>HTML5 by end of 2014!
+      - **Oct. 2014:** Final and complete!
+
+  -
+    content: |
+      ## 10 years from start to finish <!-- .element: class="util-gray" -->
+      #### Web standardization can<br>be a rather slow process
+
+  -
+    content: |
+      ### HTML5 Browser Support
+
+      - **Chrome 58:** 94% supported
+      - **Opera 44:** 94% supported
+      - **Firefox 53:** 85% supported
+      - **Safari 10.1:** 74% supported
+      - **Edge 15:** 85% supported
+      - **Internet Explorer 11:** 56% supported
+
+      <small>
+      Percentage of HTML5 Elements supported (As of [May 2017](http://html5test.com/results/desktop.html))
+      </small>
+
+    notes: |
+      As of May 2017
+      Source: html5test.com
+
+  -
+    content: |
+      <div class="grid grid-1-2"><div>![HTML5](images/html5.svg)</div><div class="util-left">
+      ### So what's so cool about HTML5?
+
+      There is far too much to cover in our time together
+
+      But here are some highlights
+      </div>
+      </div>
+
+  -
+    content: |
+      ## Marks some old things obsolete
+      **Examples**
+
+      - Deprecated items (e.g. `frame, frameset, noframes`)
+      - Presentational elements and attributes replaced by CSS (e.g. `font, big, center`)
+
+      [Reference](http://dev.w3.org/html5/spec/single-page.html#obsolete)
+
+  -
+    content: |
+      ## Redefines a few things
+
+      Gives some old elements semantic meaning and separates them from presentation (e.g. `b, i, strong, em`)
+
+  -
+    content: |
+      ## HTML5 Doctype
+
+      ```html
+      <!DOCTYPE html>
+      ```
+
+      Minimum information required to ensure that a browser renders using standards mode
+
+    notes: |
+      The `doctype` is a required piece at the top of an HTML file. That little line tells the browser how to treat this HTML file&mdash;what sort of content to expect.
+
+  -
+    content: |
+      ## Old Doctypes
+
+      ```html
+      <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+      ```
+    notes: |
+      This is a welcome change for long-time web developers as the old doctypes were…more substantial.
+
+  -
+    content: |
+      ## New Structural Elements
+
+  -
+    content: |
+      ## `<section>`
+      <hr><br>
+
+      - Groups together thematically related content
+      - Similar to prior use of the `div`, but `div` has no semantic meaning
+
+
+  -
+    content: |
+      ## `<header>`
+      <hr><br>
+
+      - Container for a group of introductory or navigational aids
+      - Document can have multiple header elements
+      - E.g. one for the page, one for each section
+
+
+  -
+    content: |
+      ## `<nav>`
+      <hr><br>
+
+      - Contains major navigational information
+      - Usually a list of links
+      - Often lives in the header
+      - E.g. site navigation
+
+
+  -
+    content: |
+      ## `<footer>`
+      <hr><br>
+
+      - Contains information about its containing element
+      - E.g. who wrote it, copyright, links to related content, etc.
+      - Document can have multiple footer elements
+      - E.g. one for the page, one for each section
+
+
+  -
+    content: |
+      ## `<aside>`
+      <hr><br>
+
+      - Tangentially related content
+      - E.g. sidebar, pull quotes
+
+
+  -
+    content: |
+      ## `<article>`
+      <hr><br>
+
+      - Self-contained related content
+      - E.g. blog posts, news stories, comments, reviews, forum posts
+
+
+  -
+    content: |
+      ## Let's Develop It!
+      <hr><br>
+
+      - Use new HTML elements to layout the site
+      - Refer to the example design for hints

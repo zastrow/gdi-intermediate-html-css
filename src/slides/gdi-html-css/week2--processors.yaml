@@ -1,0 +1,145 @@
+slides:
+  -
+    content: |
+      # CSS Processors
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## LESS &amp; SASS?!
+
+      These are two very popular CSS preprocessors
+
+  -
+    content: |
+      ## What the what is a CSS Preprocessor?
+
+      CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.
+
+      Since we’re not writing straight CSS, we’re not limited to the restrictions of the language.
+
+  -
+    content: |
+      ## What they do
+
+      - **Mixins – **Classes for classes.
+      - **Parametric mixins – **Classes to which you can pass parameters, like functions.
+      - **Nested Rules – **Classes within classes, which cut down on repetitive code
+      - **Operations – **Math within CSS
+      - **Color functions – **Edit your colors
+      - **Namespaces – **Groups of styles that can be called by references
+      - **Scope – **Make local changes to styles
+      - **JavaScript evaluation – **JavaScript expressions evaluated in CSS
+
+  -
+    content: |
+      ## Some highlights
+
+      Mixins!
+
+      ```
+      /* LESS */
+      .rounded-corners (@radius: 5px) {
+        -webkit-border-radius: @radius;
+        -moz-border-radius: @radius;
+        -ms-border-radius: @radius;
+        -o-border-radius: @radius;
+        border-radius: @radius;
+      }
+
+      #footer {
+        .rounded-corners(10px);
+      }
+      ```
+
+      ```
+      /* Compiled CSS read by the browser */
+      #footer {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+      }
+      ```
+
+  -
+    content: |
+      ## Nested Rules
+      ```
+      // LESS
+
+      #header {
+      h1 {
+        font-size: 26px;
+        font-weight: bold;
+      }
+        p { font-size: 12px;
+          a { text-decoration: none;
+            &:hover { border-width: 1px }
+          }
+        }
+      }
+      ```
+
+      ```
+      /* Compiled CSS */
+      #header h1 {font-size: 26px;font-weight: bold;}
+      #header p {font-size: 12px;}
+      #header p a {text-decoration: none;}
+      #header p a:hover {border-width: 1px;}
+      ```
+
+  -
+    content: |
+      ## Functions
+
+      LESS
+
+      ```
+      p {
+        color: lighten(@base, 5%);
+      }
+      ```
+
+      SASS
+
+      ```
+      p {
+        color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
+      }
+      ```
+
+  -
+    content: |
+      ## Variables
+
+      LESS
+
+      ```
+      // LESS
+      @blue: #199FD9;
+      p {
+        color: @blue;
+      }
+      // Compiled CSS
+      p {
+        color: #199FD9;
+      }
+      ```
+
+      SASS
+
+      ```
+      // SASS
+      $blue: #199FD9;
+      p {
+        color: $blue;
+      }
+      // Compiled CSS
+      p {
+        color: #199FD9;
+      }
+      ```

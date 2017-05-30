@@ -1,0 +1,56 @@
+slides:
+  -
+    content: |
+      ## Responsive frameworks
+
+      Download a pre-built framework that has basic styles already set up.
+
+      - Fluid grids
+      - Flexible images
+      - Responsive media queries
+      - Styles for buttons and forms, because they’re a pain!
+      - Lots of base styles like `.pull-right`, `.btn`, etc.
+
+
+  -
+    content: |
+      ## Bootstrap
+
+      By far the most popular front-end framework out there.
+
+      ![images/bootstrap.png] <!-- .element: style="height:400px" -->
+
+      [Download](http://getbootstrap.com)
+
+
+  -
+    content: |
+      ## Foundation
+
+      Another very popular framework that is just as robust at bootstrap - but in a different way.
+
+      ![images/foundation.png] <!-- .element: style="height:400px" -->
+
+      [Download](http://foundation.zurb.com)
+
+  -
+    content: |
+      ## What they include
+
+      - Fully responsive out of the box
+      - Embraces Mobile First standards
+      - Compiled CSS for all sorts of components
+      - LESS or SASS stylesheets for rapid updates
+      - Javascript for popular components
+      - Pre-set styles for icons and buttons
+      - Includes Glyphic icon set (awesome!)
+
+
+  -
+    content: |
+      ## What are the cons?
+
+      - Default styles are&hellip;default and not very exciting
+      - Requires a fair amount of customization to make a unique looking site
+      - The documentation is daunting and can be very indimidating
+      - Remembering all the class names can be overwhelming

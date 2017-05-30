@@ -1,0 +1,124 @@
+slides:
+  -
+    content: |
+      ## CSS Gradients
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## Gradients
+
+      Build gradients with CSS - because doing it with images is annoying!
+
+  -
+    content: |
+      ## Linear gradients
+
+      ```css
+      .linear-example1 {
+        background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+      }
+      .linear-example2 {
+        background-image: linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
+      }
+      .linear-example3 {
+        background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
+      }
+      ```
+      <article class="gradients">
+        <div class="linear-example1">
+        </div>
+        <div class="linear-example2">
+        </div>
+        <div class="linear-example3">
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Linear gradients
+
+      ```css
+      .linear-example4 {
+      background-image: linear-gradient(red, white);
+      }
+      .linear-example5 {
+      background-image: linear-gradient(right, red, white);
+      }
+      .linear-example6 {
+      background-image: linear-gradient(bottom right, red, white);
+      }
+      ```
+      <article class="gradients">
+        <div class="linear-example4">
+        </div>
+        <div class="linear-example5">
+        </div>
+        <div class="linear-example6">
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Radial gradients
+
+      ```
+      .radial-example1 {
+      background-image: radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet);
+      }
+      .radial-example2 {
+      background-image: radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet);
+      }
+      .radial-example3 {
+      background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
+      }
+      ```
+      <article class="gradients">
+        <div class="radial-example1">
+        </div>
+        <div class="radial-example2">
+        </div>
+        <div class="radial-example3">
+        </div>
+      </article>
+
+  -
+    content: |
+      ## Radial gradients
+
+      ```
+      .radial-example4 {
+        background-image: radial-gradient(circle cover, red, white);
+      }
+      .radial-example5 {
+        background-image: radial-gradient(0 0, circle, red, white);
+      }
+      .radial-example6 {
+        background-image: radial-gradient(0 50%, circle, red, white);
+      }
+      ```
+      <article class="gradients">
+        <div class="radial-example4">
+        </div>
+        <div class="radial-example5">
+        </div>
+        <div class="radial-example6">
+        </div>
+      </article>
+
+  -
+    content: |
+      ## CSS gradients are a pain to do from scratch
+
+      That’s why people have made things like the [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor) to make our lives easier!
+
+  -
+    content: |
+      ### Develop It!</h3>
+
+      Add a background gradient to a section of your site
+
+    notes: |
+      End of Class 3 in 4 week sequence

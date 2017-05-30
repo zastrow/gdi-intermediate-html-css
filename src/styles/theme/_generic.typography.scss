@@ -1,6 +1,6 @@
 // HEADERS
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1.125rem;
+  margin: 0;
   color: color(pink);
   line-height: 1.2;
   text-shadow: none;
@@ -9,38 +9,35 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  @include font(heading, bolder);
+  @include font(heading, lighter);
   text-shadow: none;
 }
 
 h2 {
   font-size: 2.25em;
   color: color(pink);
-  @include font(heading, bolder);
+  @include font(heading, lighter);
 }
 
 h3 {
   font-size: 2em;
   color: color(pink);
-  @include font(body, lighter);
-}
-
-h2, h3 {
-  line-height: 1.6;
+  @include font(heading, lighter);
 }
 
 h4 {
   font-size: 1.75em;
-  @include font(body, lighter);
+  @include font(heading, lighter);
 }
 
 h5 {
-  font-size: 1.25em;
-  @include font(body, lighter);
+  font-size: 1.5em;
+  @include font(heading, lighter);
 }
 
 h6 {
   font-size: 1em;
+  text-transform: uppercase;
   @include font(heading, bolder);
 }
 
@@ -54,29 +51,59 @@ h6 {
 
 .short-title {
   font-size: 0.875em;
-  color: color(pink);
+  color: mix(color(pink), gray(0), 40%);
   @include font(heading, bolder);
   text-transform: uppercase;
   letter-spacing: 0.0625em;
+  position: absolute;
+  margin: 0;
+  top: 2em;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 // Other type
 p {
-  margin: 1em 0;
+  font-size: 1.25em;
+  margin: 0;
   line-height: 1.3;
+
+  &:empty {
+    display: none;
+  }
+}
+
+li {
+  position: relative;
+}
+
+li + li {
+  margin-top: 0.5em;
 }
 
 ol,
 ul {
-  line-height: 1.2em;
-  font-size: 1em;
+  line-height: 1.2;
+  font-size: 1.25em;
   color: color(gray);
-  margin-top: 1em;
+  margin: 0;
 }
 
-ul {
-  list-style: none;
-  text-align: center;
+h1, h2, h3, h4, h5, h6, p, div, ol, ul, blockquote, pre {
+  &:not(:empty) + h1,
+  &:not(:empty) + h2,
+  &:not(:empty) + h3,
+  &:not(:empty) + h4,
+  &:not(:empty) + h5,
+  &:not(:empty) + h6,
+  &:not(:empty) + blockquote,
+  &:not(:empty) + p,
+  &:not(:empty) + ol,
+  &:not(:empty) + ul,
+  &:not(:empty) + pre {
+    margin-top: 1em;
+  }
 }
 
 pre code {
@@ -89,16 +116,8 @@ b {
   font-weight: bold;
 }
 
-em {
+em, i {
   font-style: italic;
-}
-
-ol,
-dl,
-ul {
-  display: inline-block;
-  text-align: left;
-  margin: 0 0 0 1em;
 }
 
 ol {
@@ -106,15 +125,32 @@ ol {
 }
 
 ul {
-  list-style-type: disc;
+  list-style: none;
+  text-align: center;
+  li::before {
+    position: absolute;
+    right: calc(100% + 0.25em);
+    content: '\25B8';
+    color: color(pink);
+  }
+}
+
+ol,
+ul,
+dl {
+  text-align: left;
 }
 
 ul ul {
-  list-style-type: square;
+  li::before {
+    content: '-';
+  }
 }
 
 ul ul ul {
-  list-style-type: circle;
+  li::before {
+    content: '•';
+  }
 }
 
 ul ul,
@@ -122,7 +158,7 @@ ul ol,
 ol ol,
 ol ul {
   display: block;
-  margin-left: 40px;
+  margin-left: 2.5rem;
 }
 
 dt {
@@ -130,7 +166,7 @@ dt {
 }
 
 dd {
-  margin-left: 40px;
+  margin-left: 2.5rem;
 }
 
 q,
@@ -142,11 +178,10 @@ blockquote {
   display: block;
   position: relative;
   width: 70%;
-  margin: 20px auto;
-  padding: 5px;
+  margin: 1.5rem auto;
+  padding: 0.25rem;
   font-style: italic;
   background: rgba( gray(0), 0.05);
-  box-shadow: 0px 0px 2px rgba(gray(100), 0.2);
 }
 
 blockquote p:first-child,

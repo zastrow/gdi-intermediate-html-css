@@ -1,72 +1,105 @@
 slides:
   -
     content: |
-      ![Gir Develop It](images/gdi_logo_badge.png) <!-- .element: style="padding: 10px; width:400px;" -->
-      ## Intermediate HTML/CSS
-      #### &amp; Intro to Responsive Design
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 215" class="gdi-logo">
+        <g fill-rule="evenodd">
+          <path class="splash" d="M444.6 188.5C434 174 423 140 441 131.5c20.8-9.7 25.7 16 16 24-10 8.2-12.4 33-12.4 33zm-12 10.6c-8-8-17-15-26.8-21-12.5-7-28.2-11.2-42.2-15-35.8-10-16.4-72 30.4-37.7 22.2 16 30.7 47.6 38.6 74.6zM422 140s-31-47-31.3-98.2c-.2-42.8 46.5-52 59.4-28.3 15 27-6 50.4-15 66.3-10.3 19-12.3 60-12.3 60z"/>
+          <path class="gdi" fill-rule="nonzero" d="M7 201.7l11.8-26c12.6 7 25 11.2 41.3 11.2 24 0 35-12 35-34v-6c-10 12.2-21 20-40 20-28 0-54-21-54-57v-.6c0-36.4 26-57 54-57 19 0 30 8 40 18.2V55h34v95c0 22-5 37.8-15.2 48-11.4 11.4-29 16.5-52.6 16.5-20 0-38.4-4.6-54-12.8zm88-91v-.5C95 93.5 82 82 65 82c-16.7 0-29.4 11.4-29.4 28v.4c0 17 12.7 28.3 29.6 28.3 17 0 30-11.7 30-28.4zm42.6 6v-.4c0-40.8 26.6-63 55.5-63 19 0 30 8.4 38 18.2V11.3h35v166.3h-34V160c-8.3 11.4-20 20-38 20-28.3 0-55.4-22.4-55.4-63.2zm94 0v-.4c0-20.3-13.4-33.7-29.6-33.7-16.2 0-29.8 13.2-29.8 33.7v.5c0 20.3 13.7 33.7 29.8 33.7 16.2 0 29.6-13.4 29.6-33.7zm50.8-105.4H319V42h-36.6V11.4zm1 44.2H318v122h-34.6v-122z"/>
+        </g>
+      </svg>
+
+      # Intermediate HTML and CSS <!-- .element: class="title" -->
+      ## Introduction to Responsive Design <!-- .element: class="subtitle" -->
+      Week One
 
     notes: |
       Say hi
     options:
         id: start
         class: title-card
+        background: "#f05b62"
 
   -
     content: |
-      ## Welcome!
       #### Wifi Info <!-- .element: class="blue" -->
 
-      **Network:** Build Right<br>
-      **Password:**
+      **Network:** •••••••<br>
+      **Password:** ••••••••
 
-      ## Download workshop files
+      <hr>
+
       Please download workshop files at<br>
-      [paz.cc/gdi-html-css-files](http://girldevelopit.github.io/gdi-featured-intermediate-html-css/workshop-files.zip)
+      [paz.cc/gdi-html/files](http://paz.cc/gdi-html/files)
   -
     content: |
-      ## Thanks to our host:
-      ### Sparkbox
-  -
-    content: |
-      ### Class notes
-      All slides are available at:<br>
-      [paz.cc/gdi-html-css-slides](http://girldevelopit.github.io/gdi-featured-intermediate-html-css)
-  -
-    content: |
-      ### Welcome!
+      # Thanks to our host
 
-      <div class="left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class="green">Some "rules"</p>
-          <ul>
-              <li>We are here for you!</li>
-              <li>Every question is important</li>
-              <li>Help each other</li>
-              <li>Have fun</li>
-          </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 127" width="1000">
+        <path fill="#221F20" fill-rule="evenodd" d="M126 121.4c0 2.6-2 4.7-4.6 4.7H4.7C2 126 0 124 0 121.5V4.7C0 2 2 0 4.7 0h116.7c2.6 0 4.7 2 4.7 4.7v116.7zM88.4 83c0 3.3-2.8 6-6.2 6H61.5L80 76.7h2c3.5 0 6.3 2.8 6.3 6.3zm-49 6V76.7H51L43.4 89h-4zm0-52h21.3L39.4 51V37zM82 37c3.5 0 6.3 2.7 6.3 6.2 0 3.4-2.8 6.2-6.2 6.2h-9L80.5 37H82zm20 23.3H35.3l41.6-28-12.7 21.5v.3c0 .5.2.8.6.8h17c6.5 0 11.7-5.2 11.7-11.6 0-6-4.4-10.8-10.2-11.6L92 17.2V17c0-.5-.2-.8-.5-.8H91l-7.7 5.4-14.8 10H34.8c-.4 0-.7.2-.7.6v22.5l-14.3 9.7c-.2 0-.3.3-.3.5 0 .4.3.7.7.7H86.7l-38.4 26 11.4-19.4V72c0-.4-.2-.7-.5-.7H35c-.4 0-.7.3-.7.6v21.8c0 .4.4.7.8.7h5.5L33 106.7v.3c0 .4.3.7.7.7h.4l19.5-13.2H82c6.5 0 11.7-5.2 11.7-11.6 0-5-3-9-7-10.8L102 61.6c.3 0 .4-.3.4-.6 0-.4-.3-.7-.7-.7zm382.5-33.6h11.3l7 19.8 5.7-19.8h10.7l-11 36.2 11.3 40h-11l-6-21.8-6.6 22h-11L497.2 63l-12.8-36.3zm-26 10.2c-3.4.2-5 2-5 5v45.3c-.2 1.6.2 3 1 3.8 1 1 2.3 1.5 4 1.5 3.7-.2 5.5-2 5.4-5.2V42c-.4-3-2.2-4.8-5.4-5zm-8 66l-8-7.8V34.5l8-7.8h15.3l8.5 8.4v59.4l-8.8 8.7h-15zm-43-43.2h4.6c1.8 0 3-.4 3.7-1.2.8-.8 1-2.2 1-4v-13c0-1.4-.3-2.4-1-3-.6-.8-1.7-1-3.3-1h-5v22.2zm4.6 32.7h1c2.3 0 3.6-1.3 3.7-4V74.2c0-2.7-1.4-4-4.3-4h-5v22.4h4.7zM396.5 103V26.8h23.3L428 35v24.7l-5 5 5 5V95l-8 8h-23.6zm-24 0L363 71.3v32h-11l-.2-76.5h11l.2 34.7 9.3-34.7h11l-9.6 39.5 10 37h-11.3zm-56.7-42.5h5.3c2.6 0 3.8-1.2 4-3.6V40.3c-.2-2.4-1.4-3.5-3.7-3.5h-5.6v23.5zM325 103l-5-32h-4.3v32h-11V26.8h22.8l8 8V63l-5 5 5.3 35h-11zm-53.6-20.5h6l-3.2-33.7-2.8 33.7zm8.3 20.6l-1-10h-8l-1 10h-11.2l8.2-76.3h14.7l9 76.4h-10.7zM229 61h5.4c1.5 0 2.4-.5 3-1 .7-.7 1-1.7 1-3V40.7c0-1-.3-2-1-2.6-.5-.7-1.6-1-3-1H229v24zm-10.8 42V26.8h23.2l8.2 8v28.5l-8.2 8.2H229V103h-10.8zm-39 0l-6.6-6.5V77.7h11v8.8c0 4 1.6 5.8 4.7 5.8 3.3 0 4.7-2 4.7-5.8V73l-20.7-11.6V33l6.5-6.3h18l7 7v16.6h-10.5V43c0-3.7-1.6-5.6-4.8-5.7-1.8 0-3 .4-3.7 1.2-1 1-1.3 2.4-1.3 4.5v10.4l20.6 12 .2 30.7-7 7h-18z"/>
+        </svg>
+
+  -
+    content: |
+      # Class notes
+
+      **All slides are available at:**<br>
+      [paz.cc/gdi-html/slides](http://paz.cc/gdi-html/slides)
+
+      **Collaborative Notes:**<br>
+      [paz.cc/gdi-html/notes](http://paz.cc/gdi-html/notes)
+  -
+    content: |
+      # Welcome! <!-- .element: class="util-margin-b1" -->
+
+      <div class="grid grid-1-2">
+
+        Girl Develop It is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction. <!-- .element: class="util-left" -->
+        <div>
+        #### Some "rules"
+        - We are here for you
+        - Every question is important
+        - Help each other
+        - Have fun
+        </div>
       </div>
   -
     content: |
-      ### Thank you to our Teaching Assistants today
+      ### Thank you to our<br>Teaching Assistants
   -
     content: |
-      ### About your instructor
+      <!-- About your instructor -->
+      # Philip Zastrow <!-- .element: class="util-gray" -->
+      ### Frontend Designer <!-- .element: class="util-margin-t0" -->
+      #### Sparkbox <!-- .element: class="util-margin-t0" -->
+      #### [@zastrow](https://twitter.com/zastrow)
+
   -
     content: |
-      ### Now it's all about you!
+      <div class="grid grid-1-2">
 
-      - Tell us who you are.
-      - What do you hope to get out of this class?
-      - Unlimited amount of money - where would you travel to?
+        # Now it’s all<br>about you!
+
+        - Tell us who you are.
+        - What do you hope to get out of this class?
+        - Unlimited amount of money - where would you travel to?
+
+      </div>
+
   -
     content: |
-      ## What we'll be covering in this class
+      ## What we’ll be covering in this class
 
-      We'll be jumping into HTML/CSS right where the beginner class left off.
+      We’ll be jumping into HTML/CSS right<br>where the beginner class left off.
 
-      We will not be going over the previous class, we just don't have the time!
+      We will not be going over the previous class,<br>we just don’t have the time!
   -
     content: |
-      ### We will be building a profile site from scratch
+      #### Project: <!-- .element: class="util-gray" -->
+      # We will be building a<br>profile site from scratch <!-- .element: class="util-margin-t0" -->
 
-      ![today's project](images/gdi-profile-layout.png)
+  -
+    content: |
+      ![today’s project](images/gdi-profile-layout.png)
+
+    options:
+      class: full-page-image

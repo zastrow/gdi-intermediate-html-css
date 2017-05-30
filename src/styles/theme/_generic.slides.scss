@@ -1,7 +1,7 @@
 // slides
 .slide {
   // uncomment box-shadow for debugging slide edges
-  // box-shadow: 0 0 0 0.125em rgba(white, 0.2);
+  // box-shadow: 0 0 0 1px black;
   top: 0 !important;
   bottom: 0 !important;
   box-sizing: border-box;
@@ -10,4 +10,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.reveal .slides > section {
+  padding: 2em;
+}
+
+.reveal .full-iframe iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1400px;
+  height: 788px;
+  max-height: none !important;
+  max-width: none !important;
+  border: none;
 }

@@ -1,0 +1,104 @@
+slides:
+  -
+    content: |
+      # Shadows
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## Text Shadow
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## text-shadow
+
+      ```
+      #example1 {
+        text-shadow: 2px 2px 10px red;
+      }
+
+      #example2 {
+      text-shadow: 1px 1px 10px red,
+        10px 10px 10px orange,
+        15px 15px 10px yellow,
+        20px 20px 10px green,
+        25px 25px 10px blue,
+        30px 30px 10px purple;
+      }
+      ```
+
+      <article class="text-shadow">
+        <div class="example1">lorem ipsum</div>
+        <div class="example2">lorem ipsum</div>
+      </article>
+
+  -
+    content: |
+      ## Box Shadow
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### box-shadow
+
+      Adds a drop shadow to an element
+
+  -
+    content: |
+      ### box-shadow
+
+      box-shadow: offset-x offset-y color
+
+      ```
+      .example1 { box-shadow: 5px 5px red; }
+      ```
+
+      <div style="box-shadow: 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      </div>
+
+    options:
+      class: example2
+  -
+    content: |
+      ### box-shadow
+
+      `box-shadow: offset-x offset-y blur spread color`
+
+      ```
+
+      .example { box-shadow: 0 0 5px 5px red; }
+
+      ```
+      <div style="box-shadow: 0 0 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      </div>
+    options:
+      class: example2
+
+  -
+    content: |
+      ### box-shadow
+
+      `box-shadow: offset-x offset-y blur spread color`
+
+      ```
+      .example { box-shadow: 0 2px 5px 0px red; }
+      ```
+
+      <div style="box-shadow: 0 2px 5px 0px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      </div>
+
+  -
+    content: |
+      ### Develop It!
+
+      - Add shadows to your text
+      - Remember: Be subtle!
+      - Add a box-shadow to the nav

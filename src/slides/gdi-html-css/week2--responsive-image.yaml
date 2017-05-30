@@ -1,0 +1,59 @@
+slides:
+  -
+    content: |
+      # Responsive Images
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+    options:
+      class: section-card
+
+  -
+    content: |
+      ## Retina Images
+
+      Retina screens have twice the pixel density than regular screens.
+
+      If you’re not using SVG Graphics, you’ll need two images, one for regular resolution and one for retina.
+
+  -
+    content: |
+      ## 2x Media Queries
+
+      Target only retina screens by using this media query:
+
+      ```
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        /* Retina-specific stuff here */
+      }
+      ```
+
+      This takes care of two things, 2x pixel ratio on iOS devices and "high res" Android screens.
+
+  -
+    content: |
+      ## 2x Images
+
+      <div class="left" style="width:50%;">
+      <p class="green">Regular resolution icon
+      <img src="images/119-piggy-bank.png" />
+      </div>
+       <div class="right" style="width:50%;">
+      <p class="green">2x resolution icon
+      <img src="images/119-piggy-bank@2x.png" />
+      </div>
+
+      ```css
+      @media
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi) {
+        .icon {
+          background-image: url(images/icon-2x.png) no-repeat 0 0;
+          background-size: 20px 20px;
+        }
+      }
+      ```
+
+  -
+    content: |
+      ## Or, you could just use SVG

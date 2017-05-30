@@ -1,18 +1,24 @@
 slides:
   -
     content: |
-      # Common Applications
+      # Getting Started
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
     options:
       class: section-card
   -
     content: |
-      ### Common Applications
+      <div class="util-left">
 
-      HTML &amp; CSS are awesome, right?
+      ### HTML &amp; CSS are<br>awesome, right?
 
-      But how do people use them *really?*
+      <hr style="width: 100%">
 
-      Here's a few things we'll be covering today:
+      ### But how do people<br>use them *really?*
+
+      </div><div class="util-left">
+
+      ##### Here's a few things we'll be covering today: <!-- .element: class="fragment util-gray" -->
 
       - Horizontal & fixed navigation <!-- .element: class="fragment" -->
       - Heros with full bleed background images <!-- .element: class="fragment" -->
@@ -20,279 +26,674 @@ slides:
       - Custom font-faces <!-- .element: class="fragment" -->
       - Three column layouts <!-- .element: class="fragment" -->
       - Fancy buttons <!-- .element: class="fragment" -->
+      </div>
 
-  -
-    content: |
-      # Standard Practices
     options:
-      class: section-card
+      class: grid grid-1-2
 
   -
     content: |
-      ### Standard Practices
+      ### Common Practices
 
-          <li class="fragment">Reset CSS files
-          <li class="fragment">Standard widths and sizes
-          <li class="fragment">Containers for layout
+      <hr><br>
+
+      - Reset or Normalize CSS files <!-- .element: class="fragment" -->
+      - Defining widths and sizes <!-- .element: class="fragment" -->
+      - Containers for layout <!-- .element: class="fragment" -->
 
   -
     content: |
-      ### Reset CSS
+      ### Reset vs. Normalize
+      <hr>
 
-      Even though HTML is the structure and CSS is the design, some HTML elements have default styles
+      Defining the starting point for your styles
 
-      Different browsers display these things differently. A reset gets rid of these inconsistencies.
+  -
+    content: |
+      ### Why use Reset or Normalize?
+
+      Even though HTML is the structure and CSS is the design, some HTML elements have default styles.
+
+      Different browsers have somewhat varying default styles.
+
+  -
+    content: |
+      The purpose in using Reset or Normalize is create a baseline for all browsers, which in return helps cross-browser compatibility.
 
       **Examples include:**
 
-      - Bulleted lists like this one have standard bullets
-      - Paragraphs &amp; headings have default padding
-      - Links are blue and underlined
+      - The display of a focused element, like an input field
+      - The `line-height` used between lines of text
+      - Early implementations of newer HTML elements still in draft
 
   -
     content: |
       ### Reset CSS
+      <hr>
 
-      Most elements:
+      The clean slate approach
 
+  -
+    content: |
       ```css
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font-size: 100%;
-      font: inherit;
-      vertical-align: baseline;
-      ```
+      /* http://meyerweb.com/eric/tools/css/reset/
+         v2.0 | 20110126
+         License: none (public domain)
+      */
 
-      Lists:
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+      	margin: 0;
+      	padding: 0;
+      	border: 0;
+      	font-size: 100%;
+      	font: inherit;
+      	vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+      	display: block;
+      }
+      body {
+      	line-height: 1;
+      }
+      ol, ul {
+      	list-style: none;
+      }
+      blockquote, q {
+      	quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+      	content: '';
+      	content: none;
+      }
+      table {
+      	border-collapse: collapse;
+      	border-spacing: 0;
+      }
+      ```
+    options:
+      class: code-full
+
+  -
+    markdown: false
+    content: |
+      <iframe src="https://s.codepen.io/zastrow/debug/jrPBdw"></iframe>
+    options:
+      class: full-iframe
+
+  -
+    markdown: false
+    content: |
+      <iframe src="https://s.codepen.io/zastrow/debug/JNqNBL"></iframe>
+    options:
+      class: full-iframe
+
+  -
+    content: |
+      ### Normalize CSS
+      <hr>
+
+      The equalizer approach
+
+  -
+    content: |
       ```css
-      list-style: none;
+      /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+      /* Document
+         ========================================================================== */
+
+      /**
+       * 1. Correct the line height in all browsers.
+       * 2. Prevent adjustments of font size after orientation changes in
+       *    IE on Windows Phone and in iOS.
+       */
+
+      html {
+        line-height: 1.15; /* 1 */
+        -ms-text-size-adjust: 100%; /* 2 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+      }
+
+      /* Sections
+         ========================================================================== */
+
+      /**
+       * Remove the margin in all browsers (opinionated).
+       */
+
+      body {
+        margin: 0;
+      }
+
+      /**
+       * Add the correct display in IE 9-.
+       */
+
+      article,
+      aside,
+      footer,
+      header,
+      nav,
+      section {
+        display: block;
+      }
+
+      /**
+       * Correct the font size and margin on `h1` elements within `section` and
+       * `article` contexts in Chrome, Firefox, and Safari.
+       */
+
+      h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+
+      /* Grouping content
+         ========================================================================== */
+
+      /**
+       * Add the correct display in IE 9-.
+       * 1. Add the correct display in IE.
+       */
+
+      figcaption,
+      figure,
+      main { /* 1 */
+        display: block;
+      }
+
+      /**
+       * Add the correct margin in IE 8.
+       */
+
+      figure {
+        margin: 1em 40px;
+      }
+
+      /**
+       * 1. Add the correct box sizing in Firefox.
+       * 2. Show the overflow in Edge and IE.
+       */
+
+      hr {
+        box-sizing: content-box; /* 1 */
+        height: 0; /* 1 */
+        overflow: visible; /* 2 */
+      }
+
+      /**
+       * 1. Correct the inheritance and scaling of font size in all browsers.
+       * 2. Correct the odd `em` font sizing in all browsers.
+       */
+
+      pre {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+      }
+
+      /* Text-level semantics
+         ========================================================================== */
+
+      /**
+       * 1. Remove the gray background on active links in IE 10.
+       * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+       */
+
+      a {
+        background-color: transparent; /* 1 */
+        -webkit-text-decoration-skip: objects; /* 2 */
+      }
+
+      /**
+       * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+       * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+       */
+
+      abbr[title] {
+        border-bottom: none; /* 1 */
+        text-decoration: underline; /* 2 */
+        text-decoration: underline dotted; /* 2 */
+      }
+
+      /**
+       * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+       */
+
+      b,
+      strong {
+        font-weight: inherit;
+      }
+
+      /**
+       * Add the correct font weight in Chrome, Edge, and Safari.
+       */
+
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      /**
+       * 1. Correct the inheritance and scaling of font size in all browsers.
+       * 2. Correct the odd `em` font sizing in all browsers.
+       */
+
+      code,
+      kbd,
+      samp {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+      }
+
+      /**
+       * Add the correct font style in Android 4.3-.
+       */
+
+      dfn {
+        font-style: italic;
+      }
+
+      /**
+       * Add the correct background and color in IE 9-.
+       */
+
+      mark {
+        background-color: #ff0;
+        color: #000;
+      }
+
+      /**
+       * Add the correct font size in all browsers.
+       */
+
+      small {
+        font-size: 80%;
+      }
+
+      /**
+       * Prevent `sub` and `sup` elements from affecting the line height in
+       * all browsers.
+       */
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      /* Embedded content
+         ========================================================================== */
+
+      /**
+       * Add the correct display in IE 9-.
+       */
+
+      audio,
+      video {
+        display: inline-block;
+      }
+
+      /**
+       * Add the correct display in iOS 4-7.
+       */
+
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+
+      /**
+       * Remove the border on images inside links in IE 10-.
+       */
+
+      img {
+        border-style: none;
+      }
+
+      /**
+       * Hide the overflow in IE.
+       */
+
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      /* Forms
+         ========================================================================== */
+
+      /**
+       * 1. Change the font styles in all browsers (opinionated).
+       * 2. Remove the margin in Firefox and Safari.
+       */
+
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: sans-serif; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+      }
+
+      /**
+       * Show the overflow in IE.
+       * 1. Show the overflow in Edge.
+       */
+
+      button,
+      input { /* 1 */
+        overflow: visible;
+      }
+
+      /**
+       * Remove the inheritance of text transform in Edge, Firefox, and IE.
+       * 1. Remove the inheritance of text transform in Firefox.
+       */
+
+      button,
+      select { /* 1 */
+        text-transform: none;
+      }
+
+      /**
+       * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+       *    controls in Android 4.
+       * 2. Correct the inability to style clickable types in iOS and Safari.
+       */
+
+      button,
+      html [type="button"], /* 1 */
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button; /* 2 */
+      }
+
+      /**
+       * Remove the inner border and padding in Firefox.
+       */
+
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+
+      /**
+       * Restore the focus styles unset by the previous rule.
+       */
+
+      button:-moz-focusring,
+      [type="button"]:-moz-focusring,
+      [type="reset"]:-moz-focusring,
+      [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+      }
+
+      /**
+       * Correct the padding in Firefox.
+       */
+
+      fieldset {
+        padding: 0.35em 0.75em 0.625em;
+      }
+
+      /**
+       * 1. Correct the text wrapping in Edge and IE.
+       * 2. Correct the color inheritance from `fieldset` elements in IE.
+       * 3. Remove the padding so developers are not caught out when they zero out
+       *    `fieldset` elements in all browsers.
+       */
+
+      legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+      }
+
+      /**
+       * 1. Add the correct display in IE 9-.
+       * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+       */
+
+      progress {
+        display: inline-block; /* 1 */
+        vertical-align: baseline; /* 2 */
+      }
+
+      /**
+       * Remove the default vertical scrollbar in IE.
+       */
+
+      textarea {
+        overflow: auto;
+      }
+
+      /**
+       * 1. Add the correct box sizing in IE 10-.
+       * 2. Remove the padding in IE 10-.
+       */
+
+      [type="checkbox"],
+      [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+      }
+
+      /**
+       * Correct the cursor style of increment and decrement buttons in Chrome.
+       */
+
+      [type="number"]::-webkit-inner-spin-button,
+      [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      /**
+       * 1. Correct the odd appearance in Chrome and Safari.
+       * 2. Correct the outline style in Safari.
+       */
+
+      [type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+      }
+
+      /**
+       * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+       */
+
+      [type="search"]::-webkit-search-cancel-button,
+      [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      /**
+       * 1. Correct the inability to style clickable types in iOS and Safari.
+       * 2. Change font properties to `inherit` in Safari.
+       */
+
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+      }
+
+      /* Interactive
+         ========================================================================== */
+
+      /*
+       * Add the correct display in IE 9-.
+       * 1. Add the correct display in Edge, IE, and Firefox.
+       */
+
+      details, /* 1 */
+      menu {
+        display: block;
+      }
+
+      /*
+       * Add the correct display in all browsers.
+       */
+
+      summary {
+        display: list-item;
+      }
+
+      /* Scripting
+         ========================================================================== */
+
+      /**
+       * Add the correct display in IE 9-.
+       */
+
+      canvas {
+        display: inline-block;
+      }
+
+      /**
+       * Add the correct display in IE.
+       */
+
+      template {
+        display: none;
+      }
+
+      /* Hidden
+         ========================================================================== */
+
+      /**
+       * Add the correct display in IE 10-.
+       */
+
+      [hidden] {
+        display: none;
+      }
       ```
+    options:
+      class: code-full
+
+  -
+    markdown: false
+    content: |
+      <iframe src="https://s.codepen.io/zastrow/debug/jrPBdw"></iframe>
+    options:
+      class: full-iframe
+
+  -
+    markdown: false
+    content: |
+      <iframe src="https://s.codepen.io/zastrow/debug/Mmdmqp"></iframe>
+    options:
+      class: full-iframe
 
   -
     content: |
-      ## Reset CSS
+      ## Pick your starting point
 
-      <!-- We've done all the hard work for you! Instead of typing this out - we've included this in our example files. -->
-
-  -
-    content: |
-      ## Normalize CSS
-
-      We've done all the hard work for you! Instead of typing this out - we've included this in our example files.
+      Both `reset.css` and `normalize.css` are included in the example project files. Link up which ever you would like to work with.
 
   -
     content: |
-      ### Standard widths and sizes
+      ### Widths and Sizes
+      <hr>
 
-      - Screen sizes vary from computer to computer. Standardize your site on different screen sizes by defining specific widths.
-      - Wrap your content in containers to control the max width it can span across a screen.
-      - Keep in mind screen sizes also mean different font size display.
-      - Retina screens have a higher pixel density and a larger resolution, so fonts appear smaller.
+      Things to remember when developing in our multi-device world
 
   -
     content: |
-      ### Fixed vs. Fluid Width pages
+      - Screen sizes vary from computer to computer. There are thousands of different screen sizes for phones alone. <!-- .element: class="fragment" -->
+      - Wrap your content in containers to control the max width it can span across a screen. <!-- .element: class="fragment" -->
+      - Keep in mind screen sizes sometimes means different font size&nbsp;display. <!-- .element: class="fragment" -->
+      - Retina (High PPI) screens have a higher pixel density and a larger resolution, so fonts appear smaller. <!-- .element: class="fragment" -->
 
-      #### Fixed
+  -
+    content: |
+      ### Fixed vs. Fluid
+      <hr>
 
-      - Fixed websites have a set width for the wrapper, usually a Desktop viewport of 960px to 1024px.
+      A Dao of Web Design<br>[paz.cc/dao](http://paz.cc/dao)
+
+  -
+    content: |
+      ### Fixed Width <!-- .element: style="margin: 0" -->
+      <hr>
+      ###### The Old Way <!-- .element: class="util-gray" style="margin-bottom: 2em" -->
+
+      - Fixed websites have a set width for the wrapper, usually a Desktop viewport of `960px` to `1024px`.
       - The elements inside the wrapper have a set width, or percentage of the wrapper width.
       - No matter the screensize, the user always sees the same size site.
 
   -
     content: |
-      ### Fixed vs. Fluid Width pages
-
-      #### Fluid
+      ### Fluid Width <!-- .element: style="margin: 0" -->
+      <hr>
+      ###### The Modern Way <!-- .element: class="util-gray" style="margin-bottom: 2em" -->
 
       - Majority of the components, including the wrapper, have percentages for their widths.
-      - The layout adjusts for the width of the user's screen resolution.
-      - Sounds like a responsive site right!? More on that later.
+      - The layout adjusts for the width of the device&rsquo;s viewport&mdash;that is the browser dimensions.
+      - Sounds a lot like responsive web design right!? More on that later.
 
   -
     content: |
-      ### Containers
+      ### Wrapper Containers
+      <hr>
 
-      Wrappers are a good way to center content if the screen width is wider than your content.
+      Reining in that fluidity
+
+  -
+    content: |
 
       ```css
       .container {
-        width: 100%; /* take up full viewport width */
-        max-width: 1400px; /* if viewport is larger than 1440px,
+        /* take up full viewport width */
+        width: 100%;
+
+        /* if viewport is larger than 1440px,
                         don't let it take up 100% */
-        margin: 0 auto; /* center content in the viewport */
+        max-width: 1400px;
+
+        /* center content in the viewport */
+        margin: 0 auto;
       }
       ```
+      <div class="util-left">
+
+      Wrappers are a good way to center content if the screen width is wider than your content.
 
       1. The container will take up 100% of the screen if the width of the viewport is less than 1440px.
       2. If the viewport is wider than 1440px, it will reach it's max width, and become centered in the viewport.
-
-  -
-    content: |
-      # HTML5
+      </div>
 
     options:
-      class: section-card
-
-  -
-    content: |
-      ### HTML 5: What is it?
-
-      Formally, HTML5 is the [W3C’s specification](http://www.w3.org/TR/html5/) for the next version of HTML.
-
-      Informally, people use "HTML5" to refer to a whole set of new web standards and abilities:
-
-      - HTML5
-      - CSS3
-      - JavaScript
-
-  -
-    content: |
-      ## Quick History of HTML5
-
-      - **2004:** "WHAT" Working group formed. (WHATWG)<br>
-        Members from Apple, Mozilla, &amp; Opera set out to develop HTML5.
-      - **2008:** First verson of HTML5 published<br>
-        First draft is written, but changes are still coming. HTML5 is continually evolving.
-      - **2008:** Firefox 3 becomes HTML5 compatable.
-      - **Jan. 2010:** YouTube now offers HTML5 video player.
-
-  -
-    content: |
-      ## Okay, not that quick history of HTML5
-
-      - **April 2010:** Steve Jobs puts a big nail in Flash’s coffin with is “[Thougts on Flash](https://www.apple.com/hotnews/thoughts-on-flash/)” letter
-      - **Dec. 2010:** Chrome opens HTML5 web store.
-      - **Sept. 2011:** 34% of top 100 sites use HTML5
-      - **Sept. 2012:** WC3 proposes stable release of HTML5 by end of 2014!
-      - **Oct. 2014:** Final and complete!
-
-  -
-    content: |
-      ## What about the browsers?
-
-      Percentage of HTML5 Elements supported (As of [May 2017](http://html5test.com/results/desktop.html)):
-
-      - **Chrome 58:** 94% supported
-      - **Opera 44:** 94% supported
-      - **Firefox 53:** 85% supported
-      - **Safari 10.1:** 74% supported
-      - **Edge 15:** 85% supported
-      - **Internet Explorer 11:** 56% supporte d
-
-    notes: |
-      As of May 2017
-      Source: html5test.com
-
-  -
-    content: |
-      ### So what's so cool about it?
-
-      ![](images/html5.svg) <!-- .element: style="width:50%" class="no-border" -->
-
-      Too much to cover in our time together
-
-      But here are some highlights
-
-  -
-    content: |
-      ## Marks some old things obsolete
-      **Examples**
-
-      - Deprecated items (e.g. `frame, frameset, noframes`)
-      - Presentational elements and attributes replaced by CSS (e.g. `font, big, center`)
-
-      [Reference](http://dev.w3.org/html5/spec/single-page.html#obsolete)
-
-  -
-    content: |
-      ## Redefines a few things
-
-      Gives some old elements semantic meaning and separates them from presentation (e.g. `b, i, strong, em`)
-
-  -
-    content: |
-      ## HTML5 Doctype
-
-      ```html
-      <!DOCTYPE html>
-      ```
-
-      Minimum information required to ensure that a browser renders using standards mode
-
-  -
-    content: |
-      ## Old Doctypes
-
-      ```html
-      <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-      "http://www.w3.org/TR/html4/strict.dtd">
-
-      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-      ```
-
-  -
-    content: |
-      ## New Structural Elements
-
-  -
-    content: |
-      ## <section>
-
-      - Groups together thematically related content
-      - Similar to prior use of the div, but div has no semantic meaning
-
-
-  -
-    content: |
-      ## <header>
-
-      - Container for a group of introductory or navigational aids
-      - Document can have multiple header elements
-      - E.g. one for the page, one for each section
-
-
-  -
-    content: |
-      ## <nav>
-
-      - Contains major navigational information
-      - Usually a list of links
-      - Often lives in the header
-      - E.g. site navigation
-
-
-  -
-    content: |
-      ## <footer>
-
-      - Contains information about its containing element
-      - E.g. who wrote it, copyright, links to related content, etc.
-      - Document can have multiple footer elements
-      - E.g. one for the page, one for each section
-
-
-  -
-    content: |
-      ## <aside>
-
-      - Tangentially related content
-      - E.g. sidebar, pull quotes
-
-
-  -
-    content: |
-      ## <article>
-
-      - Self-contained related content
-      - E.g. blog posts, news stories, comments, reviews, forum posts
-
-
-  -
-    content: |
-      ### Let's Develop It
-
-      - Use new HTML elements to layout the site
-      - Refer to the example design for hints
+      class: grid grid-1-2 grid-stretch

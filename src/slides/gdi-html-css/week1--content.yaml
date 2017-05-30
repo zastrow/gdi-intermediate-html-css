@@ -1,0 +1,123 @@
+slides:
+  -
+    content: |
+      # Three Column<br>Content Area
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### Why three columns?
+
+      Columns and grid layout is a common pattern<br>in web design that spans many site types.
+
+  -
+    content: |
+      # HTML
+      ###### Three Column Content Area<!-- .element: class="short-title" -->
+
+  -
+    content: |
+      Our code should look something like this:
+
+      ```html
+        <section id="main-content">
+        <h3>...</h3>
+        <section class="column">
+        <img src="images/africa.png" alt="Africa">
+        <h4>My Home</h4>
+        <p>Wild zebras live in Africa.</p>
+        <a href="home.html" class="btn">See my home</a>
+        </section>
+        <!-- Repeat .column x3 -->
+        </section>
+      ```
+
+  -
+    content: |
+      # CSS
+      ###### Three Column Content Area<!-- .element: class="short-title" -->
+
+  -
+    content: |
+      Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.
+
+      ```css
+      .column {
+        float: left;
+        width: 33.333%;
+        padding: 1em;
+      }
+      ```
+
+      We used 33.333%, because that is one third of 100%. Don’t forget padding (or margin) to give the columns some space.
+
+  -
+    content: |
+      ### Wow. Large Images.
+
+      Our responsive `max-width: 100%;` lets the image grow until it hits the edge of the container. In this case, we want the image to be a little bit smaller than the container.
+
+      ```css
+      .column img {
+        width: 70%;
+      }
+      ```
+
+      There we go!
+
+  -
+    content: |
+
+      Let’s add a border radius to it too, because we ❤️ circles
+
+      ```css
+      .column img {
+        width: 70%;
+        border-radius: 50%;
+        border: 0.3125em solid #5C4B82;
+        margin-bottom: 1.25em;
+      }
+      ```
+
+  -
+    content: |
+      # Container
+      ###### Three Column Content Area<!-- .element: class="short-title" -->
+
+  -
+    content: |
+      <div>
+      We’ve got our 3 column layout set, our images are scaled based on the width of the column, but our columns are still bumping against the edges of the browser.
+      </div>
+      <div>
+      ```html
+      <section id="main-content">
+        <div class="container">
+          <h3>...</h3>
+          <section class="column">
+          ...
+          </section>
+          <section class="column">
+          ...
+          </section>
+          <section class="column">
+          ...
+          </section>
+        </div>
+      </section>
+      ```
+      </div>
+
+    options:
+      class: grid grid-1-2
+
+  -
+    content: |
+      ### Let's develop it!
+      <hr><br>
+
+      - Use media queiries so it is a single column until there is enough room for three columns
+      - Setup a three column grid with three equal widths

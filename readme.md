@@ -1,6 +1,6 @@
 Intermediate HTML/CSS &amp; Intro to Responsive Design
 ================================
-#### Written by Cara Jo Miller, GDI Boulder. Modified by Lisa Smith, GDI RDU. Further Modified by [Philip Zastrow](http://twitter.com/zastrow), GDI Dayton (May 2017)
+#### Written by Cara Jo Miller, GDI Boulder.<br>Modified by Lisa Smith, GDI RDU.<br>May 2017: Modified by [Philip Zastrow](http://twitter.com/zastrow), [GDI Dayton](http://gdidayton.com)
 ---------------------
 ## Building the slide deck:
 

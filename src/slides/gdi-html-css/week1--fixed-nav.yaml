@@ -2,19 +2,26 @@ slides:
   -
     content: |
       # Horizontal Fixed Nav
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
 
   -
     content: |
-      ### All the cool kids are doing it
+      ### Super popular design approach
       - Horizontal fixed-to-top nav allows users to have access to navigational elements at all times
-      - All the rage these days
       - Be careful - screen heights vary, and it reduces the amount of content visible on smaller screens
 
   -
     content: |
-      ### Fixed Nav: HTML
-      Let's include it in a header, since we know we'll be grouping related content here.
+      # HTML
+      ###### Horizontal Fixed Nav<!-- .element: class="short-title" -->
 
+  -
+    content: |
+      <div class="grid grid-stretch grid-1-2">
+      <p class="util-left">Let’s include it in a header, since we know we’ll be grouping related content here.</p>
       ```html
       <header>
         <nav>
@@ -26,14 +33,20 @@ slides:
         </nav>
       </header>
       ```
+      </div>
 
   -
     content: |
-      ### Fixed Nav: CSS
+      # CSS
+      ###### Horizontal Fixed Nav<!-- .element: class="short-title" -->
 
-      Remember, using fixed position is like using absolute position, except that it's fixed to the viewport, not the containing element.
-
-      We also have to define a width for it, and its location.
+  -
+    content: |
+      <div class="grid grid-stretch grid-1-2">
+      <div class="util-left">
+      <p>Remember, using fixed position is like using absolute position, except that it’s fixed to the viewport, not the containing element.</p>
+      <p>We also have to define a width for it, and its location.</p>
+      </div>
 
       ```css
       nav {
@@ -41,50 +54,51 @@ slides:
         top: 0;
         left: 0;
         background: #fafafa;
-        border-bottom: 2px solid #ccc;
-        height: 70px;
+        border-bottom: 0.125em solid #ccc;
+        height: 4.375em;
         width: 100%;
       }
       ```
+      </div>
 
   -
     content: |
-      ### Fixed Nav: CSS
-
-      Because we've fixed the nav to the top of the viewport, we need to bump the content of the `body` down to be visible to the user.
-      This should be the same, or more than, the height of the navigation bar.
-
+      <div class="grid grid-stretch grid-1-2">
+      <div class="util-left">
+        <p>Because we’ve fixed the nav to the top of the viewport, we need to bump the content of the `body` down to be visible to the user.</p>
+        <p>This should be the same, or more than, the height of the navigation bar.</p>
+      </div>
       ```css
       body {
-        padding-top: 70px;
+        padding-top: 4.375em;
       }
       nav {
         position: fixed;
         top: 0;
         left: 0;
         background: #fafafa;
-        border-bottom: 2px solid #ccc;
-        height: 70px;
+        border-bottom: 0.125em solid #ccc;
+        height: 4.375em;
         width: 100%;
       }
       ```
+      </div>
 
   -
     content: |
-      ### Fixed Nav: CSS
-
-      Now we need to get those list items next to each other instead of stacked.
-
-      Let's float them to the left and add some padding to the links so they have a large clickable area.
-
+      <div class="grid grid-stretch grid-1-2">
+      <div class="util-left">
+        <p>Now we need to get those list items next to each other instead of stacked.</p>
+        <p>Let’s float them to the left and add some padding to the links so they have a large clickable area.</p>
+      </div>
       ```css
       nav {
         position: fixed;
         top: 0;
         left: 0;
         background: #fafafa;
-        border-bottom: 2px solid #ccc;
-        height: 70px;
+        border-bottom: 0.125em solid #ccc;
+        height: 4.375em;
         width: 100%;
       }
       nav li {
@@ -92,21 +106,28 @@ slides:
         width: auto;
       }
       nav li a {
-        padding: 25px 10px;
+        padding: 1.5em 0.625em;
         display: block;
       }
       ```
+      </div>
 
   -
     content: |
-      ### Fixed Nav: Adding a brand
+      # Add a Brand
+      ###### Horizontal Fixed Nav<!-- .element: class="short-title" -->
 
-      We can use an `h1` with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.
+  -
+    content: |
+      <div class="grid grid-1-2">
+      <p>We can use an `h1` with text replacement to include a brand, or logo, in the corner that will still work if images are turned off, making it accesible to screen readers.</p>
 
       ```html
       <header>
         <nav>
-          <h1 id="brand">IMA Zebra</h1>
+          <h1 id="brand">
+            <a href="/">IMA Zebra</a>
+          </h1>
           <ul>
             <li><a href="#home">My Home</a></li>
             <li><a href="#diet">My Diet</a></li>
@@ -115,19 +136,23 @@ slides:
         </nav>
       </header>
       ```
+      </div>
 
   -
     content: |
-      ### Fixed Nav: Text replacement & `h1`s
+      # Text replacement & `h1`s
+      ###### Horizontal Fixed Nav<!-- .element: class="short-title" -->
 
+  -
+    content: |
       ```css
       #brand {
         color: transparent;
         background: url(../images/z.png) no-repeat top left;
-        height: 60px;
-        width: 60px;
+        height: 3.75em;
+        width: 3.75em;
         float: left;
-        margin: 5px;
+        margin: 0.25em;
       }
       nav ul {
         float: right;
@@ -138,22 +163,28 @@ slides:
   -
     content: |
       ### Why Text Replacement?
+      <hr><br>
 
       - If we turn the CSS off for this page - the title will still be visible to the browser.
       - If a user is coming to our site with a screen reader, the title of the site will be readable to them
-      - Search engines &hearts; it!
+      - Search engines ❤️ it!
 
   -
     content: |
-      ### Fixed Nav: Container
+      # Container
+      ###### Horizontal Fixed Nav<!-- .element: class="short-title" -->
 
-      Notice how the edge of the nav bumps up against the edge of the browser? Let's fix that by adding a container around it.
+  -
+    content: |
+      Notice how the edge of the nav bumps up against the edge of the browser? Let’s fix that by adding a container around it.
 
       ```html
       <header>
         <nav>
-        <div class="container">
-          <h1 id="brand">IMA Zebra</h1>
+          <div class="container">
+            <h1 id="brand">
+              <a href="/">IMA Zebra</a>
+            </h1>
             <ul>
               <li><a href="#home">My Home</a></li>
               <li><a href="#diet">My Diet</a></li>
@@ -164,15 +195,16 @@ slides:
       </header>
       ```
 
+    options:
+      class: grid grid-1-2
+
   -
     content: |
-      ### Fixed Nav: Container
-
-      Let's give the container a fixed width and see what happens.
+      Let’s give the container a fixed width and see what happens.
 
       ```css
       .container {
-        width: 1024px;
+        width: 64em;
         margin: 0 auto;
       }
       ```
@@ -181,9 +213,10 @@ slides:
 
   -
     content: |
-      ### Develop It!
+      ## Let’s Develop It!
+      <hr>
 
-      Let's make some small tweaks to the navigation
+      Let’s make some small tweaks to the navigation
 
       - Remove the underlines on the links with `text-decoration`
       - Change the color of the links

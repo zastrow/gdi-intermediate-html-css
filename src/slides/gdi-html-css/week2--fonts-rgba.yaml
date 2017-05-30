@@ -2,6 +2,7 @@ slides:
   -
     content: |
       # @font-face
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 
     options:
       class: section-card
@@ -22,11 +23,12 @@ slides:
 
       Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!
 
-      The service runs on Google's servers which are fast, reliable and tested. Google provides this service free of charge.
+      The service runs on Google’s servers which are fast, reliable and tested. Google provides this service free of charge.
 
   -
     content: |
       # [Google Fonts](http://fonts.google.com)
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 
     options:
       class: section-card
@@ -35,9 +37,9 @@ slides:
     content: |
       ### @font-face
 
-      In our example, we've used Lato for the body and Bree Serif for the headlines
+      In our example, we’ve used Lato for the body and Bree Serif for the headlines
 
-      You can use any font you'd like!
+      You can use any font you’d like!
 
       ![lato](images/lato.png) <!-- .element: style="width: 40%; float: left;" -->
       ![bree](images/bree.png) !-- .element: style="width: 40%; float: right;" -->
@@ -79,6 +81,7 @@ slides:
   -
     content: |
       # `rgba()` Colors & `opacity`
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
     options:
       class: section-card
 
@@ -187,7 +190,8 @@ slides:
 
   -
     content: |
-      ### Develop It!
+      ### Let’s Develop It!
+      <hr>
 
       Change some colors to have alpha transparency or opacity.
 

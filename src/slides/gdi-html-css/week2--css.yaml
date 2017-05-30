@@ -1,0 +1,14 @@
+slides:
+  -
+    content: |
+      # CSS3
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### CSS 3: What is it?
+
+      CSS3 is the [W3C’s specification](http://www.w3.org/TR/css3/) for the next version of CSS.

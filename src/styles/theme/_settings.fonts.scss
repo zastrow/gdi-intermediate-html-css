@@ -1,27 +1,27 @@
 // Font Stacks
-$avenir: "Avenir Next", "Hevetica Neue", Helvetica, Arial, sans-serif;
-$operator: Monaco, monospace;
+$body: Raleway, "Hevetica Neue", Helvetica, Arial, sans-serif;
+$code: "Fira Mono", monospace;
 
 // Font Maps
 $fonts: (
-  heading: $avenir,
-  body: $avenir,
-  code: $operator
+  heading: $body,
+  body: $body,
+  code: $code
 );
 
 $heading-weight: (
-  lighter: 300,
-  bolder: 500
+  lighter: 600,
+  bolder: 800
 );
 
 $body-weight: (
-  lighter: 500,
-  bolder: 700
+  lighter: 400,
+  bolder: 600
 );
 
 $code-weight: (
   lighter: 400,
-  bolder: 400
+  bolder: 700
 );
 
 // Font Functions

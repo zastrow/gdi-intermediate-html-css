@@ -1,0 +1,58 @@
+slides:
+  -
+    content: |
+      # Vendor Prefixes
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+        class: section-card
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      HTML5 and CSS3 are still new!
+
+      This is great, but it means that not all browsers treat new CSS3 properties the same
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      Flags it as a work-in-progress
+
+      When finished, the browser should support the non-prefixed name
+
+  -
+    content: |
+      ### Vendor Prefixes
+
+      Each browser has their own:
+
+      - **Chrome:** `-webkit-`
+      - **Firefox:** `-moz-`
+      - **Safari:** `-webkit-`
+      - **Opera:** `-o-`
+      - **Internet Explorer:** `-ms-`
+
+  -
+    content: |
+      ### Using Prefixes
+
+      ```css
+      #hero img {
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      }```
+
+      Order matters! The non-prefixed version should always go last.
+
+  -
+    content: |
+      ### NOTE:
+      While you should always use the vendor prefixes when writing code, today we’re just going to use the non-prefixed property.
+
+      This is to save time during the code exercises
