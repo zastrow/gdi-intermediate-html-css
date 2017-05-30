@@ -848,7 +848,7 @@ Notes:</script>
       ### Fixed vs. Fluid
 <hr>
 
-A Dao of Web Design<br>[paz.cc/dao](http://paz.cc/dao)
+A Dao of Web Design<br>[paz.cc/dao-article](http://paz.cc/dao-article)
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -991,7 +991,7 @@ Notes:</script>
 - Deprecated items (e.g. `frame, frameset, noframes`)
 - Presentational elements and attributes replaced by CSS (e.g. `font, big, center`)
 
-[Reference](http://dev.w3.org/html5/spec/single-page.html#obsolete)
+[paz.cc/gdi-html/html-obsolete](http://paz.cc/gdi-html/html-obsolete)
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -1814,6 +1814,8 @@ Notes:</script>
       ### Why three columns?
 
 Columns and grid layout is a common pattern<br>in web design that spans many site types.
+
+We need to put your fresh RWD skills to work!
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -1848,17 +1850,42 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      Now that we have our 3 columns, we want them to appear next to each other. We can do this by floating them all left.
+      Now that we have our 3 content areas, we want them to appear next to each other when there is enough screen space. We can do this by floating them all left.
 
 ```css
-.column {
-  float: left;
-  width: 33.333%;
-  padding: 1em;
+@media (min-width: 44em) {
+  .column {
+    float: left;
+    width: 33.333%;
+    padding: 1em;
+  }
 }
 ```
 
-We used 33.333%, because that is one third of 100%. Don’t forget padding (or margin) to give the columns some space.
+We used 33.333%, because that is one third of 100%. Don’t forget padding to give the columns some space.
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ### Uh, oh. Those columns aren’t working.
+<div class="grid grid-1-2 grid-stretch util-margin-t1">
+<div>
+  <p>We need some extra CSS to redefine the box model. By default padding adds to the size of a container. Instead of a container with a width of `33.333%`, the width is<br>`33.333% + 2em`.</p>
+  <p>`box-sizing` to the rescue!</p>
+</div>
+<div>
+```css
+@media (min-width: 44em) {
+  .column {
+    float: left;
+    width: 33.333%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+}
+```
+</div>
+</div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">

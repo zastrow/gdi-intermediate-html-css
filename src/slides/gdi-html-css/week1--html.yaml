@@ -81,7 +81,7 @@ slides:
       - Deprecated items (e.g. `frame, frameset, noframes`)
       - Presentational elements and attributes replaced by CSS (e.g. `font, big, center`)
 
-      [Reference](http://dev.w3.org/html5/spec/single-page.html#obsolete)
+      [paz.cc/gdi-html/html-obsolete](http://paz.cc/gdi-html/html-obsolete)
 
   -
     content: |
