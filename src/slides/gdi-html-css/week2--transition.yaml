@@ -1,40 +1,51 @@
 slides:
   -
     content: |
-      ## Transitions
+      # Transitions
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+
       #### Allow property changes in CSS values to occur smoothly over a specified duration
+
+  -
+    content: |
       #### Create some awesome effects without any JavaScript
 
   -
     content: |
       ## Transition Triggers
 
-      - Hover
-      - Mouse click
-      - Focus state
-      - Active state
-      - Changes to the element
+      - `:hover`
+      - `:active`
+      - `:focus`
+      - `:target`
+      - Changes to the selectors
 
   -
     content: |
       ## Transition Properties
 
-      - transition-property
-      - transition-duration
-      - transition-delay
-      - transition-timing-function
+      - `transition-property`
+      - `transition-duration`
+      - `transition-delay`
+      - `transition-timing-function`
 
   -
     content: |
-      ## transition-property
+      ## `transition-property`
 
-      the names of CSS properties that should be transitioned
+      The names of CSS properties that should be transitioned
 
       ```
       .example1 { transition-property: background-color; }
       ```
 
-      set to <strong>all</strong> to transition all CSS properties
+      set to `all` to transition all CSS properties
 
       ```
       .example2 { transition-property: all; }
@@ -104,20 +115,19 @@ slides:
         <div class="ease-in-out">ease-in-out</div>
         <div class="cubic-bezier">cubic-bezier</div>
       </article>
-      [cubic-bezier](http://cubic-bezier.com)
+      [http://cubic-bezier.com](http://cubic-bezier.com)
 
   -
     content: |
       ### That’s a lot to remember right?
 
-      Lucky for us, someone has created a tool that makes our lives easier.
-
-      [css3generator.com](http://css3generator.com/)
+      Friendly reminder to hit MDN. You don’t need to remember everything if you know where to find it.
 
   -
     content: |
-      ### Develop It!
+      ### Let’s Develop It!
+      <hr>
 
       Pick a transition property and apply it to an element.
 
-      Hint: The transition will only work if it has a pseudo class, like `:hover`
+      <span>**Hint:** The transition will only work if it has a pseudo class, like `:hover`</span>

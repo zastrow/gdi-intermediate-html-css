@@ -1,0 +1,7 @@
+slides:
+  -
+    content: |
+      # CSS Grid
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+    options:
+      class: section-card

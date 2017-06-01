@@ -1,7 +1,7 @@
 slides:
   -
     content: |
-      # Shadows
+      # CSS Shadows
       ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 
     options:
@@ -9,41 +9,38 @@ slides:
 
   -
     content: |
-      ## Text Shadow
-
-    options:
-      class: section-card
+      ### Text Shadow
+      <hr>
 
   -
     content: |
-      ## text-shadow
-
-      ```
-      #example1 {
-        text-shadow: 2px 2px 10px red;
+      <div>
+      ```css
+      .example-1 {
+        text-shadow: 0.125rem 0.125rem 0.5rem red;
       }
 
-      #example2 {
-      text-shadow: 1px 1px 10px red,
-        10px 10px 10px orange,
-        15px 15px 10px yellow,
-        20px 20px 10px green,
-        25px 25px 10px blue,
-        30px 30px 10px purple;
+      .example-2 {
+      text-shadow: 0.125rem 0.125rem 0.5rem red,
+        0.5rem 0.5rem 0.5rem orange,
+        1rem 1rem 0.5rem yellow,
+        1.5rem 1.5rem 0.5rem green,
+        2rem 2rem 0.5rem blue,
+        2.5rem 2.5rem 0.5rem purple;
       }
       ```
+      </div>
+      <div>
+        #### Example One <!-- .element: class="util-gray" style="text-shadow: 0.125rem 0.125rem 0.5rem red;" -->
 
-      <article class="text-shadow">
-        <div class="example1">lorem ipsum</div>
-        <div class="example2">lorem ipsum</div>
-      </article>
-
+        #### Example Two <!-- .element: class="util-gray" style="text-shadow:0.125rem 0.125rem 0.5rem red,0.5rem 0.5rem 0.5rem orange,1rem 1rem 0.5rem yellow,1.5rem 1.5rem 0.5rem green,2rem 2rem 0.5rem blue,2.5rem 2.5rem 0.5rem purple" -->
+      </div>
+    options:
+      class: grid grid-1-2
   -
     content: |
       ## Box Shadow
-
-    options:
-      class: section-card
+      <hr>
 
   -
     content: |
@@ -97,7 +94,8 @@ slides:
 
   -
     content: |
-      ### Develop It!
+      ### Let’s Develop It!
+      <hr>
 
       - Add shadows to your text
       - Remember: Be subtle!

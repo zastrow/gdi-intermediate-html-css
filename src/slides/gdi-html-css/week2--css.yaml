@@ -9,6 +9,7 @@ slides:
 
   -
     content: |
-      ### CSS 3: What is it?
+      ## CSS 3: What is it?
+      <hr>
 
-      CSS3 is the [W3C’s specification](http://www.w3.org/TR/css3/) for the next version of CSS.
+      CSS3 is the [W3C’s specification](http://www.w3.org/TR/css3/) for the latest version of CSS.

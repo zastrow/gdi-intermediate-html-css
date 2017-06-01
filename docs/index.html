@@ -2276,6 +2276,7 @@ Notes:</script>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## How to make an SVG
+<hr>
 
 Use vector drawing program like<br>Adobe Illustrator, Sketch, or Inkscape. <!-- .element: class="fragment" -->
 
@@ -2284,7 +2285,7 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
 ```html
 <img src="images/circle.svg" />
@@ -2295,7 +2296,7 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
 ```css
 .my-container {
@@ -2308,7 +2309,7 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
 ```xml
 <div class="my-container">
@@ -2365,30 +2366,33 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
     <script type="text/template">
-      We’ll need to add a background, some padding, account for the floated list items.
+      We’ll need to add a background, some padding, and center the icons by changing some display properties.
 
 ```css
 .social {
-  background: #57BEC5;
+  background-color: #5C4B82;
   color: #fafafa;
-  padding: 1.5625em 0;
+  padding: 1.5625em 0; /* 25px */
+  text-align: center;
+}
+.social-list {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 .social-item {
-  float: left;
-  width: auto;
-  padding: 1.25em;
+  display: inline-table;
 }
 ```
 Notes:</script>
   </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
     <script type="text/template">
-      ### Centering the List
-
-First we should put our social links in a container! We’ll also add in a headline.
+      Let’s add a wrapper and a heading for the social links as well.
 
 ```html
-<section id="social">
+<section class="social">
   <div class="container">
   <h3>...</h3>
   <ul>
@@ -2397,8 +2401,6 @@ First we should put our social links in a container! We’ll also add in a headl
   </div>
 </section>
 ```
-
-Next we’ll center the `ul` with a very [flexible technique](http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support) that will allow us to have a list of any width
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2419,52 +2421,48 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### CSS 3: What is it?
+      ## CSS 3: What is it?
+<hr>
 
-CSS3 is the [W3C’s specification](http://www.w3.org/TR/css3/) for the next version of CSS.
+CSS3 is the [W3C’s specification](http://www.w3.org/TR/css3/) for the latest version of CSS.
 Notes:</script>
   </section>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
       # Vendor Prefixes
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+###### Intermediate HTML and CSS <!-- .element: class="short-title" -->
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Vendor Prefixes
+      #### Prefixes flag a property<br>as a work-in-progress
+<hr>
 
-HTML5 and CSS3 are still new!
-
-This is great, but it means that not all browsers treat new CSS3 properties the same
+Vendor prefixes were quite prevalent<br>during the early days of CSS3 adoption.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Vendor Prefixes
-
-Flags it as a work-in-progress
-
-When finished, the browser should support the non-prefixed name
+      #### Although not as common today, some CSS properties still require them in some browsers.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Vendor Prefixes
+      ###### Vendor Prefixes <!-- .element: class="short-title util-pink" -->
 
-Each browser has their own:
+Vendor prefixes are based on the<br>(historically) underlying rendering engine:
 
 - **Chrome:** `-webkit-`
-- **Firefox:** `-moz-`
 - **Safari:** `-webkit-`
-- **Opera:** `-o-`
+- **Firefox:** `-moz-`
+- **Opera:** `-o-` and `-webkit-`
 - **Internet Explorer:** `-ms-`
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Using Prefixes
+      ###### Using Prefixes <!-- .element: class="short-title util-pink" -->
 
 ```css
 .avatar {
@@ -2480,12 +2478,32 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### NOTE:
-While you should always use the vendor prefixes when writing code, today we’re just going to use the non-prefixed property.
+      ### Can I Use
+<hr>
 
-This is to save time during the code exercises
+The best resource on browser suppot and prefix requirements
 
-https://autoprefixer.github.io
+[caniuse.com](http://caniuse.com)
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ### Autoprefixer
+<hr>
+
+<div class="grid grid-1-2">
+<div>
+
+Today’s easiest way to get prefixes where they need to exist is with Autoprefixer through the use of  CSS Processors.<br><span style="opacity:0.5">(More on those later)</span>
+
+</div>
+<div>
+
+Autoprefixer also offers a web tool to convert CSS to contain the appropriate vendor prefixes.
+
+[paz.cc/gdi-html/autoprefixer](http://paz.cc/gdi-html/autoprefixer)
+
+</div>
 Notes:</script>
   </section>
 
@@ -2512,20 +2530,16 @@ Notes:</script>
 Google Fonts is a font-hosting service offering hundreds of free and open-source web-optimized fonts
 Notes:</script>
   </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      # Google Fonts
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      In our example, we’ve used Lato for the body and Bree Serif for the headlines
+      In our example, we’ve used Lato for<br>the body and Bree Serif for the headlines
 
-You can use any font you’d like!
+<div class="grid grid-1-2 util-margin-v2">
+![lato](images/lato.png) <!-- .element: style="width:100%;" -->
+![bree](images/bree.png) <!-- .element: style="width:100%;" -->
+</div>
 
-![lato](images/lato.png) <!-- .element: style="width: 40%; float: left;" -->
-![bree](images/bree.png) !-- .element: style="width: 40%; float: right;" -->
+Feel free to use any font you’d like!
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2570,43 +2584,45 @@ Notes:</script>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
-      # Shadows
+      # CSS Shadows
 ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      ## Text Shadow
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## text-shadow
-
-```
-#example1 {
-  text-shadow: 2px 2px 10px red;
-}
-
-#example2 {
-text-shadow: 1px 1px 10px red,
-  10px 10px 10px orange,
-  15px 15px 10px yellow,
-  20px 20px 10px green,
-  25px 25px 10px blue,
-  30px 30px 10px purple;
-}
-```
-
-<article class="text-shadow">
-  <div class="example1">lorem ipsum</div>
-  <div class="example2">lorem ipsum</div>
-</article>
+      ### Text Shadow
+<hr>
 Notes:</script>
   </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
+    <script type="text/template">
+      <div>
+```css
+.example-1 {
+  text-shadow: 0.125rem 0.125rem 0.5rem red;
+}
+
+.example-2 {
+text-shadow: 0.125rem 0.125rem 0.5rem red,
+  0.5rem 0.5rem 0.5rem orange,
+  1rem 1rem 0.5rem yellow,
+  1.5rem 1.5rem 0.5rem green,
+  2rem 2rem 0.5rem blue,
+  2.5rem 2.5rem 0.5rem purple;
+}
+```
+</div>
+<div>
+  #### Example One <!-- .element: class="util-gray" style="text-shadow: 0.125rem 0.125rem 0.5rem red;" -->
+
+  #### Example Two <!-- .element: class="util-gray" style="text-shadow:0.125rem 0.125rem 0.5rem red,0.5rem 0.5rem 0.5rem orange,1rem 1rem 0.5rem yellow,1.5rem 1.5rem 0.5rem green,2rem 2rem 0.5rem blue,2.5rem 2.5rem 0.5rem purple" -->
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## Box Shadow
+<hr>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2661,7 +2677,8 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Develop It!
+      ### Let’s Develop It!
+<hr>
 
 - Add shadows to your text
 - Remember: Be subtle!
@@ -2671,15 +2688,8 @@ Notes:</script>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
-      ## CSS Gradients
+      # CSS Gradients
 ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## Gradients
-
-Build gradients with CSS - because doing it with images is annoying!
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2784,59 +2794,69 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## CSS gradients are a pain to do from scratch
-
-That’s why people have made things like the [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor) to make our lives easier!
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ### Develop It!</h3>
+      ### Let’s Develop It!
+<hr>
 
 Add a background gradient to a section of your site
 Notes:End of Class 3 in 4 week sequence
 </script>
   </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+    <script type="text/template">
+      # Multiple Backgrounds
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:</script>
+  </section>
 
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+    <script type="text/template">
+      # Transitions
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:</script>
+  </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Transitions
+      
 #### Allow property changes in CSS values to occur smoothly over a specified duration
-#### Create some awesome effects without any JavaScript
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### Create some awesome effects without any JavaScript
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## Transition Triggers
 
-- Hover
-- Mouse click
-- Focus state
-- Active state
-- Changes to the element
+- `:hover`
+- `:active`
+- `:focus`
+- `:target`
+- Changes to the selectors
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## Transition Properties
 
-- transition-property
-- transition-duration
-- transition-delay
-- transition-timing-function
+- `transition-property`
+- `transition-duration`
+- `transition-delay`
+- `transition-timing-function`
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## transition-property
+      ## `transition-property`
 
-the names of CSS properties that should be transitioned
+The names of CSS properties that should be transitioned
 
 ```
 .example1 { transition-property: background-color; }
 ```
 
-set to <strong>all</strong> to transition all CSS properties
+set to `all` to transition all CSS properties
 
 ```
 .example2 { transition-property: all; }
@@ -2909,25 +2929,24 @@ determines how intermediate values are calculated
   <div class="ease-in-out">ease-in-out</div>
   <div class="cubic-bezier">cubic-bezier</div>
 </article>
-[cubic-bezier](http://cubic-bezier.com)
+[http://cubic-bezier.com](http://cubic-bezier.com)
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ### That’s a lot to remember right?
 
-Lucky for us, someone has created a tool that makes our lives easier.
-
-[css3generator.com](http://css3generator.com/)
+Friendly reminder to hit MDN. You don’t need to remember everything if you know where to find it.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Develop It!
+      ### Let’s Develop It!
+<hr>
 
 Pick a transition property and apply it to an element.
 
-Hint: The transition will only work if it has a pseudo class, like `:hover`
+<span>**Hint:** The transition will only work if it has a pseudo class, like `:hover`</span>
 Notes:</script>
   </section>
 
@@ -3049,6 +3068,12 @@ Extra Credit: Use it with transition to make the transform smoother.
 Notes:</script>
   </section>
 
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+    <script type="text/template">
+      # Animation
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:</script>
+  </section>
 
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">

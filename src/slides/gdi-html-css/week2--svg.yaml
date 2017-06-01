@@ -110,6 +110,7 @@ slides:
   -
     content: |
       ## How to make an SVG
+      <hr>
 
       Use vector drawing program like<br>Adobe Illustrator, Sketch, or Inkscape. <!-- .element: class="fragment" -->
 
@@ -117,7 +118,7 @@ slides:
 
   -
     content: |
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
       ```html
       <img src="images/circle.svg" />
@@ -127,7 +128,7 @@ slides:
 
   -
     content: |
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
       ```css
       .my-container {
@@ -139,7 +140,7 @@ slides:
 
   -
     content: |
-      #### How to use SVG
+      ###### How to use an SVG<!-- .element: class="short-title util-gray" -->
 
       ```xml
       <div class="my-container">
@@ -199,18 +200,23 @@ slides:
 
   -
     content: |
-      We’ll need to add a background, some padding, account for the floated list items.
+      We’ll need to add a background, some padding, and center the icons by changing some display properties.
 
       ```css
       .social {
-        background: #57BEC5;
+        background-color: #5C4B82;
         color: #fafafa;
-        padding: 1.5625em 0;
+        padding: 1.5625em 0; /* 25px */
+        text-align: center;
+      }
+      .social-list {
+        list-style: none;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
       }
       .social-item {
-        float: left;
-        width: auto;
-        padding: 1.25em;
+        display: inline-table;
       }
       ```
     options:
@@ -218,12 +224,10 @@ slides:
 
   -
     content: |
-      ### Centering the List
-
-      First we should put our social links in a container! We’ll also add in a headline.
+      Let’s add a wrapper and a heading for the social links as well.
 
       ```html
-      <section id="social">
+      <section class="social">
         <div class="container">
         <h3>...</h3>
         <ul>
@@ -232,9 +236,8 @@ slides:
         </div>
       </section>
       ```
-
-      Next we’ll center the `ul` with a very [flexible technique](http://matthewjamestaylor.com/blog/beautiful-css-centered-menus-no-hacks-full-cross-browser-support) that will allow us to have a list of any width
-
+    options:
+      class: grid grid-1-2
 
   -
     content: |

@@ -2,42 +2,37 @@ slides:
   -
     content: |
       # Vendor Prefixes
-      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+      ###### Intermediate HTML and CSS <!-- .element: class="short-title" -->
 
     options:
         class: section-card
 
   -
     content: |
-      ### Vendor Prefixes
+      #### Prefixes flag a property<br>as a work-in-progress
+      <hr>
 
-      HTML5 and CSS3 are still new!
-
-      This is great, but it means that not all browsers treat new CSS3 properties the same
-
-  -
-    content: |
-      ### Vendor Prefixes
-
-      Flags it as a work-in-progress
-
-      When finished, the browser should support the non-prefixed name
+      Vendor prefixes were quite prevalent<br>during the early days of CSS3 adoption.
 
   -
     content: |
-      ### Vendor Prefixes
+      #### Although not as common today, some CSS properties still require them in some browsers.
 
-      Each browser has their own:
+  -
+    content: |
+      ###### Vendor Prefixes <!-- .element: class="short-title util-pink" -->
+
+      Vendor prefixes are based on the<br>(historically) underlying rendering engine:
 
       - **Chrome:** `-webkit-`
-      - **Firefox:** `-moz-`
       - **Safari:** `-webkit-`
-      - **Opera:** `-o-`
+      - **Firefox:** `-moz-`
+      - **Opera:** `-o-` and `-webkit-`
       - **Internet Explorer:** `-ms-`
 
   -
     content: |
-      ### Using Prefixes
+      ###### Using Prefixes <!-- .element: class="short-title util-pink" -->
 
       ```css
       .avatar {
@@ -52,9 +47,28 @@ slides:
 
   -
     content: |
-      ### NOTE:
-      While you should always use the vendor prefixes when writing code, today we’re just going to use the non-prefixed property.
+      ### Can I Use
+      <hr>
 
-      This is to save time during the code exercises
+      The best resource on browser suppot and prefix requirements
 
-      https://autoprefixer.github.io
+      [caniuse.com](http://caniuse.com)
+
+  -
+    content: |
+      ### Autoprefixer
+      <hr>
+
+      <div class="grid grid-1-2">
+      <div>
+
+      Today’s easiest way to get prefixes where they need to exist is with Autoprefixer through the use of  CSS Processors.<br><span style="opacity:0.5">(More on those later)</span>
+
+      </div>
+      <div>
+
+      Autoprefixer also offers a web tool to convert CSS to contain the appropriate vendor prefixes.
+
+      [paz.cc/gdi-html/autoprefixer](http://paz.cc/gdi-html/autoprefixer)
+
+      </div>

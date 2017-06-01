@@ -24,20 +24,14 @@ slides:
 
   -
     content: |
-      # Google Fonts
-      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+      In our example, we’ve used Lato for<br>the body and Bree Serif for the headlines
 
-    options:
-      class: section-card
+      <div class="grid grid-1-2 util-margin-v2">
+      ![lato](images/lato.png) <!-- .element: style="width:100%;" -->
+      ![bree](images/bree.png) <!-- .element: style="width:100%;" -->
+      </div>
 
-  -
-    content: |
-      In our example, we’ve used Lato for the body and Bree Serif for the headlines
-
-      You can use any font you’d like!
-
-      ![lato](images/lato.png) <!-- .element: style="width: 40%; float: left;" -->
-      ![bree](images/bree.png) !-- .element: style="width: 40%; float: right;" -->
+      Feel free to use any font you’d like!
 
   -
     content: |
