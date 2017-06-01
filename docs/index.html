@@ -18,8 +18,8 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<!-- <link rel="stylesheet" href="lib/css/atom-one-dark.css"> -->
 
-    <!-- Google Fonts: Fira Mono and Raleway -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Google Fonts: Lato and Ubuntu Mono -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -86,10 +86,10 @@ Notes:</script>
       # Welcome! <!-- .element: class="util-margin-b1" -->
 
 <div class="grid grid-1-2">
-
-  Girl Develop It is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction. <!-- .element: class="util-left" -->
+  <p><strong class="util-pink">Girl Develop It</strong> is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction.</p>
   <div>
   #### Some "rules"
+
   - We are here for you
   - Every question is important
   - Help each other
@@ -1093,8 +1093,106 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Let's Develop It!
-<hr><br>
+      ###### Before we get into the code  <!-- .element: class="util-gray" -->
+## A Quick Word on Units
+<hr>
+
+What is an `em` and a `rem`?
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### The browser default font size is 16px
+
+## 1em equals 16px <!-- .elements: class="util-gray" -->
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### An `em` is relative to its parent `font-size` value
+
+```css
+h2 {
+  font-size: 2em; /* 32px */
+}
+
+h2 span {
+  font-size: 1em; /* 32px */
+}
+```
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### An `em` is also relative to its `font-size` value
+
+```css
+h2 {
+  font-size: 2em; /* 32px */
+  margin: 1em; /* 32px */
+}
+```
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### A `rem` is based on the root `em` value<br><small>i.e. 16px</small>
+
+```css
+h2 {
+  font-size: 2em; /* 32px */
+  margin: 1em 0; /* 16px */
+}
+```
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ### Browser Support
+<table>
+  <tr>
+    <th class="util-center"></th>
+    <th class="util-center">IE 8</th>
+    <th class="util-center">IE 9</th>
+    <th class="util-center">IE 10</th>
+    <th class="util-center">IE 11</th>
+    <th class="util-center">Edge</th>
+    <th class="util-center">Safari</th>
+    <th class="util-center">Chrome</th>
+    <th class="util-center">Firefox</th>
+    <th class="util-center">Opera</th>
+  </tr>
+  <tr>
+    <td>`em`</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+  </tr>
+  <tr>
+    <td>`rem`</td>
+    <td class="util-center">❌</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+  </tr>
+</table>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ## Let’s Develop It!
+<hr>
 
 - Use new HTML elements to layout the site
 - Refer to the example design for hints
@@ -2004,8 +2102,8 @@ Notes:Say hi
     <script type="text/template">
       #### Wifi Info <!-- .element: class="blue" -->
 
-**Network:** Build Right<br>
-**Password:** makerseries
+**Network:** •••••••<br>
+**Password:** ••••••••
 
 <hr>
 
@@ -2035,13 +2133,13 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      # Welcome!
+      # Welcome! <!-- .element: class="util-margin-b1" -->
 
 <div class="grid grid-1-2">
-
-  Girl Develop It is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction. <!-- .element: class="util-left" -->
+  <p><strong class="util-pink">Girl Develop It</strong> is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction.</p>
   <div>
   #### Some "rules"
+
   - We are here for you
   - Every question is important
   - Help each other
@@ -2056,8 +2154,21 @@ Notes:</script>
 Notes:</script>
   </section>
 
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      # Week 1
+<hr>
 
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+#### Any Questions? <!-- .element: class="util-gray" -->
+
+- HTML 5
+- Fluid vs. Flexible Layout
+- Responsive Web Design
+Notes:</script>
+  </section>
+
+
+  <section data-markdown data-separator-notes="^Notes:"id="svg"class="slide section-card">
     <script type="text/template">
       # Scalable Vector Graphics<br><small>SVG</small>
 ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
@@ -2065,96 +2176,177 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## SVG Graphics
-
-Designers everywhere have always wanted to use vector based graphics on their sites because of their quality.
-
-Well now you can!
+      # The Difference Between Raster Graphics and<br>Vector Graphics
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## It’s not that new really
+      ### Common Web Image Formats
+<div class="grid grid-1-2 grid-stretch util-margin-t2">
+<div class="util-center">
+  ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
 
-It’s been a W3C (World Wide Web Consortium) standard since 1999
+  JPG
 
-In recent years browsers are becoming more and more compatable with SVG graphics.
+  GIF
 
-Once upon a time, .png graphics weren’t supported in browsers, soon the world will know about SVG!
+  PNG
+
+</div>
+<div class="util-center">
+  ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+
+  SVG
+
+</div>
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
+    <script type="text/template">
+      <div class="util-center">
+  ![Raster Circle](images/circle.png)
+  ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
+</div>
+<div class="util-center">
+  ![Vector Circle](images/circle.svg)
+  ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
+    <script type="text/template">
+      <div class="util-center">
+  ![Raster Circle](images/circle.png) <!-- .element: width="70%" -->
+  ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
+</div>
+<div class="util-center">
+  ![Vector Circle](images/circle.svg) <!-- .element: width="70%" -->
+  ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+</div>
+Notes:Raster graphics are pixel based and has a grid-like structure, where each color fills a box. Vectore graphics, on the other hand, are mathematical points on a plane. As that plane grows and shirnks those points move relative to the plane, making them scalable without distortion.
+</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ## Sweet baby turtles, that’s cool!
+
+# 🐢
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## How to use SVG today
+      ### SVG is actually pretty old
+<hr>
 
-Use Adobe Illustrator, or other vector program, to create a high quality image.
-
-Save it as a .svg file.
-
-Save a high res .png image as a fallback.
+- SVG has been a W3C standard since 1999
+- SVG was originally designed as a<br> web-native Flash alternative
+- In the last 5-6 years, SVG has become a<br>dominanting image format on the web.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Include SVG
+      ### SVG Browser Support
+<table>
+  <tr>
+    <th class="util-center">IE 8</th>
+    <th class="util-center">IE 9</th>
+    <th class="util-center">IE 10</th>
+    <th class="util-center">IE 11</th>
+    <th class="util-center">Edge</th>
+    <th class="util-center">Safari</th>
+    <th class="util-center">Chrome</th>
+    <th class="util-center">Firefox</th>
+    <th class="util-center">Opera</th>
+  </tr>
+  <tr>
+    <td class="util-center">❌</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+    <td class="util-center">✅</td>
+  </tr>
+</table>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ## How to make an SVG
 
-Use SVG as an image:
+Use vector drawing program like<br>Adobe Illustrator, Sketch, or Inkscape. <!-- .element: class="fragment" -->
 
-```
-<img src="image.svg" onerror="this.onerror=null; this.src='image.png'">
-```
-
-Use SVG as a background image:
-
-HTML: <!-- .element class="blue" -->
+Code it. SVG is a markup language! <!-- .element: class="fragment" -->
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### How to use SVG
 
 ```html
-<a href="/" class="logo">
-  GDI
-</a>
+<img src="images/circle.svg" />
 ```
 
-CSS: <!-- .element class="blue" -->
+With an `<img>`, an SVG can be loaded on<br>screen just like any other image file.
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      #### How to use SVG
 
 ```css
-.logo {
-  display: block;
-  color: transparent;
-  width: 100px;
-  height: 82px;
-  background: url(kiwi.svg);
-  background-size: 100px 82px;
+.my-container {
+  background-image: url('images/circle.svg');
 }
 ```
+
+Again, since SVGs are images, they can be<br>loaded through CSS as a background image.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Browser Support
+      #### How to use SVG
 
-Our favorite topic - Internet Explorer
+```xml
+<div class="my-container">
+  <svg viewBox="0 0 86 86" width="86" height="86">
+    <circle cx="43" cy="43" r="40"
+    fill="#F05B62"
+    stroke="#53555C"
+    stroke-width="5"/>
+  </svg>
+</div>
+```
 
-![images/svg-support.png](SVG support)
-
-Chris Coyer has written an [amazing article](http://css-tricks.com/using-svg/) with tons of work arounds for our BFF IE8.
+SVG is markup and can live alongside HTML.<br>**Warning:** Only SVG tags can live inside `<svg>...</svg>`
 Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"id="social-icons"class="slide section-card">
+    <script type="text/template">
+      # SVG Social Icons
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:Now that we know how awesome SVGs are, let’s use them in our social links section.
+</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### SVG Social Icons
-
-Now that we know how awesome SVG graphics are, let’s use them in our social links section.
+      ## HTML
+<hr>
+###### Social Links <!-- .element: class="util-gray" -->
 Notes:</script>
   </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
     <script type="text/template">
-      ### Social Links: HTML
+      We’re using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.
 
 ```html
-<section id="social">
-  <ul>
-    <li>
-      <a href="..">
+<section class="social">
+  <ul class="social-list">
+    <li class="social-item">
+      <a href="http://facebook.com">
           <img src="images/facebook.svg" alt="Facebook" />
       </a>
     </li>
@@ -2162,27 +2354,29 @@ Notes:</script>
   </ul>
 </section>
 ```
-
-We’re using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Social Links: CSS
-
-We’ll need to add a background, some padding, account for the floated list items.
+      ## CSS
+<hr>
+###### Social Links <!-- .element: class="util-gray" -->
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
+    <script type="text/template">
+      We’ll need to add a background, some padding, account for the floated list items.
 
 ```css
-#social {
+.social {
   background: #57BEC5;
   color: #fafafa;
-  padding: 25px 0;
-  overflow: hidden;
+  padding: 1.5625em 0;
 }
-#social li {
+.social-item {
   float: left;
   width: auto;
-  padding: 20px;
+  padding: 1.25em;
 }
 ```
 Notes:</script>
@@ -2209,13 +2403,13 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Develop It!
+      ### Let’s Develop It!
+<hr>
 
 - Style the headline using the Descendant Selector
-- If you have Illustrator or another program to modify .svg graphics, change the colors to match your site
+- If you have graphics program try modify the SVG to change the colors to match your site. If you want to be really daring, try editting it with your text editor.
 Notes:</script>
   </section>
-
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
@@ -2273,9 +2467,9 @@ Notes:</script>
       ### Using Prefixes
 
 ```css
-#hero img {
--moz-border-radius: 50%;
+.avatar {
 -webkit-border-radius: 50%;
+-moz-border-radius: 50%;
 -ms-border-radius: 50%;
 -o-border-radius: 50%;
 border-radius: 50%;
@@ -2290,46 +2484,43 @@ Notes:</script>
 While you should always use the vendor prefixes when writing code, today we’re just going to use the non-prefixed property.
 
 This is to save time during the code exercises
+
+https://autoprefixer.github.io
 Notes:</script>
   </section>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
-      # @font-face
+      # Custom Fonts
 ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### @font-face</h3>
+      ### How to load custom fonts
 
-The world of HTML has progressed beyond Times New Roman and Arial
-
-Yay!
-
-How do we use new and cool fonts?
+1. Self host your font files with `@font-face` rules
+2. Use a font-hosting service
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Class, meet Google Web Fonts
+      ### Google Fonts
 
-Google has hundreds of free, open-source fonts that have been optimized for the web, and ready for us to use!
+## [fonts.google.com](https://fonts.google.com)
 
-The service runs on Google’s servers which are fast, reliable and tested. Google provides this service free of charge.
+Google Fonts is a font-hosting service offering hundreds of free and open-source web-optimized fonts
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
-      # [Google Fonts](http://fonts.google.com)
+      # Google Fonts
 ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### @font-face
-
-In our example, we’ve used Lato for the body and Bree Serif for the headlines
+      In our example, we’ve used Lato for the body and Bree Serif for the headlines
 
 You can use any font you’d like!
 
@@ -2341,14 +2532,15 @@ Notes:</script>
     <script type="text/template">
       ### Using Google Fonts in 3 steps!
 1. Search the hundreds of font families, then add them to your collection.
-2. Compare and refine the collection - think about what styles you NEED.
+2. Compare and refine the collection&mdash;watch the “Load time” message, try to keep it <strong class="util-green">Fast</strong>!
 3. Grab the code that Google prepares for you and add it to your site!
 
 ```html
-@import url(http://fonts.googleapis.com/
-css?family=Lato:300,400,700,300italic,400italic|Bree+Serif);
+<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato:300,300i,400,400i" rel="stylesheet">
 ```
-[What does that do?](http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic|Bree+Serif)
+
+<small>What does that do?<br>
+[paz.cc/gdi-html/fonts](http://paz.cc/gdi-html/fonts)</small>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2356,132 +2548,12 @@ Notes:</script>
       ### Integrating into the CSS
 ```css
 body{
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', Helvetica, sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Bree Serif', Georgia, serif;
 }
 ```
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ### Develop It!
-
-Pick some fonts for your site using Google Fonts.
-
-Adjust the `font-size` and `line-height` to refine your fonts.
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      # `rgba()` Colors & `opacity`
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## `rgba()` Colors & `opacity`
-
-In CSS, we can choose colors with hexadecimal `#0000FF` or `rgb(0, 0, 255)`
-
-In CSS3, there are ways to control opacity of a color too!
-
-- **`rgba()`** - controls the opacity of a color
-- **`opacity`** - controls the opacity of an element
-Notes:</script>
-  </section>
-  <section class="slide ">
-    
-      <h2><code>rgba()</code> Colors & <code>opacity</code></h2>
-
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: 1; height: 50px; width: 40%; float: right; margin-bottom: 20px; border: 3px solid black;">
-    opacity: 1;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, 1); height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, 1);
-  </div>
-</article>
-
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: .8; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
-    opacity: .8;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, .8);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, .8);
-  </div>
-</article>
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: .6; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
-    opacity: .6;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, .6);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, .6);
-  </div>
-</article>
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: .4; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
-    opacity: .4;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, .4);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, .4);
-  </div>
-</article>
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: .2; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
-    opacity: .2;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, .2);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, .2);
-  </div>
-</article>
-<article class="fragment">
-  <div style="background-color: rgb(255, 0, 0); opacity: .1; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
-    opacity: .1;
-  </div>
-  <div style="background-color: rgba(255, 0, 0, .1);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
-    rgba(255, 0, 0, .1);
-  </div>
-</article>
-<aside class="notes"></aside>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ### RGBA Colors</h3>
-
-controls the opacity of a color
-
-```css
-.example2 {
-  background-color: rgba(255, 0, 0, 0.8);
-}
-```
-
-color property using (red, green, blue, opacity)
-
-opacity is a decimal value from 0 to 1
-
-- 0 - not visible
-- 1 - fully visible
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ### Opacity
-
-controls the opacity of an element
-
-```css
-.example2 {
-  opacity: 0.8;
-}
-```
-
-decimal value from 0 to 1
-
-- 0 - not visible
-- 1 - fully visible
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -2489,13 +2561,12 @@ Notes:</script>
       ### Let’s Develop It!
 <hr>
 
-Change some colors to have alpha transparency or opacity.
+Pick some fonts for your site using Google Fonts.
 
-Use [hex2rgba.devoth.com](http://hex2rgba.devoth.com) to convert HEX to RGBA.
-
-Hint: Try making the navbar 80% opaque.
+Adjust the `font-size` and `line-height` to refine your fonts.
 Notes:</script>
   </section>
+
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">

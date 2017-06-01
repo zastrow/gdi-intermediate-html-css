@@ -178,11 +178,102 @@ slides:
       - Self-contained related content
       - E.g. blog posts, news stories, comments, reviews, forum posts
 
+  -
+    content: |
+      ###### Before we get into the code  <!-- .element: class="util-gray" -->
+      ## A Quick Word on Units
+      <hr>
+
+      What is an `em` and a `rem`?
 
   -
     content: |
-      ## Let's Develop It!
-      <hr><br>
+      #### The browser default font size is 16px
+
+      ## 1em equals 16px <!-- .elements: class="util-gray" -->
+
+  -
+    content: |
+      #### An `em` is relative to its parent `font-size` value
+
+      ```css
+      h2 {
+        font-size: 2em; /* 32px */
+      }
+
+      h2 span {
+        font-size: 1em; /* 32px */
+      }
+      ```
+
+  -
+    content: |
+      #### An `em` is also relative to its `font-size` value
+
+      ```css
+      h2 {
+        font-size: 2em; /* 32px */
+        margin: 1em; /* 32px */
+      }
+      ```
+
+  -
+    content: |
+      #### A `rem` is based on the root `em` value<br><small>i.e. 16px</small>
+
+      ```css
+      h2 {
+        font-size: 2em; /* 32px */
+        margin: 1em 0; /* 16px */
+      }
+      ```
+
+  -
+    content: |
+      ### Browser Support
+      <table>
+        <tr>
+          <th class="util-center"></th>
+          <th class="util-center">IE 8</th>
+          <th class="util-center">IE 9</th>
+          <th class="util-center">IE 10</th>
+          <th class="util-center">IE 11</th>
+          <th class="util-center">Edge</th>
+          <th class="util-center">Safari</th>
+          <th class="util-center">Chrome</th>
+          <th class="util-center">Firefox</th>
+          <th class="util-center">Opera</th>
+        </tr>
+        <tr>
+          <td>`em`</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+        </tr>
+        <tr>
+          <td>`rem`</td>
+          <td class="util-center">❌</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+        </tr>
+      </table>
+
+  -
+    content: |
+      ## Let’s Develop It!
+      <hr>
 
       - Use new HTML elements to layout the site
       - Refer to the example design for hints

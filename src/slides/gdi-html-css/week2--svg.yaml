@@ -6,95 +6,180 @@ slides:
 
     options:
       class: section-card
+      id: svg
 
   -
     content: |
-      ## SVG Graphics
-
-      Designers everywhere have always wanted to use vector based graphics on their sites because of their quality.
-
-      Well now you can!
+      # The Difference Between Raster Graphics and<br>Vector Graphics
 
   -
     content: |
-      ## It’s not that new really
+      ### Common Web Image Formats
+      <div class="grid grid-1-2 grid-stretch util-margin-t2">
+      <div class="util-center">
+        ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
 
-      It’s been a W3C (World Wide Web Consortium) standard since 1999
+        JPG
 
-      In recent years browsers are becoming more and more compatable with SVG graphics.
+        GIF
 
-      Once upon a time, .png graphics weren’t supported in browsers, soon the world will know about SVG!
+        PNG
+
+      </div>
+      <div class="util-center">
+        ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+
+        SVG
+
+      </div>
+      </div>
 
   -
     content: |
-      ## How to use SVG today
+      <div class="util-center">
+        ![Raster Circle](images/circle.png)
+        ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
+      </div>
+      <div class="util-center">
+        ![Vector Circle](images/circle.svg)
+        ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+      </div>
 
-      Use Adobe Illustrator, or other vector program, to create a high quality image.
-
-      Save it as a .svg file.
-
-      Save a high res .png image as a fallback.
+    options:
+      class: grid grid-1-2
 
   -
     content: |
-      ## Include SVG
+      <div class="util-center">
+        ![Raster Circle](images/circle.png) <!-- .element: width="70%" -->
+        ###### Raster <!-- .element: class="util-gray util-margin-t2" -->
+      </div>
+      <div class="util-center">
+        ![Vector Circle](images/circle.svg) <!-- .element: width="70%" -->
+        ###### Vector <!-- .element: class="util-gray util-margin-t2" -->
+      </div>
 
-      Use SVG as an image:
+    options:
+      class: grid grid-1-2
+    notes: |
+      Raster graphics are pixel based and has a grid-like structure, where each color fills a box. Vectore graphics, on the other hand, are mathematical points on a plane. As that plane grows and shirnks those points move relative to the plane, making them scalable without distortion.
 
-      ```
-      <img src="image.svg" onerror="this.onerror=null; this.src='image.png'">
-      ```
+  -
+    content: |
+      ## Sweet baby turtles, that’s cool!
 
-      Use SVG as a background image:
+      # 🐢
 
-      HTML: <!-- .element class="blue" -->
+  -
+    content: |
+      ### SVG is actually pretty old
+      <hr>
+
+      - SVG has been a W3C standard since 1999
+      - SVG was originally designed as a<br> web-native Flash alternative
+      - In the last 5-6 years, SVG has become a<br>dominanting image format on the web.
+
+  -
+    content: |
+      ### SVG Browser Support
+      <table>
+        <tr>
+          <th class="util-center">IE 8</th>
+          <th class="util-center">IE 9</th>
+          <th class="util-center">IE 10</th>
+          <th class="util-center">IE 11</th>
+          <th class="util-center">Edge</th>
+          <th class="util-center">Safari</th>
+          <th class="util-center">Chrome</th>
+          <th class="util-center">Firefox</th>
+          <th class="util-center">Opera</th>
+        </tr>
+        <tr>
+          <td class="util-center">❌</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+          <td class="util-center">✅</td>
+        </tr>
+      </table>
+
+  -
+    content: |
+      ## How to make an SVG
+
+      Use vector drawing program like<br>Adobe Illustrator, Sketch, or Inkscape. <!-- .element: class="fragment" -->
+
+      Code it. SVG is a markup language! <!-- .element: class="fragment" -->
+
+  -
+    content: |
+      #### How to use SVG
 
       ```html
-      <a href="/" class="logo">
-        GDI
-      </a>
+      <img src="images/circle.svg" />
       ```
 
-      CSS: <!-- .element class="blue" -->
+      With an `<img>`, an SVG can be loaded on<br>screen just like any other image file.
+
+  -
+    content: |
+      #### How to use SVG
 
       ```css
-      .logo {
-        display: block;
-        color: transparent;
-        width: 100px;
-        height: 82px;
-        background: url(kiwi.svg);
-        background-size: 100px 82px;
+      .my-container {
+        background-image: url('images/circle.svg');
       }
       ```
 
-  -
-    content: |
-      ## Browser Support
-
-      Our favorite topic - Internet Explorer
-
-      ![images/svg-support.png](SVG support)
-
-      Chris Coyer has written an [amazing article](http://css-tricks.com/using-svg/) with tons of work arounds for our BFF IE8.
-
+      Again, since SVGs are images, they can be<br>loaded through CSS as a background image.
 
   -
     content: |
-      ### SVG Social Icons
+      #### How to use SVG
 
-      Now that we know how awesome SVG graphics are, let’s use them in our social links section.
+      ```xml
+      <div class="my-container">
+        <svg viewBox="0 0 86 86" width="86" height="86">
+          <circle cx="43" cy="43" r="40"
+          fill="#F05B62"
+          stroke="#53555C"
+          stroke-width="5"/>
+        </svg>
+      </div>
+      ```
 
+      SVG is markup and can live alongside HTML.<br>**Warning:** Only SVG tags can live inside `<svg>...</svg>`
 
   -
     content: |
-      ### Social Links: HTML
+      # SVG Social Icons
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+      id: social-icons
+    notes: |
+      Now that we know how awesome SVGs are, let’s use them in our social links section.
+
+  -
+    content: |
+      ## HTML
+      <hr>
+      ###### Social Links <!-- .element: class="util-gray" -->
+
+  -
+    content: |
+      We’re using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.
 
       ```html
-      <section id="social">
-        <ul>
-          <li>
-            <a href="..">
+      <section class="social">
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="http://facebook.com">
                 <img src="images/facebook.svg" alt="Facebook" />
             </a>
           </li>
@@ -103,27 +188,33 @@ slides:
       </section>
       ```
 
-      We’re using a list for these links for the exact same reason we used them in the navigation. They are a list of links, and should be marked up accordingly.
+    options:
+      class: grid grid-1-2
 
   -
     content: |
-      ### Social Links: CSS
+      ## CSS
+      <hr>
+      ###### Social Links <!-- .element: class="util-gray" -->
 
+  -
+    content: |
       We’ll need to add a background, some padding, account for the floated list items.
 
       ```css
-      #social {
+      .social {
         background: #57BEC5;
         color: #fafafa;
-        padding: 25px 0;
-        overflow: hidden;
+        padding: 1.5625em 0;
       }
-      #social li {
+      .social-item {
         float: left;
         width: auto;
-        padding: 20px;
+        padding: 1.25em;
       }
       ```
+    options:
+      class: grid grid-1-2
 
   -
     content: |
@@ -147,7 +238,8 @@ slides:
 
   -
     content: |
-      ### Develop It!
+      ### Let’s Develop It!
+      <hr>
 
       - Style the headline using the Descendant Selector
-      - If you have Illustrator or another program to modify .svg graphics, change the colors to match your site
+      - If you have graphics program try modify the SVG to change the colors to match your site. If you want to be really daring, try editting it with your text editor.

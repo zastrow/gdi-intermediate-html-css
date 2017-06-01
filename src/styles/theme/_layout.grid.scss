@@ -2,10 +2,11 @@
   display: grid !important;
   align-items: center;
   text-align: left;
+  width: 100%;
 }
 
 .grid-1-2 {
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1.5em;
 }
 

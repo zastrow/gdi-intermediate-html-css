@@ -52,10 +52,10 @@ slides:
       # Welcome! <!-- .element: class="util-margin-b1" -->
 
       <div class="grid grid-1-2">
-
-        Girl Develop It is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction. <!-- .element: class="util-left" -->
+        <p><strong class="util-pink">Girl Develop It</strong> is here to provide affordable and accessible<br>programs to learn software<br>through mentorship and<br>hands-on instruction.</p>
         <div>
         #### Some "rules"
+
         - We are here for you
         - Every question is important
         - Help each other

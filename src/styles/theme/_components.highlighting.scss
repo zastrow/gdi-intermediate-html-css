@@ -1,16 +1,12 @@
-// Sparkbox Dark by Philip Zastrow
-
-$base:    gray(88);
+$base:    gray(10);
 $mono-1:  gray(20);
 $mono-2:  gray(30);
 $mono-3:  gray(40);
-$hue-1:   #56b6c2;
-$hue-2:   #61aeee;
-$hue-3:   deeppink;
-$hue-4:   #98c379;
-$hue-5:   #e06c75;
-$hue-5-2: #be5046;
-$hue-6:   color(gray);
+$hue-1:   color(pink);
+$hue-2:   color(blue);
+$hue-3:   color-code(warning);
+$hue-4:   color-code(success);
+$hue-5:   color(gray);
 
 
 .hljs {
@@ -23,14 +19,14 @@ $hue-6:   color(gray);
 
 .hljs-comment,
 .hljs-quote {
-  color: gray(50);
+  color: $hue-5;
   font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: color-code(warning);
+  color: $hue-3;
 }
 
 .hljs-section,
@@ -38,11 +34,11 @@ $hue-6:   color(gray);
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e06c75;
+  color: $hue-1;
 }
 
 .hljs-literal {
-  color: color(gray);
+  color: $mono-1;
 }
 
 .hljs-string,
@@ -50,12 +46,12 @@ $hue-6:   color(gray);
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: color-code(success);
+  color: $hue-4;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: color(pink);
+  color: $hue-1;
 }
 
 .hljs-attr,
@@ -66,7 +62,7 @@ $hue-6:   color(gray);
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: color(gray);
+  color: $mono-3;
 }
 
 .hljs-symbol,
@@ -75,7 +71,7 @@ $hue-6:   color(gray);
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: color(pink);
+  color: $hue-2;
 }
 
 .hljs-emphasis {

@@ -1,0 +1,76 @@
+slides:
+  -
+    content: |
+      # Custom Fonts
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      ### How to load custom fonts
+
+      1. Self host your font files with `@font-face` rules
+      2. Use a font-hosting service
+
+  -
+    content: |
+      ### Google Fonts
+
+      ## [fonts.google.com](https://fonts.google.com)
+
+      Google Fonts is a font-hosting service offering hundreds of free and open-source web-optimized fonts
+
+  -
+    content: |
+      # Google Fonts
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
+
+  -
+    content: |
+      In our example, we’ve used Lato for the body and Bree Serif for the headlines
+
+      You can use any font you’d like!
+
+      ![lato](images/lato.png) <!-- .element: style="width: 40%; float: left;" -->
+      ![bree](images/bree.png) !-- .element: style="width: 40%; float: right;" -->
+
+  -
+    content: |
+      ### Using Google Fonts in 3 steps!
+      1. Search the hundreds of font families, then add them to your collection.
+      2. Compare and refine the collection&mdash;watch the “Load time” message, try to keep it <strong class="util-green">Fast</strong>!
+      3. Grab the code that Google prepares for you and add it to your site!
+
+      ```html
+      <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato:300,300i,400,400i" rel="stylesheet">
+      ```
+
+      <small>What does that do?<br>
+      [paz.cc/gdi-html/fonts](http://paz.cc/gdi-html/fonts)</small>
+
+
+  -
+    content: |
+      ### Integrating into the CSS
+      ```css
+      body{
+        font-family: 'Lato', Helvetica, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Bree Serif', Georgia, serif;
+      }
+      ```
+
+  -
+    content: |
+      ### Let’s Develop It!
+      <hr>
+
+      Pick some fonts for your site using Google Fonts.
+
+      Adjust the `font-size` and `line-height` to refine your fonts.

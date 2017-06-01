@@ -1,0 +1,11 @@
+slides:
+  -
+    content: |
+      # Week 1
+      <hr>
+
+      #### Any Questions? <!-- .element: class="util-gray" -->
+
+      - HTML 5
+      - Fluid vs. Flexible Layout
+      - Responsive Web Design

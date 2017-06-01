@@ -40,9 +40,9 @@ slides:
       ### Using Prefixes
 
       ```css
-      #hero img {
-      -moz-border-radius: 50%;
+      .avatar {
       -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
       border-radius: 50%;
@@ -56,3 +56,5 @@ slides:
       While you should always use the vendor prefixes when writing code, today we’re just going to use the non-prefixed property.
 
       This is to save time during the code exercises
+
+      https://autoprefixer.github.io
