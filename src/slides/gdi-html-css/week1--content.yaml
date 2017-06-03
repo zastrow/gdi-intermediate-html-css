@@ -145,5 +145,5 @@ slides:
       ### Let's develop it!
       <hr><br>
 
-      - Use media queiries so it is a single column until there is enough room for three columns
+      - Use media queries so it is a single column until there is enough room for three columns
       - Setup a three column grid with three equal widths
