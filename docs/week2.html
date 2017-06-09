@@ -7,7 +7,7 @@
     <title>Intermediate HTML/CSS &amp; Intro to Responsive Design &hearts; Girl Develop It Boulder</title>
 
     <meta name="description" content="">
-    <meta name="author" content="Cara Jo Miller, adapted by Lisa Smith">
+    <meta name="author" content="Cara Jo Miller, adapted by Lisa Smith, adapted further by Philip Zastrow">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -477,7 +477,7 @@ Notes:</script>
 
 ## [fonts.google.com](https://fonts.google.com)
 
-Google Fonts is a font-hosting service offering hundreds of free and open-source web-optimized fonts
+Google Fonts is a font-hosting service offering hundreds<br>of free and open-source web-optimized fonts
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -569,59 +569,93 @@ text-shadow: 0.125rem 0.125rem 0.5rem red,
 </div>
 Notes:</script>
   </section>
+  <section class="slide full-iframe">
+    
+      <iframe src="https://codepen.io/zastrow/debug/LLGYoZ">
+  <a href="https://codepen.io/zastrow/debug/LLGYoZ">https://codepen.io/zastrow/debug/LLGYoZ</a>
+</iframe>
+<aside class="notes"></aside>
+  </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## Box Shadow
 <hr>
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ### box-shadow
 
 Adds a drop shadow to an element
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide example2">
     <script type="text/template">
-      ### box-shadow
-
-box-shadow: offset-x offset-y color
+      `box-shadow: offset-x offset-y color`
 
 ```
-.example1 { box-shadow: 5px 5px red; }
+.example1 { box-shadow: 5px 5px deeppink; }
 ```
 
-<div style="box-shadow: 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+<div class="util-margin-t2" style="box-shadow: 0.5em 0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
 </div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide example2">
     <script type="text/template">
-      ### box-shadow
-
-`box-shadow: offset-x offset-y blur spread color`
+      `box-shadow: offset-x offset-y blur spread color`
 
 ```
 
-.example { box-shadow: 0 0 5px 5px red; }
+.example { box-shadow: 0 0 0.5em 0.5em deeppink; }
 
 ```
-<div style="box-shadow: 0 0 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+<div class="util-margin-t2" style="box-shadow: 0 0 0.5em 0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
 </div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### box-shadow
-
-`box-shadow: offset-x offset-y blur spread color`
+      `box-shadow: offset-x offset-y blur spread color`
 
 ```
-.example { box-shadow: 0 2px 5px 0px red; }
+.example { box-shadow: 0 0.125em 0.5em deeppink; }
 ```
 
-<div style="box-shadow: 0 2px 5px 0px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+<div class="util-margin-t2" style="box-shadow: 0 0.125em 0.5em 0 deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      Negatives Values
+
+```
+.example { box-shadow: 0 -1em 0.75em -0.5em deeppink; }
+```
+
+<div class="util-margin-t2" style="box-shadow: 0 -1em 0.75em -0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      `box-shadow: offset-x offset-y blur spread color inset`
+
+```
+.example { box-shadow: 0 0.125em 0.5em 0.25em deeppink inset; }
+```
+
+<div class="util-margin-t2" style="box-shadow: 0 0.125em 0.5em 0.25em deeppink inset; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+</div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      Multiple Shadows
+
+```
+.example {
+  box-shadow: 0 1em 0.5em 0.25em deeppink inset, 0 1em 0.5em 0.25em dodgerblue;
+}
+```
+
+<div class="util-margin-t2" style="box-shadow: 0 1em 0.5em 0.25em deeppink inset,0 1em 0.5em 0.25em dodgerblue; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
 </div>
 Notes:</script>
   </section>
@@ -644,102 +678,89 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Linear gradients
+      ###### Linear gradients
 
 ```css
-.linear-example1 {
-  background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
-}
-.linear-example2 {
-  background-image: linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
-}
-.linear-example3 {
-  background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
-}
+.example1 { background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); }
 ```
-<article class="gradients">
-  <div class="linear-example1">
-  </div>
-  <div class="linear-example2">
-  </div>
-  <div class="linear-example3">
-  </div>
-</article>
+<div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
+```css
+.example2 { background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet); }
+```
+<div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
+```css
+.example3 { background-image: linear-gradient(60deg, red, orange, yellow, green, blue, indigo, violet); }
+```
+<div class="util-margin-t050" style="background-image: linear-gradient(60deg, red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Linear gradients
+      ###### Linear gradients
 
 ```css
-.linear-example4 {
-background-image: linear-gradient(red, white);
-}
-.linear-example5 {
-background-image: linear-gradient(right, red, white);
-}
-.linear-example6 {
-background-image: linear-gradient(bottom right, red, white);
-}
+.example4 { background-image: linear-gradient(dodgerblue 40%, deeppink 60%); }
 ```
-<article class="gradients">
-  <div class="linear-example4">
-  </div>
-  <div class="linear-example5">
-  </div>
-  <div class="linear-example6">
-  </div>
-</article>
+<div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(dodgerblue 40%, deeppink 60%); height: 2em; width: 100%;"></div>
+```css
+.example5 { background-image: linear-gradient(to right, dodgerblue 70%, deeppink 100%); }
+```
+<div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(to right, dodgerblue 70%, deeppink 100%); height: 2em; width: 100%;"></div>
+```css
+.example6 { background-image: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); }
+```
+<div class="util-margin-t050" style="background-image: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); height: 2em; width: 100%;"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Radial gradients
+      ###### Radial gradients
 
 ```
-.radial-example1 {
-background-image: radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet);
-}
-.radial-example2 {
-background-image: radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet);
-}
-.radial-example3 {
-background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
-}
+.example1 { background-image: radial-gradient(red, orange, yellow, green, blue, indigo, violet); }
 ```
-<article class="gradients">
-  <div class="radial-example1">
-  </div>
-  <div class="radial-example2">
-  </div>
-  <div class="radial-example3">
-  </div>
-</article>
+<div class="util-margin-t050 util-margin-b2" style="background-image: radial-gradient(red, orange, yellow, green, blue, indigo, violet); height: 6em; width: 100%;"></div>
+```css
+.example2 { background-image: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet); }
+```
+<div class="util-margin-t050" style="background-image: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet); height: 6em; width: 100%;"></div>mage: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); height: 2em; width: 100%;"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Radial gradients
+      ###### Radial gradients
 
+```css
+.example3 { background-image: radial-gradient(circle farthest-corner at 0 0, red, blue); }
 ```
-.radial-example4 {
-  background-image: radial-gradient(circle cover, red, white);
-}
-.radial-example5 {
-  background-image: radial-gradient(0 0, circle, red, white);
-}
-.radial-example6 {
-  background-image: radial-gradient(0 50%, circle, red, white);
+<div class="util-margin-t050 util-margin-b2" style="background-image: radial-gradient(circle farthest-corner at 0 0, deeppink 10%, dodgerblue 20%); height: 6em; width: 100%;"></div>
+
+```css
+.example4 { background-image: radial-gradient(40% 40% at 50% 0, deeppink 10%, dodgerblue 100%); }
+```
+<div class="util-margin-t050" style="background-image: radial-gradient(40% 40% at 50% 0, deeppink 10%, dodgerblue 100%); height: 6em; width: 100%;"></div>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+    <script type="text/template">
+      # Multiple Backgrounds
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide grid grid-1-2">
+    <script type="text/template">
+      ```css
+.example1 {
+  background-image:
+    linear-gradient(
+      rgba(255, 20, 147,0.5),
+      rgba(30, 144, 255,0.5)
+    ),
+    url('images/coffee.jpg');
+  background-size: auto, cover;
 }
 ```
-<article class="gradients">
-  <div class="radial-example4">
-  </div>
-  <div class="radial-example5">
-  </div>
-  <div class="radial-example6">
-  </div>
-</article>
+<div class="util-margin-t050" style="background-image: linear-gradient(rgba(255, 20, 147,0.5), rgba(30, 144, 255,0.5)),url('images/coffee.jpg'); background-size: auto, cover; height: 100%; width: 100%;"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -751,12 +772,6 @@ Add a background gradient to a section of your site
 Notes:End of Class 3 in 4 week sequence
 </script>
   </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      # Multiple Backgrounds
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
@@ -767,12 +782,12 @@ Notes:</script>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       
-#### Allow property changes in CSS values to occur smoothly over a specified duration
+#### Allow property changes in CSS values to<br>occur smoothly over a specified duration
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      #### Create some awesome effects without any JavaScript
+      #### Create stunning visual effects<br>without any JavaScript
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -799,14 +814,15 @@ Notes:</script>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## `transition-property`
+<hr>
 
-The names of CSS properties that should be transitioned
+The names of CSS properties to transition.
 
 ```
 .example1 { transition-property: background-color; }
 ```
 
-set to `all` to transition all CSS properties
+Set to `all` to transition all CSS properties.
 
 ```
 .example2 { transition-property: all; }
@@ -815,78 +831,92 @@ Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## transition-property
+      ### Transition Examples<br><small>[paz.cc/gdi-html/animated](http://paz.cc/gdi-html/animated)</small>
 
-[animatable examples](http://leaverou.github.com/animatable)
-
-[full list of supported properties](http://www.w3.org/TR/css3-transitions/#animatable-css)
+### Transitionable Properties List<br><small>[paz.cc/gdi-html/transition](http://paz.cc/gdi-html/transition)</small>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## transition-duration
+      ## `transition-duration`
+<hr>
 
-the number of seconds or milliseconds a transition animation should take to complete
+The number of seconds or milliseconds a<br>transition animation should take to complete.
 
 ```
 .example1 { transition-duration: 2s; }
 ```
-
-<div class="sliders" style="width:40%;">
-  <span class="value">2</span>s duration
-  <input type="range" min="0" max="10" value="3">
-</div>
-<div class="example">
-</div>
+<style>
+  .transition-duration {transition: all linear 2s; height: 2em; width: 2em; background-color: deeppink;}
+  .transition-duration:hover {transform: scale(4) rotate(90deg); background-color: dodgerblue;}
+</style>
+<div class="transition-duration"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## transition-delay
+      ## `transition-delay`
+<hr>
 
-delay transitions from the moment a trigger happens
+Delay the start of transitions from the moment a trigger occurs.
 
 ```
-.example1 { transition-delay: 0s; }
 .example2 { transition-delay: 1s; }
-.example3 { transition-delay: 2s; }
-.example4 { transition-delay: 3s; }
 ```
-
-<article>
-  <div class="example4">3</div>
-  <div class="example3">2</div>
-  <div class="example2">1</div>
-  <div class="example1">0</div>
-</article>
+<style>
+  .transition-delay {transition: all linear 2s 1s; height: 2em; width: 2em; background-color: deeppink;}
+  .transition-delay:hover {transform: scale(4) rotate(90deg); background-color: dodgerblue;}
+</style>
+<div class="transition-delay"></div>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## transition-timing-function
+      ## `transition-timing-function`
+<hr>
 
-determines how intermediate values are calculated
+Provides variation in how the transition plays out.
 
 ```
 .example { transition-timing-function: ease; }
 ```
+<style>
+  .transition-timing { transition: all 2s; height: 2em; width: 2em; background-color: deeppink; margin:auto;}
+  .transition-timing:hover { transform: scale(4) rotate(90deg); background-color: dodgerblue;}
+  .transition-timing.ease { transition-timing-function: ease; }
+  .transition-timing.linear { transition-timing-function: linear; }
+  .transition-timing.ease-in { transition-timing-function: ease-in; }
+  .transition-timing.ease-out { transition-timing-function: ease-out; }
+  .transition-timing.cubic-bezier { transition-timing-function: cubic-bezier(0.16,0.83,0.69,1.32); }
+</style>
 
-<article>
-  <div class="ease">ease</div>
-  <div class="linear">linear</div>
-  <div class="ease-in">ease-in</div>
-  <div class="ease-out">ease-out</div>
-  <div class="ease-in-out">ease-in-out</div>
-  <div class="cubic-bezier">cubic-bezier</div>
-</article>
-[http://cubic-bezier.com](http://cubic-bezier.com)
+<table>
+  <tr>
+    <th>`ease`</th>
+    <th>`linear`</th>
+    <th>`ease-in`</th>
+    <th>`ease-out`</th>
+    <th>`ease-in-out`</th>
+    <th>`cubic-bezier`</th>
+  </tr>
+  <tr>
+    <td><div class="transition-timing ease"></div></td>
+    <td><div class="transition-timing linear"></div></td>
+    <td><div class="transition-timing ease-in"></div></td>
+    <td><div class="transition-timing ease-out"></div></td>
+    <td><div class="transition-timing ease-in-out"></div></td>
+    <td><div class="transition-timing cubic-bezier"></div></td>
+  </tr>
+</table>
+
+[cubic-bezier.com](http://cubic-bezier.com)
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ### That’s a lot to remember right?
 
-Friendly reminder to hit MDN. You don’t need to remember everything if you know where to find it.
+Remember to reference the web dictionary, [mdn.io](http://mdn.io). You don’t<br>need to remember everything if you know where to find it.
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
@@ -900,46 +930,81 @@ Pick a transition property and apply it to an element.
 Notes:</script>
   </section>
 
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">
-      ## Transforms
-#### Allow elements rendered by CSS to be transformed in space
+      # Transforms
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Transform: Scale
+      #### Allow elements rendered by<br>CSS to be manipulated in space
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ## Scale
+<hr>
 
-scales the element
-
-`transform:  scale(sx[, sy]);`
+Grow or shrink an element
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide demo-transform-scale">
+    <script type="text/template">
+      ```css
+transform:  scale(sx[, sy]);
+```
+<style>
+  .transform-scale { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+  .transform-scale > div { background-color: #333; color: white; padding: 1em;}
+  .transform-scale .example1 { transform: scale(2); }
+  .transform-scale .example2 { transform: scale(0.5); }
+  .transform-scale .example3 { transform: scale(0.5, 1); }
+  .transform-scale .example4 { transform: scale(1, 0.5); }
+</style>
 
 <article class="transform-scale">
   <div class="example1">
-    scale(2);
+    scale(2)
   </div>
 
   <div class="example2">
-    scale(0.5);
-  </div>
-
-  <div class="example4">
-    scale(1, 0.5);
+    scale(0.5)
   </div>
 
   <div class="example3">
-    scale(0.5, 1);
+    scale(0.5, 1)
+  </div>
+
+  <div class="example4">
+    scale(1, 0.5)
   </div>
 </article>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Transform: Rotate
+      ## Rotate
+<hr>
 
-rotates the element degrees around its origin
-
+Spin an element clockwise or counter
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide demo-transform-rotate">
+    <script type="text/template">
+      
+```css
 transform: rotate(angle);
+```
+
+<style>
+  .transform-rotate { display: flex; justify-content: space-around; width: 100%; margin-top: 6em;}
+  .transform-rotate > div { background-color: #333; color: white; padding: 1em;}
+  .transform-rotate .example1 { transform: rotate(45deg); }
+  .transform-rotate .example2 { transform: rotate(-45deg); }
+  .transform-rotate .example3 { transform: rotate(-90deg); }
+  .transform-rotate .example4 { transform: rotate(180deg); }
+</style>
 
 <article class="transform-rotate">
   <div class="example1">
@@ -947,38 +1012,95 @@ transform: rotate(angle);
   </div>
 
   <div class="example2">
-    rotate(-45deg);
+    rotate(-45deg)
   </div>
 
   <div class="example3">
-    rotate(-90deg);
+    rotate(-90deg)
   </div>
 
   <div class="example4">
-    rotate(180deg);
+    rotate(180deg)
   </div>
 </article>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ## Transform: Translate
+      ## Translate
+<hr>
 
-move element using x and y coordinates
-
+Move an element vertically and horizontally
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide demo-transform-translate">
+    <script type="text/template">
+      ```css
 transform: translate(ax[, ay]);
+```
+
+<style>
+  .transform-translate { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+  .transform-translate div { position: relative; background-color: #ccc; color: white; padding: 1em;}
+  .transform-translate div::after {position: absolute;top:0;right:0;bottom:0;left:0; width: 100%; display: block; background-color: #333; color: white; padding: 1em; box-sizing: border-box; z-index: 10;}
+  .transform-translate .example1::after { content:'translate(1.5em)'; transform: translate(1.5em, 1.5em); }
+  .transform-translate .example2::after { content:'translate(0, 1.5em)'; transform: translate(0, 1.5em); }
+  .transform-translate .example3::after { content:'translate(3em, -1.5em)'; transform: translate(3em, -1.5em); }
+</style>
 
 <article class="transform-translate">
   <div class="example1">
-    translate(20px);
+    translate(1.5em)
   </div>
 
   <div class="example2">
-    translate(0, 20px);
+    translate(0, 1.5em)
   </div>
 
   <div class="example3">
-    translate(-20px, 20px);
+    translate(3em, -1.5em)
+  </div>
+</article>
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ## Transform: Combinations
+<hr>
+
+Transforms can be combined in a space separated list
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide demo-transform-combo">
+    <script type="text/template">
+      
+```css
+transform: translate(...) scale(...) rotate(...);
+```
+
+<style>
+  .transform-combo { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+  .transform-combo div { position: relative; background-color: #333; color: white; padding: 1em;}
+  .transform-combo .example1 { transform: translate(1em) scale(1.5); }
+  .transform-combo .example2 { transform: scale(0.75) rotate(-25deg); }
+  .transform-combo .example3 { transform: scale(0.75) rotate(-25deg) skew(10deg); }
+</style>
+
+<article class="transform-combo">
+  <div class="example1">
+    translate(1em)<br>
+    scale(1.5)
+  </div>
+
+  <div class="example2">
+    scale(0.75)<br>
+    rotate(-25deg)
+  </div>
+
+  <div class="example3">
+    scale(0.75)<br>
+    rotate(-25deg)<br>
+    skew(10deg)
   </div>
 </article>
 Notes:</script>
@@ -986,197 +1108,52 @@ Notes:</script>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
       ## Transform-origin
+<hr>
 
-the x and y origin for transformation
-
+The x and y coordinates to start a transformation
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide demo-transform-origin">
+    <script type="text/template">
+      ```css
 transform-origin: x-offset y-offset;
+```
+
+<style>
+  .transform-origin { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+  .transform-origin div { position: relative; background-color: #ccc; color: white; padding: 1em;}
+  .transform-origin div::after {position: absolute; top:0;right:0;bottom:0;left:0; width: 100%; display: block; background-color: #333; color: white; padding: 1em; box-sizing: border-box; z-index: 10;}
+  .transform-origin .example1::after { transform-origin: top right; content:'top right'; transform: rotate(45deg); }
+  .transform-origin .example2::after { transform-origin: 60% 30%; content:'60% 30%'; transform: rotate(45deg); }
+  .transform-origin .example3::after { transform-origin: 0 2em; content:'0 2em'; transform: rotate(45deg); }
+</style>
 
 <article class="transform-origin">
   <div class="example1">
-    transform-origin(top, left)
+    top right
   </div>
 
   <div class="example2">
-    transform-origin(50%, 50%)
+    60% 30%
   </div>
 
   <div class="example3">
-    transform-origin(0, 50px)
+    0 2em
   </div>
 </article>
 Notes:</script>
   </section>
   <section data-markdown data-separator-notes="^Notes:"class="slide ">
     <script type="text/template">
-      ### Develop It!
+      ### Let’s Develop It!
+<hr>
 
-Pick a transform property and apply it to an element.
-
-Hint: The transforms, like transitions, will only work if the element has a pseudo class, like :hover
-
-Extra Credit: Use it with transition to make the transform smoother.
-Notes:</script>
-  </section>
-
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      # Animation
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+- Pick a transform property and apply it to an element.
+- **Extra Credit:** Use it with transition to make the transform smoother.
 Notes:</script>
   </section>
 
 
-  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
-    <script type="text/template">
-      # CSS Processors
-###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## LESS &amp; SASS?!
-
-These are two very popular CSS preprocessors
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## What the what is a CSS Preprocessor?
-
-CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css we’ve been writing for years.
-
-Since we’re not writing straight CSS, we’re not limited to the restrictions of the language.
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## What they do
-
-- **Mixins – **Classes for classes.
-- **Parametric mixins – **Classes to which you can pass parameters, like functions.
-- **Nested Rules – **Classes within classes, which cut down on repetitive code
-- **Operations – **Math within CSS
-- **Color functions – **Edit your colors
-- **Namespaces – **Groups of styles that can be called by references
-- **Scope – **Make local changes to styles
-- **JavaScript evaluation – **JavaScript expressions evaluated in CSS
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## Some highlights
-
-Mixins!
-
-```
-/* LESS */
-.rounded-corners (@radius: 5px) {
-  -webkit-border-radius: @radius;
-  -moz-border-radius: @radius;
-  -ms-border-radius: @radius;
-  -o-border-radius: @radius;
-  border-radius: @radius;
-}
-
-#footer {
-  .rounded-corners(10px);
-}
-```
-
-```
-/* Compiled CSS read by the browser */
-#footer {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-}
-```
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## Nested Rules
-```
-// LESS
-
-#header {
-h1 {
-  font-size: 26px;
-  font-weight: bold;
-}
-  p { font-size: 12px;
-    a { text-decoration: none;
-      &:hover { border-width: 1px }
-    }
-  }
-}
-```
-
-```
-/* Compiled CSS */
-#header h1 {font-size: 26px;font-weight: bold;}
-#header p {font-size: 12px;}
-#header p a {text-decoration: none;}
-#header p a:hover {border-width: 1px;}
-```
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## Functions
-
-LESS
-
-```
-p {
-  color: lighten(@base, 5%);
-}
-```
-
-SASS
-
-```
-p {
-  color: hsl($hue: 0, $saturation: 100%, $lightness: 50%);
-}
-```
-Notes:</script>
-  </section>
-  <section data-markdown data-separator-notes="^Notes:"class="slide ">
-    <script type="text/template">
-      ## Variables
-
-LESS
-
-```
-// LESS
-@blue: #199FD9;
-p {
-  color: @blue;
-}
-// Compiled CSS
-p {
-  color: #199FD9;
-}
-```
-
-SASS
-
-```
-// SASS
-$blue: #199FD9;
-p {
-  color: $blue;
-}
-// Compiled CSS
-p {
-  color: #199FD9;
-}
-```
-Notes:</script>
-  </section>
 
       </div>
     </div>

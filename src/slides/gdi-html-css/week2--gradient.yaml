@@ -8,106 +8,61 @@ slides:
 
   -
     content: |
-      ## Linear gradients
+      ###### Linear gradients
 
       ```css
-      .linear-example1 {
-        background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
-      }
-      .linear-example2 {
-        background-image: linear-gradient(right, red, orange, yellow, green, blue, indigo, violet);
-      }
-      .linear-example3 {
-        background-image: linear-gradient(bottom right, red, orange, yellow, green, blue, indigo, violet);
-      }
+      .example1 { background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); }
       ```
-      <article class="gradients">
-        <div class="linear-example1">
-        </div>
-        <div class="linear-example2">
-        </div>
-        <div class="linear-example3">
-        </div>
-      </article>
+      <div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
+      ```css
+      .example2 { background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet); }
+      ```
+      <div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
+      ```css
+      .example3 { background-image: linear-gradient(60deg, red, orange, yellow, green, blue, indigo, violet); }
+      ```
+      <div class="util-margin-t050" style="background-image: linear-gradient(60deg, red, orange, yellow, green, blue, indigo, violet); height: 2em; width: 100%;"></div>
 
   -
     content: |
-      ## Linear gradients
+      ###### Linear gradients
 
       ```css
-      .linear-example4 {
-      background-image: linear-gradient(red, white);
-      }
-      .linear-example5 {
-      background-image: linear-gradient(right, red, white);
-      }
-      .linear-example6 {
-      background-image: linear-gradient(bottom right, red, white);
-      }
+      .example4 { background-image: linear-gradient(dodgerblue 40%, deeppink 60%); }
       ```
-      <article class="gradients">
-        <div class="linear-example4">
-        </div>
-        <div class="linear-example5">
-        </div>
-        <div class="linear-example6">
-        </div>
-      </article>
+      <div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(dodgerblue 40%, deeppink 60%); height: 2em; width: 100%;"></div>
+      ```css
+      .example5 { background-image: linear-gradient(to right, dodgerblue 70%, deeppink 100%); }
+      ```
+      <div class="util-margin-t050 util-margin-b2" style="background-image: linear-gradient(to right, dodgerblue 70%, deeppink 100%); height: 2em; width: 100%;"></div>
+      ```css
+      .example6 { background-image: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); }
+      ```
+      <div class="util-margin-t050" style="background-image: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); height: 2em; width: 100%;"></div>
 
   -
     content: |
-      ## Radial gradients
+      ###### Radial gradients
 
       ```
-      .radial-example1 {
-      background-image: radial-gradient(circle cover, red, orange, yellow, green, blue, indigo, violet);
-      }
-      .radial-example2 {
-      background-image: radial-gradient(0 0, circle, red, orange, yellow, green, blue, indigo, violet);
-      }
-      .radial-example3 {
-      background-image: radial-gradient(0 50%, circle, red, orange, yellow, green, blue, indigo, violet);
-      }
+      .example1 { background-image: radial-gradient(red, orange, yellow, green, blue, indigo, violet); }
       ```
-      <article class="gradients">
-        <div class="radial-example1">
-        </div>
-        <div class="radial-example2">
-        </div>
-        <div class="radial-example3">
-        </div>
-      </article>
+      <div class="util-margin-t050 util-margin-b2" style="background-image: radial-gradient(red, orange, yellow, green, blue, indigo, violet); height: 6em; width: 100%;"></div>
+      ```css
+      .example2 { background-image: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet); }
+      ```
+      <div class="util-margin-t050" style="background-image: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet); height: 6em; width: 100%;"></div>mage: linear-gradient(to top left, dodgerblue 40%, deeppink 40%); height: 2em; width: 100%;"></div>
 
   -
     content: |
-      ## Radial gradients
+      ###### Radial gradients
 
+      ```css
+      .example3 { background-image: radial-gradient(circle farthest-corner at 0 0, red, blue); }
       ```
-      .radial-example4 {
-        background-image: radial-gradient(circle cover, red, white);
-      }
-      .radial-example5 {
-        background-image: radial-gradient(0 0, circle, red, white);
-      }
-      .radial-example6 {
-        background-image: radial-gradient(0 50%, circle, red, white);
-      }
+      <div class="util-margin-t050 util-margin-b2" style="background-image: radial-gradient(circle farthest-corner at 0 0, deeppink 10%, dodgerblue 20%); height: 6em; width: 100%;"></div>
+
+      ```css
+      .example4 { background-image: radial-gradient(40% 40% at 50% 0, deeppink 10%, dodgerblue 100%); }
       ```
-      <article class="gradients">
-        <div class="radial-example4">
-        </div>
-        <div class="radial-example5">
-        </div>
-        <div class="radial-example6">
-        </div>
-      </article>
-
-  -
-    content: |
-      ### Let’s Develop It!
-      <hr>
-
-      Add a background gradient to a section of your site
-
-    notes: |
-      End of Class 3 in 4 week sequence
+      <div class="util-margin-t050" style="background-image: radial-gradient(40% 40% at 50% 0, deeppink 10%, dodgerblue 100%); height: 6em; width: 100%;"></div>

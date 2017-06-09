@@ -5,3 +5,32 @@ slides:
       ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
     options:
       class: section-card
+
+  -
+    content: |
+      ```css
+      .example1 {
+        background-image:
+          linear-gradient(
+            rgba(255, 20, 147,0.5),
+            rgba(30, 144, 255,0.5)
+          ),
+          url('images/coffee.jpg');
+        background-size: auto, cover;
+      }
+      ```
+      <div class="util-margin-t050" style="background-image: linear-gradient(rgba(255, 20, 147,0.5), rgba(30, 144, 255,0.5)),url('images/coffee.jpg'); background-size: auto, cover; height: 100%; width: 100%;"></div>
+
+    options:
+      class: grid grid-1-2
+
+
+  -
+    content: |
+      ### Let’s Develop It!
+      <hr>
+
+      Add a background gradient to a section of your site
+
+    notes: |
+      End of Class 3 in 4 week sequence

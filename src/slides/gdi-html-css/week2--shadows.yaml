@@ -37,59 +37,95 @@ slides:
       </div>
     options:
       class: grid grid-1-2
+
+  -
+    markdown: false
+    content: |
+      <iframe src="https://codepen.io/zastrow/debug/LLGYoZ">
+        <a href="https://codepen.io/zastrow/debug/LLGYoZ">https://codepen.io/zastrow/debug/LLGYoZ</a>
+      </iframe>
+
+    options:
+      class: full-iframe
+
   -
     content: |
       ## Box Shadow
       <hr>
 
-  -
-    content: |
-      ### box-shadow
-
       Adds a drop shadow to an element
 
   -
     content: |
-      ### box-shadow
-
-      box-shadow: offset-x offset-y color
+      `box-shadow: offset-x offset-y color`
 
       ```
-      .example1 { box-shadow: 5px 5px red; }
+      .example1 { box-shadow: 5px 5px deeppink; }
       ```
 
-      <div style="box-shadow: 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      <div class="util-margin-t2" style="box-shadow: 0.5em 0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
       </div>
 
     options:
       class: example2
   -
     content: |
-      ### box-shadow
-
       `box-shadow: offset-x offset-y blur spread color`
 
       ```
 
-      .example { box-shadow: 0 0 5px 5px red; }
+      .example { box-shadow: 0 0 0.5em 0.5em deeppink; }
 
       ```
-      <div style="box-shadow: 0 0 5px 5px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      <div class="util-margin-t2" style="box-shadow: 0 0 0.5em 0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
       </div>
     options:
       class: example2
 
   -
     content: |
-      ### box-shadow
-
       `box-shadow: offset-x offset-y blur spread color`
 
       ```
-      .example { box-shadow: 0 2px 5px 0px red; }
+      .example { box-shadow: 0 0.125em 0.5em deeppink; }
       ```
 
-      <div style="box-shadow: 0 2px 5px 0px red; height: 100px; width: 100px; border: 2px solid black; margin: 0 auto;">
+      <div class="util-margin-t2" style="box-shadow: 0 0.125em 0.5em 0 deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+      </div>
+
+  -
+    content: |
+      Negatives Values
+
+      ```
+      .example { box-shadow: 0 -1em 0.75em -0.5em deeppink; }
+      ```
+
+      <div class="util-margin-t2" style="box-shadow: 0 -1em 0.75em -0.5em deeppink; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+      </div>
+
+  -
+    content: |
+      `box-shadow: offset-x offset-y blur spread color inset`
+
+      ```
+      .example { box-shadow: 0 0.125em 0.5em 0.25em deeppink inset; }
+      ```
+
+      <div class="util-margin-t2" style="box-shadow: 0 0.125em 0.5em 0.25em deeppink inset; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
+      </div>
+
+  -
+    content: |
+      Multiple Shadows
+
+      ```
+      .example {
+        box-shadow: 0 1em 0.5em 0.25em deeppink inset, 0 1em 0.5em 0.25em dodgerblue;
+      }
+      ```
+
+      <div class="util-margin-t2" style="box-shadow: 0 1em 0.5em 0.25em deeppink inset,0 1em 0.5em 0.25em dodgerblue; height: 7em; width: 7em; border: 0.125em solid #333; margin: 0 auto;">
       </div>
 
   -

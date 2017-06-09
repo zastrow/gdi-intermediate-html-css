@@ -123,4 +123,12 @@ $smallSpaces: (25, 50, 75);
   .util-margin-b0#{$space} {
     margin-bottom: $space / 100 + em !important;
   }
+
+  .util-margin-v0#{$space} {
+    margin-bottom: $space / 100 + em !important;
+  }
+
+  .util-margin-h0#{$space} {
+    margin-bottom: $space / 100 + em !important;
+  }
 }

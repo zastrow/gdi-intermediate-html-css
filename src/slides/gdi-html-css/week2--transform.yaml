@@ -1,42 +1,81 @@
 slides:
   -
     content: |
-      ## Transforms
-      #### Allow elements rendered by CSS to be transformed in space
+      # Transforms
+      ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+
+    options:
+      class: section-card
 
   -
     content: |
-      ## Transform: Scale
+      #### Allow elements rendered by<br>CSS to be manipulated in space
 
-      scales the element
+  -
+    content: |
+      ## Scale
+      <hr>
 
-      `transform:  scale(sx[, sy]);`
+      Grow or shrink an element
+
+
+  -
+    content: |
+      ```css
+      transform:  scale(sx[, sy]);
+      ```
+      <style>
+        .transform-scale { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+        .transform-scale > div { background-color: #333; color: white; padding: 1em;}
+        .transform-scale .example1 { transform: scale(2); }
+        .transform-scale .example2 { transform: scale(0.5); }
+        .transform-scale .example3 { transform: scale(0.5, 1); }
+        .transform-scale .example4 { transform: scale(1, 0.5); }
+      </style>
 
       <article class="transform-scale">
         <div class="example1">
-          scale(2);
+          scale(2)
         </div>
 
         <div class="example2">
-          scale(0.5);
-        </div>
-
-        <div class="example4">
-          scale(1, 0.5);
+          scale(0.5)
         </div>
 
         <div class="example3">
-          scale(0.5, 1);
+          scale(0.5, 1)
+        </div>
+
+        <div class="example4">
+          scale(1, 0.5)
         </div>
       </article>
 
+    options:
+      class: demo-transform-scale
+
   -
     content: |
-      ## Transform: Rotate
+      ## Rotate
+      <hr>
 
-      rotates the element degrees around its origin
+      Spin an element clockwise or counter
 
+  -
+    content: |
+
+      ```css
       transform: rotate(angle);
+      ```
+
+      <style>
+        .transform-rotate { display: flex; justify-content: space-around; width: 100%; margin-top: 6em;}
+        .transform-rotate > div { background-color: #333; color: white; padding: 1em;}
+        .transform-rotate .example1 { transform: rotate(45deg); }
+        .transform-rotate .example2 { transform: rotate(-45deg); }
+        .transform-rotate .example3 { transform: rotate(-90deg); }
+        .transform-rotate .example4 { transform: rotate(180deg); }
+      </style>
 
       <article class="transform-rotate">
         <div class="example1">
@@ -44,68 +83,147 @@ slides:
         </div>
 
         <div class="example2">
-          rotate(-45deg);
+          rotate(-45deg)
         </div>
 
         <div class="example3">
-          rotate(-90deg);
+          rotate(-90deg)
         </div>
 
         <div class="example4">
-          rotate(180deg);
+          rotate(180deg)
         </div>
       </article>
+
+    options:
+      class: demo-transform-rotate
 
   -
     content: |
-      ## Transform: Translate
+      ## Translate
+      <hr>
 
-      move element using x and y coordinates
+      Move an element vertically and horizontally
 
+
+  -
+    content: |
+      ```css
       transform: translate(ax[, ay]);
+      ```
+
+      <style>
+        .transform-translate { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+        .transform-translate div { position: relative; background-color: #ccc; color: white; padding: 1em;}
+        .transform-translate div::after {position: absolute;top:0;right:0;bottom:0;left:0; width: 100%; display: block; background-color: #333; color: white; padding: 1em; box-sizing: border-box; z-index: 10;}
+        .transform-translate .example1::after { content:'translate(1.5em)'; transform: translate(1.5em, 1.5em); }
+        .transform-translate .example2::after { content:'translate(0, 1.5em)'; transform: translate(0, 1.5em); }
+        .transform-translate .example3::after { content:'translate(3em, -1.5em)'; transform: translate(3em, -1.5em); }
+      </style>
 
       <article class="transform-translate">
         <div class="example1">
-          translate(20px);
+          translate(1.5em)
         </div>
 
         <div class="example2">
-          translate(0, 20px);
+          translate(0, 1.5em)
         </div>
 
         <div class="example3">
-          translate(-20px, 20px);
+          translate(3em, -1.5em)
         </div>
       </article>
+
+    options:
+      class: demo-transform-translate
+
+  -
+    content: |
+      ## Transform: Combinations
+      <hr>
+
+      Transforms can be combined in a space separated list
+
+  -
+    content: |
+
+      ```css
+      transform: translate(...) scale(...) rotate(...);
+      ```
+
+      <style>
+        .transform-combo { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+        .transform-combo div { position: relative; background-color: #333; color: white; padding: 1em;}
+        .transform-combo .example1 { transform: translate(1em) scale(1.5); }
+        .transform-combo .example2 { transform: scale(0.75) rotate(-25deg); }
+        .transform-combo .example3 { transform: scale(0.75) rotate(-25deg) skew(10deg); }
+      </style>
+
+      <article class="transform-combo">
+        <div class="example1">
+          translate(1em)<br>
+          scale(1.5)
+        </div>
+
+        <div class="example2">
+          scale(0.75)<br>
+          rotate(-25deg)
+        </div>
+
+        <div class="example3">
+          scale(0.75)<br>
+          rotate(-25deg)<br>
+          skew(10deg)
+        </div>
+      </article>
+
+    options:
+      class: demo-transform-combo
 
   -
     content: |
       ## Transform-origin
+      <hr>
 
-      the x and y origin for transformation
-
-      transform-origin: x-offset y-offset;
-
-      <article class="transform-origin">
-        <div class="example1">
-          transform-origin(top, left)
-        </div>
-
-        <div class="example2">
-          transform-origin(50%, 50%)
-        </div>
-
-        <div class="example3">
-          transform-origin(0, 50px)
-        </div>
-      </article>
+      The x and y coordinates to start a transformation
 
   -
     content: |
-      ### Develop It!
+      ```css
+      transform-origin: x-offset y-offset;
+      ```
 
-      Pick a transform property and apply it to an element.
+      <style>
+        .transform-origin { display: flex; justify-content: space-around; width: 100%; margin-top: 3em;}
+        .transform-origin div { position: relative; background-color: #ccc; color: white; padding: 1em;}
+        .transform-origin div::after {position: absolute; top:0;right:0;bottom:0;left:0; width: 100%; display: block; background-color: #333; color: white; padding: 1em; box-sizing: border-box; z-index: 10;}
+        .transform-origin .example1::after { transform-origin: top right; content:'top right'; transform: rotate(45deg); }
+        .transform-origin .example2::after { transform-origin: 60% 30%; content:'60% 30%'; transform: rotate(45deg); }
+        .transform-origin .example3::after { transform-origin: 0 2em; content:'0 2em'; transform: rotate(45deg); }
+      </style>
 
-      Hint: The transforms, like transitions, will only work if the element has a pseudo class, like :hover
+      <article class="transform-origin">
+        <div class="example1">
+          top right
+        </div>
 
-      Extra Credit: Use it with transition to make the transform smoother.
+        <div class="example2">
+          60% 30%
+        </div>
+
+        <div class="example3">
+          0 2em
+        </div>
+      </article>
+
+    options:
+      class: demo-transform-origin
+
+  -
+    content: |
+      ### Let’s Develop It!
+      <hr>
+
+      - Pick a transform property and apply it to an element.
+      - **Extra Credit:** Use it with transition to make the transform smoother.
