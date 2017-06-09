@@ -5,3 +5,27 @@ slides:
       ###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
     options:
       class: section-card
+  -
+    content: |
+      ### Flexbox is a newer CSS property that<br>gives a great deal of control over how containers and content interact.
+  -
+    content: |
+      ### Flebox is an overarching term for a collection of properties that can be utilized when `display:flex;` is used on an element.
+  -
+    content: |
+      [flexboxfroggy.com](http://flexboxfroggy.com)
+
+      ![](images/flexbox-froggy.png)
+
+  -
+    content: |
+      ## CSS Grid
+      <hr>
+
+      The latest thing in layout
+
+  -
+    content: |
+      [cssgridgarden.com](http://cssgridgarden.com)
+
+      ![](images/cssgridgarden.png)

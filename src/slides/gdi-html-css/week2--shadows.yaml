@@ -12,6 +12,8 @@ slides:
       ### Text Shadow
       <hr>
 
+      Does what it says on the label
+
   -
     content: |
       <div>
@@ -73,7 +75,6 @@ slides:
       `box-shadow: offset-x offset-y blur spread color`
 
       ```
-
       .example { box-shadow: 0 0 0.5em 0.5em deeppink; }
 
       ```
