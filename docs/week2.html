@@ -531,6 +531,127 @@ Adjust the `font-size` and `line-height` to refine your fonts.
 Notes:</script>
   </section>
 
+  <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
+    <script type="text/template">
+      # `rgba()` Colors & `opacity`
+###### Intermediate HTML and CSS<!-- .element: class="short-title" -->
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      In CSS, we can choose colors a handful of ways incuding hexidecimals, like `#0000FF`,  or `rgb(0, 0, 255)`
+
+- **`rgba()`** - controls the opacity of a color
+- **`opacity`** - controls the opacity of an element
+Notes:</script>
+  </section>
+  <section class="slide ">
+    
+      <h2><code>rgba()</code> Colors & <code>opacity</code></h2>
+
+<style>
+  .opacity-demo-group {
+    width: 100%;
+  }
+</style>
+
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: 1; height: 50px; width: 40%; float: right; margin-bottom: 20px; border: 3px solid black;">
+    opacity: 1;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, 1); height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, 1);
+  </div>
+</article>
+
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: .8; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+    opacity: .8;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, .8);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, .8);
+  </div>
+</article>
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: .6; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+    opacity: .6;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, .6);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, .6);
+  </div>
+</article>
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: .4; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+    opacity: .4;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, .4);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, .4);
+  </div>
+</article>
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: .2; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+    opacity: .2;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, .2);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, .2);
+  </div>
+</article>
+<article class="fragment opacity-demo-group">
+  <div style="background-color: rgb(255, 0, 0); opacity: .1; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
+    opacity: .1;
+  </div>
+  <div style="background-color: rgba(255, 0, 0, .1);  height: 50px; width: 40%; float: left; margin-bottom: 20px;border: 3px solid black;">
+    rgba(255, 0, 0, .1);
+  </div>
+</article>
+<aside class="notes"></aside>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      `rgba()` Colors controls the opacity of a color
+
+```css
+.example2 {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+```
+
+color property using (red, green, blue, alpha)
+
+alpha is a decimal value from 0 to 1
+
+- 0 - not visible
+- 1 - fully visible
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      `opacity` controls the opacity of an element
+
+```css
+.example2 {
+  opacity: 0.8;
+}
+```
+
+opacity is a decimal value from 0 to 1
+
+- 0 - not visible
+- 1 - fully visible
+Notes:</script>
+  </section>
+  <section data-markdown data-separator-notes="^Notes:"class="slide ">
+    <script type="text/template">
+      ### Let’s Develop It!
+<hr>
+
+Change some colors to have alpha transparency or opacity.
+
+Use [hex2rgba.devoth.com](http://hex2rgba.devoth.com) to convert HEX to RGBA.
+
+Hint: Try making the navbar 80% opaque.
+Notes:</script>
+  </section>
 
   <section data-markdown data-separator-notes="^Notes:"class="slide section-card">
     <script type="text/template">

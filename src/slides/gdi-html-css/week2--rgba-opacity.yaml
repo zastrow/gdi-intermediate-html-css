@@ -1,3 +1,4 @@
+slides:
   -
     content: |
       # `rgba()` Colors & `opacity`
@@ -7,11 +8,7 @@
 
   -
     content: |
-      ## `rgba()` Colors & `opacity`
-
-      In CSS, we can choose colors with hexadecimal `#0000FF` or `rgb(0, 0, 255)`
-
-      In CSS3, there are ways to control opacity of a color too!
+      In CSS, we can choose colors a handful of ways incuding hexidecimals, like `#0000FF`,  or `rgb(0, 0, 255)`
 
       - **`rgba()`** - controls the opacity of a color
       - **`opacity`** - controls the opacity of an element
@@ -21,7 +18,13 @@
     content: |
       <h2><code>rgba()</code> Colors & <code>opacity</code></h2>
 
-      <article class="fragment">
+      <style>
+        .opacity-demo-group {
+          width: 100%;
+        }
+      </style>
+
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: 1; height: 50px; width: 40%; float: right; margin-bottom: 20px; border: 3px solid black;">
           opacity: 1;
         </div>
@@ -30,7 +33,7 @@
         </div>
       </article>
 
-      <article class="fragment">
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: .8; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
           opacity: .8;
         </div>
@@ -38,7 +41,7 @@
           rgba(255, 0, 0, .8);
         </div>
       </article>
-      <article class="fragment">
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: .6; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
           opacity: .6;
         </div>
@@ -46,7 +49,7 @@
           rgba(255, 0, 0, .6);
         </div>
       </article>
-      <article class="fragment">
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: .4; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
           opacity: .4;
         </div>
@@ -54,7 +57,7 @@
           rgba(255, 0, 0, .4);
         </div>
       </article>
-      <article class="fragment">
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: .2; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
           opacity: .2;
         </div>
@@ -62,7 +65,7 @@
           rgba(255, 0, 0, .2);
         </div>
       </article>
-      <article class="fragment">
+      <article class="fragment opacity-demo-group">
         <div style="background-color: rgb(255, 0, 0); opacity: .1; height: 50px; width: 40%; float: right; margin-bottom: 20px;border: 3px solid black;">
           opacity: .1;
         </div>
@@ -74,9 +77,7 @@
 
   -
     content: |
-      ### RGBA Colors</h3>
-
-      controls the opacity of a color
+      `rgba()` Colors controls the opacity of a color
 
       ```css
       .example2 {
@@ -84,18 +85,16 @@
       }
       ```
 
-      color property using (red, green, blue, opacity)
+      color property using (red, green, blue, alpha)
 
-      opacity is a decimal value from 0 to 1
+      alpha is a decimal value from 0 to 1
 
       - 0 - not visible
       - 1 - fully visible
 
   -
     content: |
-      ### Opacity
-
-      controls the opacity of an element
+      `opacity` controls the opacity of an element
 
       ```css
       .example2 {
@@ -103,7 +102,7 @@
       }
       ```
 
-      decimal value from 0 to 1
+      opacity is a decimal value from 0 to 1
 
       - 0 - not visible
       - 1 - fully visible
